@@ -1,11 +1,11 @@
 {
   "properties": {
-    "displayName": "Azure Security Benchmark",
+    "displayName": "Azure Security Benchmark v1",
     "policyType": "BuiltIn",
-    "description": "This initiative includes audit and virtual machine extension deployment policies that address a subset of Azure Security Benchmark recommendations. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/azsecbm.",
+    "description": "This initiative has been deprecated. The Azure Security Benchmark initiative now represents the Azure Security Benchmark v2 controls, and serves as the Azure Security Center default policy initiative. Please assign that initiative, or manage its policies and compliance results within Azure Security Center.",
     "metadata": {
-      "version": "5.0.0-preview",
-      "preview": true,
+      "version": "7.0.2-deprecated",
+      "deprecated": true,
       "category": "Regulatory Compliance"
     },
     "policyDefinitionGroups": [
@@ -363,6 +363,18 @@
       }
     ],
     "parameters": {
+      "IncludeArcMachines": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Include Arc connected servers for Guest Configuration policies",
+          "description": "Optionally choose to audit settings inside Arc connected servers using Guest Configuration policies. By selecting this option, you agree to be charged monthly per Arc connected machine."
+        },
+        "allowedValues": [
+          "true",
+          "false"
+        ],
+        "defaultValue": "false"
+      },
       "listOfMembersToExcludeFromWindowsVMAdministratorsGroup": {
         "type": "String",
         "metadata": {
@@ -435,6 +447,14 @@
           "westus2"
         ]
       },
+      "NetworkWatcherResourceGroupName": {
+        "type": "String",
+        "defaultValue": "NetworkWatcherRG",
+        "metadata": {
+          "displayName": "NetworkWatcher resource group name",
+          "description": "Name of the resource group of NetworkWatcher, such as NetworkWatcherRG"
+        }
+      },
       "approvedVirtualNetworkForVMs": {
         "type": "String",
         "metadata": {
@@ -461,7 +481,7 @@
       "listOfResourceTypesWithDiagnosticLogsEnabled": {
         "type": "Array",
         "metadata": {
-          "displayName": "List of resource types that should have diagnostic logs enabled",
+          "displayName": "List of resource types that should have resource logs enabled",
           "description": "Audit diagnostic setting for selected resource types"
         },
         "defaultValue": [
@@ -581,7 +601,8 @@
         "type": "String",
         "metadata": {
           "displayName": "Latest Windows Python version",
-          "description": "Latest supported Python version for App Services"
+          "description": "Latest supported Python version for App Services",
+          "deprecated": true
         },
         "defaultValue": "3.6"
       },
@@ -718,9 +739,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "144f1397-32f9-4598-8c88-118decc3ccba",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/144f1397-32f9-4598-8c88-118decc3ccba",
+        "policyDefinitionReferenceId": "69bf4abd-ca1e-4cf6-8b5a-762d42e61d4f",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/69bf4abd-ca1e-4cf6-8b5a-762d42e61d4f",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "MembersToExclude": {
             "value": "[parameters('listOfMembersToExcludeFromWindowsVMAdministratorsGroup')]"
           }
@@ -875,9 +899,40 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "36e17963-7202-494a-80c3-f508211c826b",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/36e17963-7202-494a-80c3-f508211c826b",
+        "policyDefinitionReferenceId": "3cf2ab00-13f1-4d0c-8971-2ac904541a7e",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3cf2ab00-13f1-4d0c-8971-2ac904541a7e",
         "parameters": {
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v1.0_1.11"
+        ]
+
+      },
+      {
+        "policyDefinitionReferenceId": "497dff13-db2a-4c0f-8603-28fa3b331ab6",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/497dff13-db2a-4c0f-8603-28fa3b331ab6",
+        "parameters": {
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v1.0_1.11"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "385f5831-96d4-41db-9a3c-cd3af78aaae6",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/385f5831-96d4-41db-9a3c-cd3af78aaae6",
+        "parameters": {
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v1.0_1.11"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "1221c620-d201-468c-81e7-2817e6107e84",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1221c620-d201-468c-81e7-2817e6107e84",
+        "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          }
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_1.11"
@@ -899,16 +954,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_2.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "3abeb944-26af-43ee-b83d-32aaf060fb94",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3abeb944-26af-43ee-b83d-32aaf060fb94",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_7.3",
-          "Azure_Security_Benchmark_v1.0_7.9"
         ]
       },
       {
@@ -1027,15 +1072,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "5c028d2a-1889-45f6-b821-31f42711ced8",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c028d2a-1889-45f6-b821-31f42711ced8",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_1.11"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "5c607a2e-c700-4744-8254-d77e7c9eb5e4",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
         "parameters": {
@@ -1072,9 +1108,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "68511db2-bd02-41c4-ae6b-1900a012968a",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/68511db2-bd02-41c4-ae6b-1900a012968a",
+        "policyDefinitionReferenceId": "6265018c-d7e2-432f-a75d-094d5f6f4465",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6265018c-d7e2-432f-a75d-094d5f6f4465",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "WorkspaceId": {
             "value": "[parameters('listOfWorkspaceIDsForLogAnalyticsAgent')]"
           }
@@ -1100,33 +1139,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_4.4"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "6fe4ef56-7576-4dc4-8e9c-26bad4b087ce",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6fe4ef56-7576-4dc4-8e9c-26bad4b087ce",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_1.11"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "7229bd6a-693d-478a-87f0-1dc1af06f3b8",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7229bd6a-693d-478a-87f0-1dc1af06f3b8",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_1.11"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "760a85ff-6162-42b3-8d70-698e268f648c",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/760a85ff-6162-42b3-8d70-698e268f648c",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.5"
         ]
       },
       {
@@ -1170,9 +1182,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "86880e5c-df35-43c5-95ad-7e120635775e",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86880e5c-df35-43c5-95ad-7e120635775e",
+        "policyDefinitionReferenceId": "caf2d518-f029-4f6b-833b-d7081702f253",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/caf2d518-f029-4f6b-833b-d7081702f253",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          }
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_1.11"
@@ -1185,15 +1200,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_5.2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "86d97760-d216-4d81-a3ad-163087b2b6c3",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86d97760-d216-4d81-a3ad-163087b2b6c3",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.9"
         ]
       },
       {
@@ -1215,9 +1221,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "93507a81-10a4-4af0-9ee2-34cf25a96e98",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/93507a81-10a4-4af0-9ee2-34cf25a96e98",
+        "policyDefinitionReferenceId": "30f71ea1-ac77-4f26-9fc5-2d926bbd4ba7",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/30f71ea1-ac77-4f26-9fc5-2d926bbd4ba7",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "MembersToInclude": {
             "value": "[parameters('listOfMembersToIncludeInWindowsVMAdministratorsGroup')]"
           }
@@ -1227,22 +1236,15 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "985285b7-b97a-419c-8d48-c88cc934c8d8",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/985285b7-b97a-419c-8d48-c88cc934c8d8",
+        "policyDefinitionReferenceId": "67e010c1-640d-438e-a3a5-feaccb533a98",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/67e010c1-640d-438e-a3a5-feaccb533a98",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          }
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_1.11"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "a030a57e-4639-4e8f-ade9-a92f33afe7ee",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a030a57e-4639-4e8f-ade9-a92f33afe7ee",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_2.2",
-          "Azure_Security_Benchmark_v1.0_2.4"
         ]
       },
       {
@@ -1298,15 +1300,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_3.5"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "aa81768c-cb87-4ce2-bfaa-00baa10d760c",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa81768c-cb87-4ce2-bfaa-00baa10d760c",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.9"
         ]
       },
       {
@@ -1377,15 +1370,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "b4d66858-c922-44e3-9566-5cdb7a7be744",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4d66858-c922-44e3-9566-5cdb7a7be744",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_10.4"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "b54ed75b-3e1a-44ac-a333-05ba39b99ff0",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b54ed75b-3e1a-44ac-a333-05ba39b99ff0",
         "parameters": {
@@ -1409,6 +1393,9 @@
         "parameters": {
           "listOfLocations": {
             "value": "[parameters('listOfRegionsWhereNetworkWatcherShouldBeEnabled')]"
+          },
+          "resourceGroupName": {
+            "value": "[parameters('NetworkWatcherResourceGroupName')]"
           }
         },
         "groupNames": [
@@ -1426,9 +1413,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "b821191b-3a12-44bc-9c38-212138a29ff3",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b821191b-3a12-44bc-9c38-212138a29ff3",
+        "policyDefinitionReferenceId": "3d2a3320-2a72-4c67-ac5f-caa40fbee2b2",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3d2a3320-2a72-4c67-ac5f-caa40fbee2b2",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "Members": {
             "value": "[parameters('listOfOnlyMembersInWindowsVMAdministratorsGroup')]"
           }
@@ -1444,15 +1434,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_1.1"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "bde62c94-ccca-4821-a815-92c1d31a76de",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bde62c94-ccca-4821-a815-92c1d31a76de",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.3"
         ]
       },
       {
@@ -1508,15 +1489,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_1.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "cc7cda28-f867-4311-8497-a526129a8d19",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cc7cda28-f867-4311-8497-a526129a8d19",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.3"
         ]
       },
       {
@@ -1684,15 +1656,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "f0473e7a-a1ba-4e86-afb2-e829e11b01d8",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f0473e7a-a1ba-4e86-afb2-e829e11b01d8",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.9"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "f0e6e85b-9b9f-4a4b-b67b-f730d42f1b0b",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f0e6e85b-9b9f-4a4b-b67b-f730d42f1b0b",
         "parameters": {
@@ -1714,18 +1677,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "f3b44e5d-1456-475f-9c67-c66c4618e85a",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f3b44e5d-1456-475f-9c67-c66c4618e85a",
+        "policyDefinitionReferenceId": "3ff60f98-7fa4-410a-9f7f-0b00f5afdbdd",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3ff60f98-7fa4-410a-9f7f-0b00f5afdbdd",
         "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "f56a3ab2-89d1-44de-ac0d-2ada5962e22a",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f56a3ab2-89d1-44de-ac0d-2ada5962e22a",
-        "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          }
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_1.11"
@@ -1778,48 +1735,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "fcbc55c9-f25a-4e55-a6cb-33acb3be778b",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fcbc55c9-f25a-4e55-a6cb-33acb3be778b",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_1.11"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "feedbf84-6b99-488c-acc2-71c829aa5ffc",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/feedbf84-6b99-488c-acc2-71c829aa5ffc",
         "parameters": {
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_5.5"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "10c1859c-e1a7-4df3-ab97-a487fa8059f6",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/10c1859c-e1a7-4df3-ab97-a487fa8059f6",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "843664e0-7563-41ee-a9cb-7522c382d2c4",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/843664e0-7563-41ee-a9cb-7522c382d2c4",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "c2e7ca55-f62c-49b2-89a4-d41eb661d2f0",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c2e7ca55-f62c-49b2-89a4-d41eb661d2f0",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.2"
         ]
       },
       {
@@ -1837,18 +1758,6 @@
       {
         "policyDefinitionReferenceId": "7261b898-8a84-4db8-9e04-18527132abb3",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7261b898-8a84-4db8-9e04-18527132abb3",
-        "parameters": {
-          "PHPLatestVersion": {
-            "value": "[parameters('PHPLatestVersion')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ab965db2-d2bf-4b64-8b39-c38ec8179461",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ab965db2-d2bf-4b64-8b39-c38ec8179461",
         "parameters": {
           "PHPLatestVersion": {
             "value": "[parameters('PHPLatestVersion')]"
@@ -1898,9 +1807,6 @@
         "policyDefinitionReferenceId": "7008174a-fd10-4ef0-817e-fc820a951d73",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7008174a-fd10-4ef0-817e-fc820a951d73",
         "parameters": {
-          "WindowsPythonLatestVersion": {
-            "value": "[parameters('WindowsPythonLatestVersion')]"
-          },
           "LinuxPythonLatestVersion": {
             "value": "[parameters('LinuxPythonLatestVersion')]"
           }
@@ -1913,9 +1819,6 @@
         "policyDefinitionReferenceId": "7238174a-fd10-4ef0-817e-fc820a951d73",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7238174a-fd10-4ef0-817e-fc820a951d73",
         "parameters": {
-          "WindowsPythonLatestVersion": {
-            "value": "[parameters('WindowsPythonLatestVersion')]"
-          },
           "LinuxPythonLatestVersion": {
             "value": "[parameters('LinuxPythonLatestVersion')]"
           }
@@ -1928,9 +1831,6 @@
         "policyDefinitionReferenceId": "74c3584d-afae-46f7-a20a-6f8adba71a16",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/74c3584d-afae-46f7-a20a-6f8adba71a16",
         "parameters": {
-          "WindowsPythonLatestVersion": {
-            "value": "[parameters('WindowsPythonLatestVersion')]"
-          },
           "LinuxPythonLatestVersion": {
             "value": "[parameters('LinuxPythonLatestVersion')]"
           }

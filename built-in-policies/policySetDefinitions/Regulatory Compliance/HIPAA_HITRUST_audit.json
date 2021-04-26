@@ -4,7 +4,7 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes audit and virtual machine extension deployment policies that address a subset of HITRUST/HIPAA controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/hipaa-blueprint.",
     "metadata": {
-      "version": "2.0.1",
+      "version": "5.1.0",
       "category": "Regulatory Compliance"
     },
     "policyDefinitionGroups": [
@@ -2302,6 +2302,18 @@
       }
     ],
     "parameters": {
+      "IncludeArcMachines": {
+        "type": "string",
+        "metadata": {
+            "displayName": "Include Arc connected servers for Guest Configuration policies",
+            "description": "Optionally choose to audit settings inside Arc connected servers using Guest Configuration policies. By selecting this option, you agree to be charged monthly per Arc connected machine."
+        },
+        "allowedValues": [
+            "true",
+            "false"
+        ],
+        "defaultValue": "false"
+      },
       "installedApplicationsOnWindowsVM": {
         "type": "string",
         "metadata": {
@@ -2446,7 +2458,7 @@
           "Microsoft.Network/virtualNetworkGateways"
         ],
         "metadata": {
-          "displayName": "List of resource types that should have diagnostic logs enabled",
+          "displayName": "List of resource types that should have resource logs enabled",
           "description": "Audit diagnostic setting for selected resource types"
         }
       },
@@ -2466,6 +2478,14 @@
           "strongType": "location"
         },
         "defaultValue": []
+      },
+      "NetworkWatcherResourceGroupName": {
+        "type": "String",
+        "defaultValue": "NetworkWatcherRG",
+        "metadata": {
+          "displayName": "NetworkWatcher resource group name",
+          "description": "Name of the resource group of NetworkWatcher, such as NetworkWatcherRG"
+        }
       },
       "members": {
         "type": "string",
@@ -2511,8 +2531,8 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Diagnostic logs in Batch accounts should be enabled",
-          "description": "Enable or disable the monitoring of diagnostic logs in Batch accounts"
+          "displayName": "Resource logs in Batch accounts should be enabled",
+          "description": "Enable or disable the monitoring of resource logs in Batch accounts"
         }
       },
       "diagnosticsLogsInBatchAccountRetentionDays": {
@@ -2520,7 +2540,7 @@
         "defaultValue": "365",
         "metadata": {
           "displayName": "Required retention (in days) for logs in Batch accounts",
-          "description": "The required diagnostic logs retention period in days"
+          "description": "The required resource logs retention period in days"
         }
       },
       "ensureManagedInstanceTDEIsEncryptedWithYourOwnKeyMonitoringEffect": {
@@ -2555,8 +2575,8 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Diagnostic logs in Search services should be enabled",
-          "description": "Enable or disable the monitoring of diagnostic logs in Azure Search service"
+          "displayName": "Resource logs in Search services should be enabled",
+          "description": "Enable or disable the monitoring of resource logs in Azure Search service"
         }
       },
       "diagnosticsLogsInSearchServiceRetentionDays": {
@@ -2564,7 +2584,7 @@
         "defaultValue": "365",
         "metadata": {
           "displayName": "Required retention (in days) of logs in Azure Search service",
-          "description": "The required diagnostic logs retention period in days"
+          "description": "The required resource logs retention period in days"
         }
       },
       "vulnerabilityAssessmentOnManagedInstanceMonitoringEffect": {
@@ -2581,14 +2601,15 @@
       },
       "vulnerabilityAssesmentMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Vulnerabilities should be remediated by a Vulnerability Assessment solution",
-          "description": "Enable or disable the detection of VM vulnerabilities by a vulnerability assessment solution"
+          "description": "Enable or disable the detection of VM vulnerabilities by a vulnerability assessment solution",
+		      "deprecated": true
         }
       },
       "EnableInsecureGuestLogons": {
@@ -2816,8 +2837,8 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Diagnostic logs in Event Hub should be enabled",
-          "description": "Enable or disable the monitoring of diagnostic logs in Event Hub accounts"
+          "displayName": "Resource logs in Event Hub should be enabled",
+          "description": "Enable or disable the monitoring of resource logs in Event Hub accounts"
         }
       },
       "diagnosticsLogsInEventHubRetentionDays": {
@@ -2825,7 +2846,7 @@
         "defaultValue": "365",
         "metadata": {
           "displayName": "Required retention (in days) of logs in Event Hub accounts",
-          "description": "The required diagnostic logs retention period in days"
+          "description": "The required resource logs retention period in days"
         }
       },
       "vmssSystemUpdatesMonitoringEffect": {
@@ -2848,8 +2869,8 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Diagnostic logs in Virtual Machine Scale Sets should be enabled",
-          "description": "Enable or disable the monitoring of diagnostic logs in Service Fabric"
+          "displayName": "Resource logs in Virtual Machine Scale Sets should be enabled",
+          "description": "Enable or disable the monitoring of resource logs in Service Fabric"
         }
       },
       "systemUpdatesMonitoringEffect": {
@@ -3050,8 +3071,7 @@
         "type": "string",
         "defaultValue": "365",
         "metadata": {
-          "displayName": "Required retention (in days) of logs in Data Lake Store accounts",
-          "description": "The required diagnostic logs retention period in days"
+          "displayName": "Required retention period (days) for resource logs"
         }
       },
       "diagnosticsLogsInRedisCacheMonitoringEffect": {
@@ -3339,9 +3359,28 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "Deploy_InstalledApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/12f7e5d0-42a7-4630-80d8-54fb7cff9bd6",
+        "policyDefinitionReferenceId": "Prerequisite_AddSystemIdentityWhenNone",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3cf2ab00-13f1-4d0c-8971-2ac904541a7e"
+      },
+      {
+        "policyDefinitionReferenceId": "Prerequisite_AddSystemIdentityWhenUser",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/497dff13-db2a-4c0f-8603-28fa3b331ab6"
+      },
+      {
+        "policyDefinitionReferenceId": "Prerequisite_DeployExtensionWindows",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/385f5831-96d4-41db-9a3c-cd3af78aaae6"
+      },
+      {
+        "policyDefinitionReferenceId": "Prerequisite_DeployExtensionLinux",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/331e8ea8-378a-410f-a2e5-ae22f38bb0da"
+      },
+      {
+        "policyDefinitionReferenceId": "InstalledApp",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb67efd-3c46-49b0-adfe-5599eb944998",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "installedApplication": {
             "value": "[parameters('installedApplicationsOnWindowsVM')]"
           }
@@ -3350,82 +3389,54 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "Audit_InstalledApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e393799-e3ca-4e43-a9a5-0ec4648a57d9",
-        "parameters": {},
-        "groupNames": [
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_SecurityOptionsAudit",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/21e2995e-683e-497a-9e81-2f42ad07050a",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-0605.10h1System.12-10.h"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_SecurityOptionsAudit",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/498b810c-59cd-4222-9338-352ba146ccf3",
+        "policyDefinitionReferenceId": "AzureBaseline_SecurityOptionsAudit",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/33936777-f2ac-45aa-82ec-07958ec9ade4",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "AuditShutDownSystemImmediatelyIfUnableToLogSecurityAudits": {
             "value": "[parameters('AuditShutDownSystemImmediatelyIfUnableToLogSecurityAudits')]"
           }
         },
         "groupNames": [
+            "hipaa-0605.10h1System.12-10.h"
         ]
       },
       {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_SystemAuditPoliciesAccountManagement",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/225e937e-d32e-4713-ab74-13ce95b3519a",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-0605.10h1System.12-10.h"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_SystemAuditPoliciesAccountManagement",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a9991e6-21be-49f9-8916-a06d934bcf29",
-        "parameters": {},
-        "groupNames": [
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_SystemAuditPoliciesDetailedTracking",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a9a33475-481d-4b81-9116-0bf02ffe67e8",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-0635.10k1Organizational.12-10.k",
-          "hipaa-0636.10k2Organizational.1-10.k",
-          "hipaa-0637.10k2Organizational.2-10.k",
-          "hipaa-0638.10k2Organizational.34569-10.k",
-          "hipaa-0639.10k2Organizational.78-10.k",
-          "hipaa-0640.10k2Organizational.1012-10.k",
-          "hipaa-0641.10k2Organizational.11-10.k",
-          "hipaa-0642.10k3Organizational.12-10.k",
-          "hipaa-0643.10k3Organizational.3-10.k",
-          "hipaa-0644.10k3Organizational.4-10.k"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_SystemAuditPoliciesDetailedTracking",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/42a07bbf-ffcf-459a-b4b1-30ecd118a505",
+        "policyDefinitionReferenceId": "AzureBaseline_SystemAuditPoliciesAccountManagement",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94d9aca8-3757-46df-aa51-f218c5f11954",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          }
+        },
+        "groupNames": [
+            "hipaa-0605.10h1System.12-10.h"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "AzureBaseline_SystemAuditPoliciesDetailedTracking",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/58383b73-94a9-4414-b382-4146eb02611b",
+        "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "AuditProcessTermination": {
             "value": "[parameters('DeployAzureBaselineSystemAuditPoliciesDetailedTrackingAuditProcessTermination')]"
           }
         },
         "groupNames": [
-          "hipaa-0635.10k1Organizational.12-10.k",
-          "hipaa-0636.10k2Organizational.1-10.k",
-          "hipaa-0637.10k2Organizational.2-10.k",
-          "hipaa-0638.10k2Organizational.34569-10.k",
-          "hipaa-0639.10k2Organizational.78-10.k",
-          "hipaa-0640.10k2Organizational.1012-10.k",
-          "hipaa-0641.10k2Organizational.11-10.k",
-          "hipaa-0642.10k3Organizational.12-10.k",
-          "hipaa-0643.10k3Organizational.3-10.k",
-          "hipaa-0644.10k3Organizational.4-10.k"
+            "hipaa-0635.10k1Organizational.12-10.k",
+            "hipaa-0636.10k2Organizational.1-10.k",
+            "hipaa-0637.10k2Organizational.2-10.k",
+            "hipaa-0638.10k2Organizational.34569-10.k",
+            "hipaa-0639.10k2Organizational.78-10.k",
+            "hipaa-0640.10k2Organizational.1012-10.k",
+            "hipaa-0641.10k2Organizational.11-10.k",
+            "hipaa-0642.10k3Organizational.12-10.k",
+            "hipaa-0643.10k3Organizational.3-10.k",
+            "hipaa-0644.10k3Organizational.4-10.k"
         ]
       },
       {
@@ -3467,44 +3478,24 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "vulnerabilityAssessmentMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/760a85ff-6162-42b3-8d70-698e268f648c",
+        "policyDefinitionReferenceId": "AzureBaseline_SecurityOptionsMicrosoftNetworkServer",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/caf2d518-f029-4f6b-833b-d7081702f253",
         "parameters": {
-          "effect": {
-            "value": "[parameters('vulnerabilityAssesmentMonitoringEffect')]"
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
           }
         },
         "groupNames": [
-          "hipaa-0709.10m1Organizational.1-10.m",
-          "hipaa-0712.10m2Organizational.4-10.m"
+            "hipaa-0709.10m1Organizational.1-10.m"
         ]
       },
       {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_SecurityOptionsMicrosoftNetworkServer",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6fe4ef56-7576-4dc4-8e9c-26bad4b087ce",
-        "parameters": {},
-        "groupNames": [
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_SecurityOptionsMicrosoftNetworkServer",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86880e5c-df35-43c5-95ad-7e120635775e",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-0709.10m1Organizational.1-10.m"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_AdministrativeTemplatesNetwork",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7229bd6a-693d-478a-87f0-1dc1af06f3b8",
-        "parameters": {},
-        "groupNames": [
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_AdministrativeTemplatesNetwork",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/985285b7-b97a-419c-8d48-c88cc934c8d8",
+        "policyDefinitionReferenceId": "AzureBaseline_AdministrativeTemplatesNetwork",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/67e010c1-640d-438e-a3a5-feaccb533a98",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "EnableInsecureGuestLogons": {
             "value": "[parameters('EnableInsecureGuestLogons')]"
           },
@@ -3527,17 +3518,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_WindowsFirewallProperties",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8bbd627e-4d25-4906-9a6e-3789780af3ec",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-0858.09m1Organizational.4-09.m"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_WindowsFirewallProperties",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/909c958d-1b99-4c74-b88f-46a5c5bc34f9",
+        "policyDefinitionReferenceId": "AzureBaseline_WindowsFirewallProperties",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/35d9882c-993d-44e6-87d2-db66ce21b636",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "WindowsFirewallDomainUseProfileSettings": {
             "value": "[parameters('WindowsFirewallDomainUseProfileSettings')]"
           },
@@ -3594,6 +3580,7 @@
           }
         },
         "groupNames": [
+            "hipaa-0858.09m1Organizational.4-09.m"
         ]
       },
       {
@@ -3687,17 +3674,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_SecurityOptionsNetworkAccess",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/30040dab-4e75-4456-8273-14b8f75d91d9",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-0861.09m2Organizational.67-09.m"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_SecurityOptionsNetworkAccess",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f56a3ab2-89d1-44de-ac0d-2ada5962e22a",
+        "policyDefinitionReferenceId": "AzureBaseline_SecurityOptionsNetworkAccess",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3ff60f98-7fa4-410a-9f7f-0b00f5afdbdd",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "NetworkAccessRemotelyAccessibleRegistryPaths": {
             "value": "[parameters('NetworkAccessRemotelyAccessibleRegistryPaths')]"
           },
@@ -3709,6 +3691,7 @@
           }
         },
         "groupNames": [
+            "hipaa-0861.09m2Organizational.67-09.m"
         ]
       },
       {
@@ -3725,16 +3708,13 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "PreviewAuditLinuxVMsThatDoNotHaveThePasswdFilePermissionsSetTo0644",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b18175dd-c599-4c64-83ba-bb018a06d35b",
-        "parameters": {},
-        "groupNames": [
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "PreviewDeployVMExtensionToAuditThatLinuxVMsHaveThePasswdFilePermissionsSeTTo0644",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f19aa1c1-6b91-4c27-ae6a-970279f03db9",
-        "parameters": {},
+        "policyDefinitionReferenceId": "PreviewAuditThatLinuxVMsHaveThePasswdFilePermissionsSeTTo0644",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e6955644-301c-44b5-a4c4-528577de6861",
+        "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          }
+        },
         "groupNames": [
         ]
       },
@@ -3748,16 +3728,11 @@
       },
       {
         "policyDefinitionReferenceId": "Audit_WindowsCertificateInTrustedRoot",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f3b9ad83-000d-4dc1-bff0-6d54533dd03f",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-0944.09y1Organizational.2-09.y"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_WindowsCertificateInTrustedRoot",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/106ccbe4-a791-4f33-a44a-06796944b8d5",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/934345e1-4dfb-4c70-90d7-41990dc9608b",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "CertificateThumbprints": {
             "value": "[parameters('CertificateThumbprints')]"
           }
@@ -3785,17 +3760,13 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "PreviewAuditWindowsVMsThatDoNotHaveThePasswordComplexitySettingEnabled",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f48b2913-1dc5-4834-8c72-ccc1dfd819bb",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-1002.01d1System.1-01.d"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "PreviewDeployVmExtensionToAuditWindowsVmEnforcesPasswordComplexityRequirements",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7ed40801-8a0f-4ceb-85c0-9fd25c1d61a8",
-        "parameters": {},
+        "policyDefinitionReferenceId": "PreviewAuditWindowsVmEnforcesPasswordComplexityRequirements",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bf16e0bb-31e1-4646-8202-60a235cc7e74",
+        "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          }
+        },
         "groupNames": [
         ]
       },
@@ -3861,22 +3832,18 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_SecurityOptionsAccounts",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b872a447-cc6f-43b9-bccf-45703cd81607",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-1148.01c2System.78-01.c"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_SecurityOptionsAccounts",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e5b81f87-9185-4224-bf00-9f505e9f89f3",
+        "policyDefinitionReferenceId": "AzureBaseline_SecurityOptionsAccounts",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ee984370-154a-4ee8-9726-19d900e56fc0",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "AccountsGuestAccountStatus": {
             "value": "[parameters('DeployAzureBaselineSecurityOptionsAccountsAccountsGuestAccountStatus')]"
           }
         },
         "groupNames": [
+            "hipaa-1148.01c2System.78-01.c"
         ]
       },
       {
@@ -3948,22 +3915,18 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "Audit_AzureBaseline_SecurityOptionsRecoveryconsole",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ba12366f-f9a6-42b8-9d98-157d0b1a837b",
-        "groupNames": [
-          "hipaa-1637.12b2Organizational.2-12.b"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "Deploy_AzureBaseline_SecurityOptionsRecoveryconsole",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ddc0a4d5-5e08-43d5-9fd9-b586d8d7116b",
+        "policyDefinitionReferenceId": "AzureBaseline_SecurityOptionsRecoveryconsole",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f71be03e-e25b-4d0f-b8bc-9b3e309b66c0",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "RecoveryConsoleAllowFloppyCopyAndAccessToAllDrivesAndAllFolders": {
             "value": "[parameters('RecoveryConsoleAllowFloppyCopyAndAccessToAllDrivesAndAllFolders')]"
           }
         },
         "groupNames": [
-          "hipaa-1636.12b2Organizational.1-12.b"
+            "hipaa-1637.12b2Organizational.2-12.b"
         ]
       },
       {
@@ -4067,15 +4030,19 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "deployPrerequisitesToAuditWindowsVMsInWhichTheAdministratorsGroupContainsAnyOfTheSpecifiedMembers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/144f1397-32f9-4598-8c88-118decc3ccba",
+        "policyDefinitionReferenceId": "AuditWindowsVMsInWhichTheAdministratorsGroupContainsAnyOfTheSpecifiedMembers",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/69bf4abd-ca1e-4cf6-8b5a-762d42e61d4f",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "membersToExclude": {
             "value": "[parameters('membersToExclude')]"
           }
         },
         "groupNames": [
-          "hipaa-11209.01q2Organizational.9-01.q"
+          "hipaa-11210.01q2Organizational.10-01.q",
+          "hipaa-1125.01q2System.1-01.q"
         ]
       },
       {
@@ -4122,14 +4089,6 @@
         "parameters": {},
         "groupNames": [
           "hipaa-0201.09j1Organizational.124-09.j"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "auditAzureBaselineSecurityOptionsUserAccountControl",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/29829ec2-489d-4925-81b7-bda06b1718e0",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-1277.09c2Organizational.4-09.c"
         ]
       },
       {
@@ -4298,9 +4257,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "deployWindowsLogAnalyticsAgentConnection",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/68511db2-bd02-41c4-ae6b-1900a012968a",
+        "policyDefinitionReferenceId": "auditWindowsLogAnalyticsAgentConnection",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6265018c-d7e2-432f-a75d-094d5f6f4465",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "workspaceId": {
             "value": "[parameters('workspaceId')]"
           }
@@ -4337,9 +4299,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "deployAzureBaselineUserRightsAssignment",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/815dcc9f-6662-43f2-9a03-1b83e9876f24",
+        "policyDefinitionReferenceId": "AzureBaselineUserRightsAssignment",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e068b215-0026-4354-b347-8fb2766f73a2",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "usersOrGroupsThatMayAccessThisComputerFromTheNetwork": {
             "value": "[parameters('usersOrGroupsThatMayAccessThisComputerFromTheNetwork')]"
           },
@@ -4393,8 +4358,7 @@
           }
         },
         "groupNames": [
-          "hipaa-1231.09c2Organizational.23-09.c",
-          "hipaa-1279.09c3Organizational.4-09.c"
+            "hipaa-1232.09c3Organizational.12-09.c"
         ]
       },
       {
@@ -4420,9 +4384,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "deployPrerequisitesToAuditWindowsVMsInWhichTheAdministratorsGroupDoesNotContainAllOfTheSpecifiedMembers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/93507a81-10a4-4af0-9ee2-34cf25a96e98",
+        "policyDefinitionReferenceId": "TheAdministratorsGroupDoesNotContainAllOfTheSpecifiedMembers",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/30f71ea1-ac77-4f26-9fc5-2d926bbd4ba7",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "membersToInclude": {
             "value": "[parameters('membersToInclude')]"
           }
@@ -4430,16 +4397,6 @@
         "groupNames": [
           "hipaa-11211.01q2Organizational.11-01.q",
           "hipaa-1127.01q2System.3-01.q"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "auditWindowsVMsOnWhichTheLogAnalyticsAgentIsNotConnectedAsExpected",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a030a57e-4639-4e8f-ade9-a92f33afe7ee",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-12103.09ab1Organizational.5-09.ab",
-          "hipaa-1218.09ab3System.47-09.ab",
-          "hipaa-1222.09ab3System.8-09.ab"
         ]
       },
       {
@@ -4507,6 +4464,9 @@
         "parameters": {
           "listOfLocations": {
             "value": "[parameters('listOfLocations')]"
+          },
+          "resourceGroupName": {
+            "value": "[parameters('NetworkWatcherResourceGroupName')]"
           }
         },
         "groupNames": [
@@ -4516,9 +4476,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "deployPrerequisitesToAuditWindowsVMsInWhichTheAdministratorsGroupDoesNotContainOnlyTheSpecifiedMembers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b821191b-3a12-44bc-9c38-212138a29ff3",
+        "policyDefinitionReferenceId": "AuditWindowsVMsInWhichTheAdministratorsGroupDoesNotContainOnlyTheSpecifiedMembers",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3d2a3320-2a72-4c67-ac5f-caa40fbee2b2",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "members": {
             "value": "[parameters('members')]"
           }
@@ -4538,15 +4501,6 @@
         "groupNames": [
           "hipaa-1270.09ad1System.12-09.ad",
           "hipaa-1271.09ad1System.1-09.ad"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "auditThatTheAdministratorsGroupInsideWindowsVMsExcludesTheSpecifiedMembers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bde62c94-ccca-4821-a815-92c1d31a76de",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-11210.01q2Organizational.10-01.q",
-          "hipaa-1125.01q2System.1-01.q"
         ]
       },
       {
@@ -4581,22 +4535,6 @@
         },
         "groupNames": [
           "hipaa-1210.09aa3System.3-09.aa"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "auditAzureBaselineUserRightsAssignment",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c961dac9-5916-42e8-8fb1-703148323994",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-1232.09c3Organizational.12-09.c"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "showAuditResultsFromWindowsVMsInWhichTheAdministratorsGroupDoesNotContainOnlyTheSpecifiedMembers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cc7cda28-f867-4311-8497-a526129a8d19",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-1124.01q1System.34-01.q"
         ]
       },
       {
@@ -4701,9 +4639,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "deployAzureBaselineSecurityOptionsUserAccountControl",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e425e402-a050-45e5-b010-bd3f934589fc",
+        "policyDefinitionReferenceId": "AzureBaselineSecurityOptionsUserAccountControl",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/492a29ed-d143-4f03-b6a4-705ce081b463",
         "parameters": {
+          "IncludeArcMachines": {
+            "value": "[parameters('IncludeArcMachines')]"
+          },
           "uacAdminApprovalModeForTheBuiltinAdministratorAccount": {
             "value": "[parameters('uacAdminApprovalModeForTheBuiltinAdministratorAccount')]"
           },
@@ -4718,7 +4659,7 @@
           }
         },
         "groupNames": [
-          "hipaa-1233.09c3Organizational.3-09.c"
+          "hipaa-1277.09c2Organizational.4-09.c"
         ]
       },
       {
@@ -4810,15 +4751,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "auditThatTheAdministratorsGroupInsideWindowsVMsIncludesTheSpecifiedMembers",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f3b44e5d-1456-475f-9c67-c66c4618e85a",
-        "parameters": {},
-        "groupNames": [
-          "hipaa-1122.01q1System.1-01.q",
-          "hipaa-1128.01q2System.5-01.q"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "networkSecurityGroupsOnVirtualMachinesMonitoring",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6de0be7-9a8a-4b8a-b349-43cf02d22f7c",
         "parameters": {},
@@ -4885,6 +4817,26 @@
         "groupNames": [
           "hipaa-0709.10m1Organizational.1-10.m",
           "hipaa-0716.10m3Organizational.1-10.m"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "diagnosticsLogsInManagedHsmMonitoring",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a2a5b911-5617-447e-a49e-59dbe0e0434b",
+        "parameters": {
+          "requiredRetentionDays": {
+            "value": "[parameters('requiredRetentionDays')]"
+          }
+        },
+        "groupNames": [
+          "hipaa-1211.09aa3System.4-09.aa"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "managedHsmObjectsShouldBeRecoverable",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c39ba22d-4428-4149-b981-70acb31fc383",
+        "parameters": {},
+        "groupNames": [
+          "hipaa-1635.12b1Organizational.2-12.b"
         ]
       }
     ]

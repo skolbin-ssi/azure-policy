@@ -1,11 +1,11 @@
 {
   "properties": {
-    "displayName": "Azure Security Benchmark",
+    "displayName": "Azure Security Benchmark v1",
     "policyType": "BuiltIn",
-    "description": "This initiative includes audit and virtual machine extension deployment policies that address a subset of Azure Security Benchmark recommendations. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/azsecbm.",
+    "description": "This initiative has been deprecated. The Azure Security Benchmark initiative now represents the Azure Security Benchmark v2 controls, and serves as the Azure Security Center default policy initiative. Please assign that initiative, or manage its policies and compliance results within Azure Security Center.",
     "metadata": {
-      "version": "5.0.0-preview",
-      "preview": true,
+      "version": "7.0.2-deprecated",
+      "deprecated": true,
       "category": "Regulatory Compliance"
     },
     "policyDefinitionGroups": [
@@ -435,6 +435,14 @@
           "westus2"
         ]
       },
+      "NetworkWatcherResourceGroupName": {
+        "type": "String",
+        "defaultValue": "NetworkWatcherRG",
+        "metadata": {
+          "displayName": "NetworkWatcher resource group name",
+          "description": "Name of the resource group of NetworkWatcher, such as NetworkWatcherRG"
+        }
+      },
       "approvedVirtualNetworkForVMs": {
         "type": "String",
         "metadata": {
@@ -461,7 +469,7 @@
       "listOfResourceTypesWithDiagnosticLogsEnabled": {
         "type": "Array",
         "metadata": {
-          "displayName": "List of resource types that should have diagnostic logs enabled",
+          "displayName": "List of resource types that should have resource logs enabled",
           "description": "Audit diagnostic setting for selected resource types"
         },
         "defaultValue": [
@@ -581,7 +589,8 @@
         "type": "String",
         "metadata": {
           "displayName": "Latest Windows Python version",
-          "description": "Latest supported Python version for App Services"
+          "description": "Latest supported Python version for App Services",
+          "deprecated": true
         },
         "defaultValue": "3.6"
       },
@@ -883,16 +892,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "3abeb944-26af-43ee-b83d-32aaf060fb94",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3abeb944-26af-43ee-b83d-32aaf060fb94",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_7.3",
-          "Azure_Security_Benchmark_v1.0_7.9"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
         "parameters": {
@@ -1093,15 +1092,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "760a85ff-6162-42b3-8d70-698e268f648c",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/760a85ff-6162-42b3-8d70-698e268f648c",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.5"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "7c1b1214-f927-48bf-8882-84f0af6588b1",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7c1b1214-f927-48bf-8882-84f0af6588b1",
         "parameters": {
@@ -1157,15 +1147,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v1.0_5.2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "86d97760-d216-4d81-a3ad-163087b2b6c3",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86d97760-d216-4d81-a3ad-163087b2b6c3",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.9"
         ]
       },
       {
@@ -1273,15 +1254,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "aa81768c-cb87-4ce2-bfaa-00baa10d760c",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa81768c-cb87-4ce2-bfaa-00baa10d760c",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.9"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "abfb4388-5bf4-4ad7-ba82-2cd2f41ceae9",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abfb4388-5bf4-4ad7-ba82-2cd2f41ceae9",
         "parameters": {
@@ -1349,15 +1321,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "b4d66858-c922-44e3-9566-5cdb7a7be744",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4d66858-c922-44e3-9566-5cdb7a7be744",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_10.4"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "b54ed75b-3e1a-44ac-a333-05ba39b99ff0",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b54ed75b-3e1a-44ac-a333-05ba39b99ff0",
         "parameters": {
@@ -1381,6 +1344,9 @@
         "parameters": {
           "listOfLocations": {
             "value": "[parameters('listOfRegionsWhereNetworkWatcherShouldBeEnabled')]"
+          },
+          "resourceGroupName": {
+            "value": "[parameters('NetworkWatcherResourceGroupName')]"
           }
         },
         "groupNames": [
@@ -1656,15 +1622,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "f0473e7a-a1ba-4e86-afb2-e829e11b01d8",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f0473e7a-a1ba-4e86-afb2-e829e11b01d8",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_3.9"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "f0e6e85b-9b9f-4a4b-b67b-f730d42f1b0b",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f0e6e85b-9b9f-4a4b-b67b-f730d42f1b0b",
         "parameters": {
@@ -1768,33 +1725,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "10c1859c-e1a7-4df3-ab97-a487fa8059f6",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/10c1859c-e1a7-4df3-ab97-a487fa8059f6",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "843664e0-7563-41ee-a9cb-7522c382d2c4",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/843664e0-7563-41ee-a9cb-7522c382d2c4",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "c2e7ca55-f62c-49b2-89a4-d41eb661d2f0",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c2e7ca55-f62c-49b2-89a4-d41eb661d2f0",
-        "parameters": {
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.2"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "1bc1795e-d44a-4d48-9b3b-6fff0fd5f9ba",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1bc1795e-d44a-4d48-9b3b-6fff0fd5f9ba",
         "parameters": {
@@ -1809,18 +1739,6 @@
       {
         "policyDefinitionReferenceId": "7261b898-8a84-4db8-9e04-18527132abb3",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7261b898-8a84-4db8-9e04-18527132abb3",
-        "parameters": {
-          "PHPLatestVersion": {
-            "value": "[parameters('PHPLatestVersion')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v1.0_5.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ab965db2-d2bf-4b64-8b39-c38ec8179461",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ab965db2-d2bf-4b64-8b39-c38ec8179461",
         "parameters": {
           "PHPLatestVersion": {
             "value": "[parameters('PHPLatestVersion')]"
@@ -1870,9 +1788,6 @@
         "policyDefinitionReferenceId": "7008174a-fd10-4ef0-817e-fc820a951d73",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7008174a-fd10-4ef0-817e-fc820a951d73",
         "parameters": {
-          "WindowsPythonLatestVersion": {
-            "value": "[parameters('WindowsPythonLatestVersion')]"
-          },
           "LinuxPythonLatestVersion": {
             "value": "[parameters('LinuxPythonLatestVersion')]"
           }
@@ -1885,9 +1800,6 @@
         "policyDefinitionReferenceId": "7238174a-fd10-4ef0-817e-fc820a951d73",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7238174a-fd10-4ef0-817e-fc820a951d73",
         "parameters": {
-          "WindowsPythonLatestVersion": {
-            "value": "[parameters('WindowsPythonLatestVersion')]"
-          },
           "LinuxPythonLatestVersion": {
             "value": "[parameters('LinuxPythonLatestVersion')]"
           }
@@ -1900,9 +1812,6 @@
         "policyDefinitionReferenceId": "74c3584d-afae-46f7-a20a-6f8adba71a16",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/74c3584d-afae-46f7-a20a-6f8adba71a16",
         "parameters": {
-          "WindowsPythonLatestVersion": {
-            "value": "[parameters('WindowsPythonLatestVersion')]"
-          },
           "LinuxPythonLatestVersion": {
             "value": "[parameters('LinuxPythonLatestVersion')]"
           }
