@@ -113,14 +113,14 @@ Currently, there is no plan to change this behavior for the above Microsoft.Web 
 - Microsoft.Sql 'master' database 
    - This type behaves similarly to Microsoft.Sql/servers/auditingSettings. Compliance of some fields cannot be determined except in `AuditIfNotExists` and `DeployIfNotExists` policies.
 - Microsoft.Compute/virtualMachines/instanceView
+  - Collection query of this type is missing many properties, which means compliance checks may not work.
+- Microsoft.Network/virtualNetworks/subnets
+  - The routeTable property of this type is populated differently when queried than when created or updated unless non-standard parameters are provided. This means deny policies will work, but compliance audits will generally not be correct.
 
-The potential for fixing these resource types is still under investigation.
 
 ### Resource Type not correctly published by resource provider
 
-In some cases, a resource provider may implement a resource type, but not correctly publish it to the Azure Resource Manager. The result of this is that Azure Policy is unable to discover the type in order to determine compliance. In some cases, this still allows deny policies to work, but compliance results will usually be incorrect. These resource types exhibit this behavior:
-
-- Microsoft.Storage/storageAccounts/blobServices
+In some cases, a resource provider may implement a resource type, but not correctly publish it to the Azure Resource Manager. The result of this is that Azure Policy is unable to discover the type in order to determine compliance. In some cases, this still allows deny policies to work, but compliance results will usually be incorrect. Currently, all resource types known to have this behavior have been corrected.
 
 These resource types previously exhibited this behavior, but are now removed:
 
@@ -135,6 +135,7 @@ These resource types previously exhibited this behavior but have been fixed:
 - Microsoft.ServiceBus/namespaces/networkrulesets
 - Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies
 - Microsoft.ApiManagement/service/portalsettings/delegation
+- Microsoft.Storage/storageAccounts/blobServices
 
 ### Resource management that bypasses Azure Resource Manager
 
@@ -163,6 +164,11 @@ In a few instances, the creation pattern of a resource type doesn't follow norma
 - Microsoft.Security/securityContacts
 
 There is currently no plan to change this behavior for these types. If this scenario is important to you, please [open a support ticket](https://azure.microsoft.com/support/create-ticket/) with the Azure SQL or Automation team.
+
+### Nonstandard update pattern through Azure Portal
+In some cases, a resource provider can choose not to follow normal REST patterns when a resource is updated via the portal. In these cases, a partial PUT request is done instead of a PATCH request causing the policy engine to evaluate as if some properties do not have values. 
+
+- Microsoft.Web/sites 
 
 ### Provider pass-through to non Azure Resource Manager resources
 
@@ -197,9 +203,13 @@ Using this type of alias in the existence condition of auditIfNotExists or deplo
 
 Using this type of alias in audit/deny/append effect policies works partially. The compliance scan result will be correct for existing resources. However, when creating/updating the resource, there will be no audit events for audit effect policies and no deny or append behaviors for deny/append effect policies because of the missing property in the request payload.
 
--Microsoft.Databricks/* (Creation time only)
+- Microsoft.Databricks/* (Creation time only)
 
-All Databricks resources bypass policy enforcement at creation time. Databricks resources will have policy enforcement post-creation. To provide feedback on this, please leverage the [Databricks UserVoice] (https://feedback.azure.com/forums/909463-azure-databricks). 
+All Databricks resources bypass policy enforcement at creation time. Databricks resources will have policy enforcement post-creation. To provide feedback on this, please leverage the [Databricks UserVoice](https://feedback.azure.com/forums/909463-azure-databricks). 
+
+### Resources that are exempt from policy evaluation
+
+- Microsoft.Resources/deployments
 
 ### Resource types that exceed current enforcement and compliance scale
 

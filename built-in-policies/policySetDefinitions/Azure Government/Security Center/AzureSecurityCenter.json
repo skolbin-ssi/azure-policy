@@ -4,7 +4,7 @@
     "policyType": "BuiltIn",
     "description": "The Azure Security Benchmark initiative represents the policies and controls implementing security recommendations defined in Azure Security Benchmark v2, see https://aka.ms/azsecbm. This also serves as the Azure Security Center default policy initiative. You can directly assign this initiative, or manage its policies and compliance results within Azure Security Center.",
     "metadata": {
-      "version": "23.2.0",
+      "version": "27.1.1",
       "category": "Security Center"
     },
     "policyDefinitionGroups": [
@@ -289,7 +289,6 @@
         "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-8"
       }
     ],
-
     "parameters": {
       "useServicePrincipalToProtectSubscriptionsMonitoringEffect": {
         "type": "string",
@@ -305,14 +304,15 @@
       },
       "updateOsVersionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Operating system version should be the most current version for your cloud service roles",
-          "description": "Keeping the operating system (OS) on the most recent supported version for your cloud service roles enhances the systems security posture."
+          "description": "Keeping the operating system (OS) on the most recent supported version for your cloud service roles enhances the systems security posture.",
+          "deprecated": true
         }
       },
       "resolveLogAnalyticsHealthIssuesMonitoringEffect": {
@@ -387,6 +387,18 @@
           "description": "Enable or disable virtual machine scale sets reporting of system updates"
         }
       },
+      "AzureDefenderForResourceManagerShouldBeEnabledMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Defender for Resource Manager should be enabled",
+          "description": "Azure Defender for Resource Manager automatically monitors the resource management operations in your organization. Azure Defender detects threats and alerts you about suspicious activity. Learn more about the capabilities of Azure Defender for Resource Manager at https://aka.ms/defender-for-resource-manager . Enabling this Azure Defender plan results in charges. Learn about the pricing details per region on Security Center's pricing page: https://aka.ms/pricing-security-center ."
+        }
+      },
       "vmssEndpointProtectionMonitoringEffect": {
         "type": "string",
         "defaultValue": "AuditIfNotExists",
@@ -455,7 +467,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Disk encryption should be applied on virtual machines",
+          "displayName": "Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources",
           "description": "Enable or disable the monitoring for VM disk encryption"
         }
       },
@@ -684,14 +696,15 @@
       },
       "kubernetesServiceVersionUpToDateMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Kubernetes Services should be upgraded to a non vulnerable Kubernetes version",
-          "description": "Enable or disable the monitoring of the Kubernetes Services with versions that contain known vulnerabilities"
+          "description": "Enable or disable the monitoring of the Kubernetes Services with versions that contain known vulnerabilities",
+          "deprecated": true
         }
       },
       "diagnosticsLogsInAppServiceMonitoringEffect": {
@@ -1102,8 +1115,8 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Vulnerabilities on your SQL databases should be remediated",
-          "description": "Enable or disable the monitoring of Vulnerability Assessment scan results and recommendations for how to remediate database vulnerabilities."
+          "displayName": "SQL databases should have vulnerability findings resolved",
+          "description": "Enable or disable the monitoring of vulnerability assessment scan results and recommendations for how to remediate database vulnerabilities."
         }
       },
       "serverSqlDbVulnerabilityAssesmentMonitoringEffect": {
@@ -1114,7 +1127,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Vulnerabilities on your SQL servers on machine should be remediated",
+          "displayName": "SQL servers on machines should have vulnerability findings resolved",
           "description": "SQL Vulnerability assessment scans your database for security vulnerabilities, and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data. Resolving the vulnerabilities found can greatly improve your database security posture."
         }
       },
@@ -1552,7 +1565,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Advanced data security should be enabled on SQL Managed Instance",
+          "displayName": "Azure Defender for SQL should be enabled for unprotected SQL Managed Instances",
           "description": "Enable or disable the monitoring of each SQL Managed Instance without advanced data security."
         }
       },
@@ -2245,7 +2258,7 @@
       },
       "cognitiveServicesAccountsShouldEnableDataEncryptionWithACustomerManagedKeyMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
@@ -2258,7 +2271,7 @@
       },
       "azureCosmosDbAccountsShouldUseCustomerManagedKeysToEncryptDataAtRestMonitoringEffect": {
         "type": "string",
-        "defaultValue": "audit",
+        "defaultValue": "disabled",
         "allowedValues": [
           "audit",
           "deny",
@@ -2310,7 +2323,7 @@
       },
       "storageAccountsShouldUseCustomerManagedKeyForEncryptionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Disabled"
@@ -2335,7 +2348,7 @@
       },
       "containerRegistriesShouldBeEncryptedWithACustomerManagedKeyMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
@@ -2420,7 +2433,7 @@
       },
       "azureMachineLearningWorkspacesShouldBeEncryptedWithACustomerManagedKeyMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
@@ -2983,6 +2996,18 @@
           "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers running as root users. To list multiple namespaces, use semicolons (;) to separate them."
         }
       },
+      "arcEnabledKubernetesClustersShouldHaveAzureDefendersExtensionInstalled": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Arc enabled Kubernetes clusters should have Azure Defender's extension installed",
+          "description": "Enable or disable the monitoring of Arc enabled Kubernetes clusters without Azure Defender's extension installed"
+        }
+      },
       "MustRunAsNonRootNamespaceEffect": {
         "type": "string",
         "defaultValue": "audit",
@@ -3174,7 +3199,8 @@
         "metadata": {
           "displayName": "List of regions where Network Watcher should be enabled",
           "description": "To see a complete list of regions, run the PowerShell command Get-AzLocation",
-          "strongType": "location"
+          "strongType": "location",
+          "deprecated": true
         }
       },
       "networkWatcherShouldBeEnabledResourceGroupName": {
@@ -3183,6 +3209,45 @@
         "metadata": {
           "displayName": "Name of the resource group for Network Watcher",
           "description": "Name of the resource group where Network Watchers are located"
+        }
+      },
+      "KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "audit",
+        "allowedValues": [
+          "audit",
+          "deny",
+          "disabled"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes clusters should not use the default namespace",
+          "description": "Prevent usage of the default namespace in Kubernetes clusters to protect against unauthorized access for ConfigMap, Pod, Secret, Service, and ServiceAccount resource types. For more information, see https://aka.ms/kubepolicydoc."
+        }
+      },
+      "KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "audit",
+        "allowedValues": [
+          "audit",
+          "deny",
+          "disabled"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes clusters should disable automounting API credentials",
+          "description": "Disable automounting API credentials to prevent a potentially compromised Pod resource to run API commands against Kubernetes clusters. For more information, see https://aka.ms/kubepolicydoc."
+        }
+      },
+      "KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "audit",
+        "allowedValues": [
+          "audit",
+          "deny",
+          "disabled"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes clusters should not grant CAPSYSADMIN security capabilities",
+          "description": "To reduce the attack surface of your containers, restrict CAP_SYS_ADMIN Linux capabilities. For more information, see https://aka.ms/kubepolicydoc."
         }
       }
     },
@@ -3197,18 +3262,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v2.0_IM-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5a913c68-0590-402c-a531-e57e19379da3",
-        "policyDefinitionReferenceId": "updateOsVersionMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('updateOsVersionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
         ]
       },
       {
@@ -3910,6 +3963,21 @@
         ]
       },
       {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3d20c29-b36d-48fe-808b-99a87530ad99",
+        "policyDefinitionReferenceId": "AzureDefenderForResourceManagerShouldBeEnabledMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('AzureDefenderForResourceManagerShouldBeEnabledMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_LT-1",
+          "Azure_Security_Benchmark_v2.0_LT-2",
+          "Azure_Security_Benchmark_v2.0_IR-3",
+          "Azure_Security_Benchmark_v2.0_IR-5"
+        ]
+      },
+      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0e60b895-3786-45da-8377-9c6b4b6ac5f9",
         "policyDefinitionReferenceId": "functionAppDisableRemoteDebuggingMonitoring",
         "parameters": {
@@ -4081,18 +4149,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v2.0_PA-7"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fb893a29-21bb-418c-a157-e99480ec364c",
-        "policyDefinitionReferenceId": "kubernetesServiceVersionUpToDateMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('kubernetesServiceVersionUpToDateMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
         ]
       },
       {
@@ -4976,6 +5032,19 @@
         ]
       },
       {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8dfab9c4-fe7b-49ad-85e4-1e9be085358f",
+        "policyDefinitionReferenceId": "arcEnabledKubernetesClustersShouldHaveAzureDefendersExtensionInstalled",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('arcEnabledKubernetesClustersShouldHaveAzureDefendersExtensionInstalled')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_LT-1",
+          "Azure_Security_Benchmark_v2.0_LT-2"
+        ]
+      },
+      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c6e92c9-99f0-4e55-9cf2-0c234dc48f99",
         "policyDefinitionReferenceId": "NoPrivilegeEscalationInKubernetesCluster",
         "parameters": {
@@ -5215,15 +5284,48 @@
           "effect": {
             "value": "[parameters('networkWatcherShouldBeEnabledMonitoringEffect')]"
           },
-          "listOfLocations": {
-            "value": "[parameters('networkWatcherShouldBeEnabledListOfLocations')]"
-          },
           "resourceGroupName": {
             "value": "[parameters('networkWatcherShouldBeEnabledResourceGroupName')]"
           }
         },
         "groupNames": [
           "Azure_Security_Benchmark_v2.0_LT-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9f061a12-e40d-4183-a00e-171812443373",
+        "policyDefinitionReferenceId": "KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/423dd1ba-798e-40e4-9c4d-b6902674b423",
+        "policyDefinitionReferenceId": "KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d2e7ea85-6b44-4317-a0be-1b951587f626",
+        "policyDefinitionReferenceId": "KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-2"
         ]
       }
     ]

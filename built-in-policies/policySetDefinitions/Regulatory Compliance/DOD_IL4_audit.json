@@ -1,10 +1,10 @@
 {
   "properties": {
-    "displayName": "DOD Impact Level 4",
+    "displayName": "DoD Impact Level 4",
     "policyType": "BuiltIn",
-    "description": "This initiative includes audit and virtual machine extension deployment policies that address a subset of DOD Impact Level 4 (IL4) controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/dodil4-blueprint.",
+    "description": "This initiative includes policies that address a subset of DoD Impact Level 4 (IL4) controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/dodil4-initiative.",
     "metadata": {
-      "version": "6.0.1-deprecated",
+      "version": "6.1.1-deprecated",
       "category": "Regulatory Compliance",
       "deprecated": true
     },
@@ -12,8 +12,8 @@
       "IncludeArcMachines": {
         "type": "string",
         "metadata": {
-            "displayName": "Include Arc connected servers for Guest Configuration policies",
-            "description": "Optionally choose to audit settings inside Arc connected servers using Guest Configuration policies. By selecting this option, you agree to be charged monthly per Arc connected machine."
+          "displayName": "Include Arc-connected servers when evaluating guest configuration policies",
+          "description": "By selecting 'true,' you agree to be charged monthly per Arc connected machine; for more information, visit https://aka.ms/policy-pricing"
         },
         "allowedValues": [
             "true",
@@ -159,7 +159,8 @@
         "metadata": {
           "displayName": "List of regions where Network Watcher should be enabled",
           "description": "To see a complete list of regions use Get-AzLocation",
-          "strongType": "location"
+          "strongType": "location",
+          "deprecated": true
         },
         "defaultValue": [
           "eastus"
@@ -171,7 +172,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Vulnerability assessment should be enabled on SQL Managed Instance",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "vulnerabilityAssessmentOnServerMonitoringEffect": {
@@ -180,7 +181,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Vulnerability assessment should be enabled on your SQL servers",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "vulnerabilityAssessmentOnVirtualMachinesEffect": {
@@ -198,7 +199,7 @@
         "allowedValues": [ "Audit", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Geo-redundant storage should be enabled for Storage Accounts",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "geoRedundancyEnabledForAzureDatabaseForMariaDBEffect": {
@@ -216,7 +217,7 @@
         "allowedValues": [ "Audit", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Geo-redundant backup should be enabled for Azure Database for MySQL",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "geoRedundancyEnabledForAzureDatabaseForPostgreSQLEffect": {
@@ -225,7 +226,7 @@
         "allowedValues": [ "Audit", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Geo-redundant backup should be enabled for Azure Database for PostgreSQL",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "adaptiveNetworkHardeningsMonitoringEffect": {
@@ -243,7 +244,7 @@
         "allowedValues": [ "Audit", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Web Application should only be accessible over HTTPS",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "functionAppEnforceHttpsMonitoringEffect": {
@@ -252,7 +253,7 @@
         "allowedValues": [ "Audit", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Function App should only be accessible over HTTPS",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "identityRemoveExternalAccountWithWritePermissionsMonitoringEffect": {
@@ -261,7 +262,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: External accounts with write permissions should be removed from your subscription",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "identityRemoveExternalAccountWithReadPermissionsMonitoringEffect": {
@@ -270,7 +271,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: External accounts with read permissions should be removed from your subscription",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "identityRemoveExternalAccountWithOwnerPermissionsMonitoringEffect": {
@@ -279,7 +280,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: External accounts with owner permissions should be removed from your subscription",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoringEffect": {
@@ -288,7 +289,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Deprecated accounts with owner permissions should be removed from your subscription",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "identityRemoveDeprecatedAccountMonitoringEffect": {
@@ -297,7 +298,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Deprecated accounts should be removed from your subscription",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "webAppRestrictCORSAccessMonitoringEffect": {
@@ -306,7 +307,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: CORS should not allow every resource to access your Web Applications",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "vmssSystemUpdatesMonitoringEffect": {
@@ -315,7 +316,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: System updates on virtual machine scale sets should be installed",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "identityEnableMFAForReadPermissionsMonitoringEffect": {
@@ -324,7 +325,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: MFA should be enabled on accounts with read permissions on your subscription",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "identityEnableMFAForOwnerPermissionsMonitoringEffect": {
@@ -333,7 +334,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: MFA should be enabled on accounts with owner permissions on your subscription",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "identityEnableMFAForWritePermissionsMonitoringEffect": {
@@ -342,7 +343,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: MFA should be enabled accounts with write permissions on your subscription",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
       "longtermGeoRedundantBackupEnabledAzureSQLDatabasesEffect": {
@@ -351,7 +352,7 @@
         "allowedValues": [ "AuditIfNotExists", "Disabled" ],
         "metadata": {
           "displayName": "Effect for policy: Long-term geo-redundant backup should be enabled for Azure SQL Databases",
-          "description": "Azure Policy effect for this policy; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       }
     },
@@ -961,9 +962,6 @@
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b6e2945c-0b7b-40f5-9233-7a5323b5cdc6",
         "policyDefinitionReferenceId": "NetworkWatcherShouldBeEnabled",
         "parameters": {
-          "listOfLocations": {
-            "value": "[parameters('listOfLocations')]"
-          }
         }
       }
     ]

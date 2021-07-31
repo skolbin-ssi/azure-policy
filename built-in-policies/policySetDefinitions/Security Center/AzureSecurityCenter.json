@@ -4,7 +4,7 @@
     "policyType": "BuiltIn",
     "description": "The Azure Security Benchmark initiative represents the policies and controls implementing security recommendations defined in Azure Security Benchmark v2, see https://aka.ms/azsecbm. This also serves as the Azure Security Center default policy initiative. You can directly assign this initiative, or manage its policies and compliance results within Azure Security Center.",
     "metadata": {
-      "version": "27.1.0",
+      "version": "29.1.1",
       "category": "Security Center"
     },
     "policyDefinitionGroups": [
@@ -304,14 +304,15 @@
       },
       "updateOsVersionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Operating system version should be the most current version for your cloud service roles",
-          "description": "Keeping the operating system (OS) on the most recent supported version for your cloud service roles enhances the systems security posture."
+          "description": "Keeping the operating system (OS) on the most recent supported version for your cloud service roles enhances the systems security posture.",
+          "deprecated": true
         }
       },
       "resolveLogAnalyticsHealthIssuesMonitoringEffect": {
@@ -537,7 +538,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Disk encryption should be applied on virtual machines",
+          "displayName": "Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources",
           "description": "Enable or disable the monitoring for VM disk encryption"
         }
       },
@@ -1173,8 +1174,8 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Vulnerabilities on your SQL databases should be remediated",
-          "description": "Enable or disable the monitoring of Vulnerability Assessment scan results and recommendations for how to remediate database vulnerabilities."
+          "displayName": "SQL databases should have vulnerability findings resolved",
+          "description": "Enable or disable the monitoring of vulnerability assessment scan results and recommendations for how to remediate database vulnerabilities."
         }
       },
       "serverSqlDbVulnerabilityAssesmentMonitoringEffect": {
@@ -1185,7 +1186,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Vulnerabilities on your SQL servers on machine should be remediated",
+          "displayName": "SQL servers on machines should have vulnerability findings resolved",
           "description": "SQL Vulnerability assessment scans your database for security vulnerabilities, and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data. Resolving the vulnerabilities found can greatly improve your database security posture."
         }
       },
@@ -1859,7 +1860,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Advanced data security should be enabled on your SQL servers",
+          "displayName": "Azure Defender for SQL should be enabled for unprotected Azure SQL servers",
           "description": "Enable or disable the monitoring of SQL servers without Advanced Data Security"
         }
       },
@@ -1871,7 +1872,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Advanced data security should be enabled on SQL Managed Instance",
+          "displayName": "Azure Defender for SQL should be enabled for unprotected SQL Managed Instances",
           "description": "Enable or disable the monitoring of each SQL Managed Instance without advanced data security."
         }
       },
@@ -1966,14 +1967,15 @@
       },
       "kubernetesServiceVersionUpToDateMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Kubernetes Services should be upgraded to a non vulnerable Kubernetes version",
-          "description": "Enable or disable the monitoring of the Kubernetes Services with versions that contain known vulnerabilities"
+          "description": "Enable or disable the monitoring of the Kubernetes Services with versions that contain known vulnerabilities",
+          "deprecated": true
         }
       },
       "vulnerabilityAssessmentOnManagedInstanceMonitoringEffect": {
@@ -2077,7 +2079,7 @@
       },
       "ensureServerTDEIsEncryptedWithYourOwnKeyMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
@@ -2089,7 +2091,7 @@
       },
       "ensureManagedInstanceTDEIsEncryptedWithYourOwnKeyMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
@@ -3133,7 +3135,7 @@
       },
       "cognitiveServicesAccountsShouldEnableDataEncryptionWithACustomerManagedKeyMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
@@ -3146,7 +3148,7 @@
       },
       "azureCosmosDbAccountsShouldUseCustomerManagedKeysToEncryptDataAtRestMonitoringEffect": {
         "type": "string",
-        "defaultValue": "audit",
+        "defaultValue": "disabled",
         "allowedValues": [
           "audit",
           "deny",
@@ -3198,7 +3200,7 @@
       },
       "storageAccountsShouldUseCustomerManagedKeyForEncryptionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Disabled"
@@ -3223,7 +3225,7 @@
       },
       "containerRegistriesShouldBeEncryptedWithACustomerManagedKeyMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
@@ -3308,7 +3310,7 @@
       },
       "azureMachineLearningWorkspacesShouldBeEncryptedWithACustomerManagedKeyMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
@@ -3383,13 +3385,13 @@
       },
       "bringYourOwnKeyDataProtectionShouldBeEnabledForMySqlServersMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Bring your own key data protection should be enabled for MySQL servers",
+          "displayName": "MySQL servers should use customer-managed keys to encrypt data at rest",
           "description": "Use customer-managed keys to manage the encryption at rest of your MySQL servers. By default, the data is encrypted at rest with service-managed keys, but customer-managed keys are commonly required to meet regulatory compliance standards. Customer-managed keys enable the data to be encrypted with an Azure Key Vault key created and owned by you. You have full control and responsibility for the key lifecycle, including rotation and management."
         }
       },
@@ -3407,13 +3409,13 @@
       },
       "bringYourOwnKeyDataProtectionShouldBeEnabledForPostgreSqlServersMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Bring your own key data protection should be enabled for PostgreSQL servers",
+          "displayName": "PostgreSQL servers should use customer-managed keys to encrypt data at rest",
           "description": "Use customer-managed keys to manage the encryption at rest of your PostgreSQL servers. By default, the data is encrypted at rest with service-managed keys, but customer-managed keys are commonly required to meet regulatory compliance standards. Customer-managed keys enable the data to be encrypted with an Azure Key Vault key created and owned by you. You have full control and responsibility for the key lifecycle, including rotation and management."
         }
       },
@@ -3759,7 +3761,8 @@
         "metadata": {
           "displayName": "List of regions where Network Watcher should be enabled",
           "description": "To see a complete list of regions, run the PowerShell command Get-AzLocation",
-          "strongType": "location"
+          "strongType": "location",
+          "deprecated": true
         }
       },
       "networkWatcherShouldBeEnabledResourceGroupName": {
@@ -3793,6 +3796,117 @@
           "displayName": "Azure Defender for DNS should be enabled",
           "description": "Azure Defender for DNS provides an additional layer of protection for your cloud resources by continuously monitoring all DNS queries from your Azure resources. Azure Defender alerts you about suspicious activity at the DNS layer. Learn more about the capabilities of Azure Defender for DNS at https://aka.ms/defender-for-dns . Enabling this Azure Defender plan results in charges. Learn about the pricing details per region on Security Center's pricing page: https://aka.ms/pricing-security-center ."
         }
+      },
+      "KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "audit",
+        "allowedValues": [
+          "audit",
+          "deny",
+          "disabled"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes clusters should not use the default namespace",
+          "description": "Prevent usage of the default namespace in Kubernetes clusters to protect against unauthorized access for ConfigMap, Pod, Secret, Service, and ServiceAccount resource types. For more information, see https://aka.ms/kubepolicydoc."
+        }
+      },
+      "KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "audit",
+        "allowedValues": [
+          "audit",
+          "deny",
+          "disabled"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes clusters should disable automounting API credentials",
+          "description": "Disable automounting API credentials to prevent a potentially compromised Pod resource to run API commands against Kubernetes clusters. For more information, see https://aka.ms/kubepolicydoc."
+        }
+      },
+      "KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "audit",
+        "allowedValues": [
+          "audit",
+          "deny",
+          "disabled"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes clusters should not grant CAPSYSADMIN security capabilities",
+          "description": "To reduce the attack surface of your containers, restrict CAP_SYS_ADMIN Linux capabilities. For more information, see https://aka.ms/kubepolicydoc."
+        }
+      },
+      "VtpmShouldBeEnabledOnSupportedVirtualMachinesMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "vTPM should be enabled on supported virtual machines",
+          "description": "Enable virtual TPM device on supported virtual machines to facilitate Measured Boot and other OS security features that require a TPM. Once enabled, vTPM can be used to attest boot integrity. This assessment only applies to trusted launch enabled virtual machines."
+        }
+      },
+      "SecureBootShouldBeEnabledOnSupportedWindowsVirtualMachinesMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Secure Boot should be enabled on supported Windows virtual machines",
+          "description": "Enable Secure Boot on supported Windows virtual machines to mitigate against malicious and unauthorized changes to the boot chain. Once enabled, only trusted bootloaders, kernel and kernel drivers will be allowed to run. This assessment only applies to trusted launch enabled Windows virtual machines."
+        }
+      },
+      "GuestAttestationExtensionShouldBeInstalledOnSupportedLinuxVirtualMachinesMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Guest Attestation extension should be installed on supported Linux virtual machines",
+          "description": "Install Guest Attestation extension on supported Linux virtual machines to allow Azure Security Center to proactively attest and monitor the boot integrity. Once installed, boot integrity will be attested via Remote Attestation. This assessment only applies to trusted launch enabled Linux virtual machines."
+        }
+      },
+      "GuestAttestationExtensionShouldBeInstalledOnSupportedLinuxVirtualMachinesScaleSetsMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Guest Attestation extension should be installed on supported Linux virtual machines scale sets",
+          "description": "Install Guest Attestation extension on supported Linux virtual machines scale sets to allow Azure Security Center to proactively attest and monitor the boot integrity. Once installed, boot integrity will be attested via Remote Attestation. This assessment only applies to trusted launch enabled Linux virtual machine scale sets."
+        }
+      },
+      "GuestAttestationExtensionShouldBeInstalledOnSupportedWindowsVirtualMachinesMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Guest Attestation extension should be installed on supported Windows virtual machines",
+          "description": "Install Guest Attestation extension on supported virtual machines to allow Azure Security Center to proactively attest and monitor the boot integrity. Once installed, boot integrity will be attested via Remote Attestation. This assessment only applies to trusted launch enabled virtual machines."
+        }
+      },
+      "GuestAttestationExtensionShouldBeInstalledOnSupportedWindowsVirtualMachinesScaleSetsMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Guest Attestation extension should be installed on supported Windows virtual machines scale sets",
+          "description": "Install Guest Attestation extension on supported virtual machines scale sets to allow Azure Security Center to proactively attest and monitor the boot integrity. Once installed, boot integrity will be attested via Remote Attestation. This assessment only applies to trusted launch enabled virtual machine scale sets."
+        }
       }
     },
     "policyDefinitions": [
@@ -3806,18 +3920,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v2.0_IM-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5a913c68-0590-402c-a531-e57e19379da3",
-        "policyDefinitionReferenceId": "updateOsVersionMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('updateOsVersionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
         ]
       },
       {
@@ -4770,18 +4872,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v2.0_PA-7"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fb893a29-21bb-418c-a157-e99480ec364c",
-        "policyDefinitionReferenceId": "kubernetesServiceVersionUpToDateMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('kubernetesServiceVersionUpToDateMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
         ]
       },
       {
@@ -6319,9 +6409,6 @@
           "effect": {
             "value": "[parameters('networkWatcherShouldBeEnabledMonitoringEffect')]"
           },
-          "listOfLocations": {
-            "value": "[parameters('networkWatcherShouldBeEnabledListOfLocations')]"
-          },
           "resourceGroupName": {
             "value": "[parameters('networkWatcherShouldBeEnabledResourceGroupName')]"
           }
@@ -6358,6 +6445,114 @@
           "Azure_Security_Benchmark_v2.0_LT-2",
           "Azure_Security_Benchmark_v2.0_IR-3",
           "Azure_Security_Benchmark_v2.0_IR-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9f061a12-e40d-4183-a00e-171812443373",
+        "policyDefinitionReferenceId": "KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/423dd1ba-798e-40e4-9c4d-b6902674b423",
+        "policyDefinitionReferenceId": "KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d2e7ea85-6b44-4317-a0be-1b951587f626",
+        "policyDefinitionReferenceId": "KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c30f9cd-b84c-49cc-aa2c-9288447cc3b3",
+        "policyDefinitionReferenceId": "VtpmShouldBeEnabledOnSupportedVirtualMachinesMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('VtpmShouldBeEnabledOnSupportedVirtualMachinesMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/97566dd7-78ae-4997-8b36-1c7bfe0d8121",
+        "policyDefinitionReferenceId": "previewSecureBootShouldBeEnabledOnSupportedWindowsVirtualMachinesMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('SecureBootShouldBeEnabledOnSupportedWindowsVirtualMachinesMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/672fe5a1-2fcd-42d7-b85d-902b6e28c6ff",
+        "policyDefinitionReferenceId": "GuestAttestationExtensionShouldBeInstalledOnSupportedLinuxVirtualMachinesMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('GuestAttestationExtensionShouldBeInstalledOnSupportedLinuxVirtualMachinesMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a21f8c92-9e22-4f09-b759-50500d1d2dda",
+        "policyDefinitionReferenceId": "GuestAttestationExtensionShouldBeInstalledOnSupportedLinuxVirtualMachinesScaleSetsMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('GuestAttestationExtensionShouldBeInstalledOnSupportedLinuxVirtualMachinesScaleSetsMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1cb4d9c2-f88f-4069-bee0-dba239a57b09",
+        "policyDefinitionReferenceId": "GuestAttestationExtensionShouldBeInstalledOnSupportedWindowsVirtualMachinesMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('GuestAttestationExtensionShouldBeInstalledOnSupportedWindowsVirtualMachinesMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f655e522-adff-494d-95c2-52d4f6d56a42",
+        "policyDefinitionReferenceId": "GuestAttestationExtensionShouldBeInstalledOnSupportedWindowsVirtualMachinesScaleSetsMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('GuestAttestationExtensionShouldBeInstalledOnSupportedWindowsVirtualMachinesScaleSetsMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v2.0_PV-3"
         ]
       }
     ]
