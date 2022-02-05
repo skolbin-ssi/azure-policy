@@ -4,9 +4,8 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes policies that address a subset of NIST SP 800-53 Rev. 5 controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/nist800-53r5-initiative.",
     "metadata": {
-      "version": "2.0.0-preview",
-      "category": "Regulatory Compliance",
-      "preview": true
+      "version": "7.0.0",
+      "category": "Regulatory Compliance"
     },
     "policyDefinitionGroups": [
       {
@@ -4006,7 +4005,7 @@
       },
       "effect-440b515e-a580-421e-abeb-b159a61ddcbc": {
         "type": "String",
-        "defaultValue": "audit",
+        "defaultValue": "disabled",
         "allowedValues": [
           "audit",
           "deny",
@@ -4014,7 +4013,8 @@
         ],
         "metadata": {
           "displayName": "Effect for policy: Kubernetes cluster containers should only listen on allowed ports",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "allowedContainerPortsList-440b515e-a580-421e-abeb-b159a61ddcbc": {
@@ -4022,7 +4022,8 @@
         "defaultValue": [],
         "metadata": {
           "displayName": "Allowed listener ports for Kubernetes cluster containers",
-          "description": "List of container ports on which Kubernetes cluster containers are allowed to listen"
+          "description": "List of container ports on which Kubernetes cluster containers are allowed to listen",
+          "deprecated": true
         }
       },
       "effect-233a2a17-77ca-4fb1-9b6b-69223d272a44": {
@@ -4422,7 +4423,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Effect for policy: Web Application Firewall (WAF) should be enabled for Azure Front Door Service service",
+          "displayName": "Effect for policy: Azure Web Application Firewall should be enabled for Azure Front Door entry-points",
           "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
@@ -5530,30 +5531,6 @@
           },
           "excludedContainers": {
             "value": "[parameters('excludedContainers-95edb821-ddaf-4404-9732-666045e056b4')]"
-          }
-        },
-        "groupNames": [
-          "NIST_SP_800-53_R5_CM-6"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "440b515e-a580-421e-abeb-b159a61ddcbc",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/440b515e-a580-421e-abeb-b159a61ddcbc",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('effect-440b515e-a580-421e-abeb-b159a61ddcbc')]"
-          },
-          "excludedNamespaces": {
-            "value": "[parameters('excludedNamespaces')]"
-          },
-          "namespaces": {
-            "value": "[parameters('namespaces')]"
-          },
-          "labelSelector": {
-            "value": "[parameters('labelSelector')]"
-          },
-          "allowedContainerPortsList": {
-            "value": "[parameters('allowedContainerPortsList-440b515e-a580-421e-abeb-b159a61ddcbc')]"
           }
         },
         "groupNames": [
@@ -6921,8 +6898,8 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "0d134df8-db83-46fb-ad72-fe0c9428c8dd",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0d134df8-db83-46fb-ad72-fe0c9428c8dd",
+        "policyDefinitionReferenceId": "0a370ff3-6cab-4e85-8995-295fd854c5b8",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a370ff3-6cab-4e85-8995-295fd854c5b8",
         "parameters": {},
         "groupNames": [
           "NIST_SP_800-53_R5_SC-12"
@@ -7090,8 +7067,8 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "048248b0-55cd-46da-b1ff-39efd52db260",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/048248b0-55cd-46da-b1ff-39efd52db260",
+        "policyDefinitionReferenceId": "ac01ad65-10e5-46df-bdd9-6b0cad13e1d2",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac01ad65-10e5-46df-bdd9-6b0cad13e1d2",
         "parameters": {},
         "groupNames": [
           "NIST_SP_800-53_R5_SC-12"
@@ -7203,15 +7180,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "cc9835f2-9f6b-4cc8-ab4a-f8ef615eb349",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cc9835f2-9f6b-4cc8-ab4a-f8ef615eb349",
-        "parameters": {},
-        "groupNames": [
-          "NIST_SP_800-53_R5_SC-28",
-          "NIST_SP_800-53_R5_SC-28(1)"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "86b3d65f-7626-441e-b690-81a8b71cff60",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
         "parameters": {},
@@ -7252,18 +7220,6 @@
           "NIST_SP_800-53_R5_IR-5",
           "NIST_SP_800-53_R5_RA-5",
           "NIST_SP_800-53_R5_SI-2",
-          "NIST_SP_800-53_R5_SI-4"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "d62cfe2b-3ab0-4d41-980d-76803b58ca65",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d62cfe2b-3ab0-4d41-980d-76803b58ca65",
-        "parameters": {},
-        "groupNames": [
-          "NIST_SP_800-53_R5_AU-6(4)",
-          "NIST_SP_800-53_R5_AU-6(5)",
-          "NIST_SP_800-53_R5_AU-12",
-          "NIST_SP_800-53_R5_AU-12(1)",
           "NIST_SP_800-53_R5_SI-4"
         ]
       },
@@ -7435,8 +7391,8 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "c25d9a16-bc35-4e15-a7e5-9db606bf9ed4",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c25d9a16-bc35-4e15-a7e5-9db606bf9ed4",
+        "policyDefinitionReferenceId": "1c988dd6-ade4-430f-a608-2a3e5b0a6d38",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c988dd6-ade4-430f-a608-2a3e5b0a6d38",
         "parameters": {},
         "groupNames": [
           "NIST_SP_800-53_R5_AC-2(12)",
@@ -7479,24 +7435,6 @@
         "groupNames": [
           "NIST_SP_800-53_R5_SC-8",
           "NIST_SP_800-53_R5_SC-8(1)"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "523b5cd1-3e23-492f-a539-13118b6d1e3a",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/523b5cd1-3e23-492f-a539-13118b6d1e3a",
-        "parameters": {},
-        "groupNames": [
-          "NIST_SP_800-53_R5_AC-2(12)",
-          "NIST_SP_800-53_R5_AU-6",
-          "NIST_SP_800-53_R5_AU-6(4)",
-          "NIST_SP_800-53_R5_AU-6(5)",
-          "NIST_SP_800-53_R5_AU-12",
-          "NIST_SP_800-53_R5_AU-12(1)",
-          "NIST_SP_800-53_R5_IR-4",
-          "NIST_SP_800-53_R5_IR-5",
-          "NIST_SP_800-53_R5_RA-5",
-          "NIST_SP_800-53_R5_SI-2",
-          "NIST_SP_800-53_R5_SI-4"
         ]
       },
       {

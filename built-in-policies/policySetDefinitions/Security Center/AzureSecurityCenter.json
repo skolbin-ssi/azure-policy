@@ -1,292 +1,352 @@
-﻿{
+{
   "properties": {
     "displayName": "Azure Security Benchmark",
     "policyType": "BuiltIn",
     "description": "The Azure Security Benchmark initiative represents the policies and controls implementing security recommendations defined in Azure Security Benchmark v2, see https://aka.ms/azsecbm. This also serves as the Azure Security Center default policy initiative. You can directly assign this initiative, or manage its policies and compliance results within Azure Security Center.",
     "metadata": {
-      "version": "29.1.1",
+      "version": "45.0.0",
       "category": "Security Center"
     },
     "policyDefinitionGroups": [
       {
-        "name": "Azure_Security_Benchmark_v2.0_NS-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_NS-1"
+        "name": "Azure_Security_Benchmark_v3.0_NS-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_NS-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_NS-2"
+        "name": "Azure_Security_Benchmark_v3.0_NS-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_NS-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_NS-3"
+        "name": "Azure_Security_Benchmark_v3.0_NS-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_NS-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_NS-4"
+        "name": "Azure_Security_Benchmark_v3.0_NS-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_NS-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_NS-5"
+        "name": "Azure_Security_Benchmark_v3.0_NS-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-5"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_NS-6",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_NS-6"
+        "name": "Azure_Security_Benchmark_v3.0_NS-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-6"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_NS-7",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_NS-7"
+        "name": "Azure_Security_Benchmark_v3.0_NS-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-7"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IM-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IM-1"
+        "name": "Azure_Security_Benchmark_v3.0_NS-8",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-8"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IM-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IM-2"
+        "name": "Azure_Security_Benchmark_v3.0_NS-9",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-9"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IM-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IM-3"
+        "name": "Azure_Security_Benchmark_v3.0_NS-10",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_NS-10"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IM-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IM-4"
+        "name": "Azure_Security_Benchmark_v3.0_DP-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DP-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IM-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IM-5"
+        "name": "Azure_Security_Benchmark_v3.0_DP-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DP-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IM-6",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IM-6"
+        "name": "Azure_Security_Benchmark_v3.0_DP-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DP-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IM-7",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IM-7"
+        "name": "Azure_Security_Benchmark_v3.0_DP-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DP-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IM-8",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IM-8"
+        "name": "Azure_Security_Benchmark_v3.0_DP-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DP-5"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PA-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PA-1"
+        "name": "Azure_Security_Benchmark_v3.0_DP-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DP-6"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PA-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PA-2"
+        "name": "Azure_Security_Benchmark_v3.0_DP-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DP-7"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PA-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PA-3"
+        "name": "Azure_Security_Benchmark_v3.0_DP-8",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DP-8"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PA-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PA-4"
+        "name": "Azure_Security_Benchmark_v3.0_IM-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PA-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PA-5"
+        "name": "Azure_Security_Benchmark_v3.0_IM-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PA-6",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PA-6"
+        "name": "Azure_Security_Benchmark_v3.0_IM-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PA-7",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PA-7"
+        "name": "Azure_Security_Benchmark_v3.0_IM-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PA-8",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PA-8"
+        "name": "Azure_Security_Benchmark_v3.0_IM-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-5"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_DP-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_DP-1"
+        "name": "Azure_Security_Benchmark_v3.0_IM-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-6"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_DP-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_DP-2"
+        "name": "Azure_Security_Benchmark_v3.0_IM-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-7"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_DP-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_DP-3"
+        "name": "Azure_Security_Benchmark_v3.0_IM-8",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-8"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_DP-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_DP-4"
+        "name": "Azure_Security_Benchmark_v3.0_IM-9",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IM-9"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_DP-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_DP-5"
+        "name": "Azure_Security_Benchmark_v3.0_PA-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PA-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_AM-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_AM-1"
+        "name": "Azure_Security_Benchmark_v3.0_PA-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PA-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_AM-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_AM-2"
+        "name": "Azure_Security_Benchmark_v3.0_PA-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PA-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_AM-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_AM-3"
+        "name": "Azure_Security_Benchmark_v3.0_PA-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PA-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_AM-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_AM-4"
+        "name": "Azure_Security_Benchmark_v3.0_PA-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PA-5"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_AM-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_AM-5"
+        "name": "Azure_Security_Benchmark_v3.0_PA-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PA-6"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_AM-6",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_AM-6"
+        "name": "Azure_Security_Benchmark_v3.0_PA-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PA-7"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_LT-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_LT-1"
+        "name": "Azure_Security_Benchmark_v3.0_PA-8",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PA-8"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_LT-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_LT-2"
+        "name": "Azure_Security_Benchmark_v3.0_PV-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PV-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_LT-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_LT-3"
+        "name": "Azure_Security_Benchmark_v3.0_PV-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PV-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_LT-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_LT-4"
+        "name": "Azure_Security_Benchmark_v3.0_PV-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PV-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_LT-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_LT-5"
+        "name": "Azure_Security_Benchmark_v3.0_PV-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PV-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_LT-6",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_LT-6"
+        "name": "Azure_Security_Benchmark_v3.0_PV-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PV-5"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_LT-7",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_LT-7"
+        "name": "Azure_Security_Benchmark_v3.0_PV-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PV-6"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IR-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IR-1"
+        "name": "Azure_Security_Benchmark_v3.0_PV-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_PV-7"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IR-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IR-2"
+        "name": "Azure_Security_Benchmark_v3.0_LT-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_LT-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IR-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IR-3"
+        "name": "Azure_Security_Benchmark_v3.0_LT-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_LT-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IR-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IR-4"
+        "name": "Azure_Security_Benchmark_v3.0_LT-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_LT-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IR-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IR-5"
+        "name": "Azure_Security_Benchmark_v3.0_LT-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_LT-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_IR-6",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_IR-6"
+        "name": "Azure_Security_Benchmark_v3.0_LT-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_LT-5"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PV-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PV-1"
+        "name": "Azure_Security_Benchmark_v3.0_LT-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_LT-6"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PV-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PV-2"
+        "name": "Azure_Security_Benchmark_v3.0_LT-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_LT-7"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PV-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PV-3"
+        "name": "Azure_Security_Benchmark_v3.0_AM-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_AM-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PV-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PV-4"
+        "name": "Azure_Security_Benchmark_v3.0_AM-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_AM-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PV-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PV-5"
+        "name": "Azure_Security_Benchmark_v3.0_AM-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_AM-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PV-6",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PV-6"
+        "name": "Azure_Security_Benchmark_v3.0_AM-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_AM-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PV-7",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PV-7"
+        "name": "Azure_Security_Benchmark_v3.0_AM-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_AM-5"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_PV-8",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_PV-8"
+        "name": "Azure_Security_Benchmark_v3.0_ES-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_ES-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_ES-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_ES-1"
+        "name": "Azure_Security_Benchmark_v3.0_ES-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_ES-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_ES-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_ES-2"
+        "name": "Azure_Security_Benchmark_v3.0_ES-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_ES-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_ES-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_ES-3"
+        "name": "Azure_Security_Benchmark_v3.0_BR-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_BR-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_BR-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_BR-1"
+        "name": "Azure_Security_Benchmark_v3.0_BR-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_BR-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_BR-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_BR-2"
+        "name": "Azure_Security_Benchmark_v3.0_BR-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_BR-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_BR-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_BR-3"
+        "name": "Azure_Security_Benchmark_v3.0_BR-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_BR-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_BR-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_BR-4"
+        "name": "Azure_Security_Benchmark_v3.0_IR-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IR-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_GS-1",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-1"
+        "name": "Azure_Security_Benchmark_v3.0_IR-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IR-2"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_GS-2",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-2"
+        "name": "Azure_Security_Benchmark_v3.0_IR-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IR-3"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_GS-3",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-3"
+        "name": "Azure_Security_Benchmark_v3.0_IR-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IR-4"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_GS-4",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-4"
+        "name": "Azure_Security_Benchmark_v3.0_IR-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IR-5"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_GS-5",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-5"
+        "name": "Azure_Security_Benchmark_v3.0_IR-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IR-6"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_GS-6",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-6"
+        "name": "Azure_Security_Benchmark_v3.0_IR-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_IR-7"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_GS-7",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-7"
+        "name": "Azure_Security_Benchmark_v3.0_DS-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DS-1"
       },
       {
-        "name": "Azure_Security_Benchmark_v2.0_GS-8",
-        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v2.0_GS-8"
+        "name": "Azure_Security_Benchmark_v3.0_DS-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DS-2"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_DS-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DS-3"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_DS-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DS-4"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_DS-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DS-5"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_DS-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DS-6"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_DS-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_DS-7"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-1",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-1"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-2",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-2"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-3",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-3"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-4",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-4"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-5",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-5"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-6",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-6"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-7",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-7"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-8",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-8"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-9",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-9"
+      },
+      {
+        "name": "Azure_Security_Benchmark_v3.0_GS-10",
+        "additionalMetadataId": "/providers/Microsoft.PolicyInsights/policyMetadata/Azure_Security_Benchmark_v3.0_GS-10"
       }
     ],
     "parameters": {
@@ -324,7 +384,8 @@
         ],
         "metadata": {
           "displayName": "Log Analytics agent health issues should be resolved on your machines",
-          "description": "Security Center uses the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA). To make sure your virtual machines are successfully monitored, you need to make sure the agent is installed on the virtual machines and properly collects security events to the configured workspace."
+          "description": "Security Center uses the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA). To make sure your virtual machines are successfully monitored, you need to make sure the agent is installed on the virtual machines and properly collects security events to the configured workspace.",
+          "deprecated": true
         }
       },
       "installLogAnalyticsAgentOnVmMonitoringEffect": {
@@ -436,7 +497,7 @@
       },
       "windowsGuestConfigBaselinesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Disabled",
+        "defaultValue": "AuditIfNotExists",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
@@ -448,7 +509,7 @@
       },
       "linuxGuestConfigBaselinesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Disabled",
+        "defaultValue": "AuditIfNotExists",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
@@ -944,6 +1005,26 @@
           "description": "The required resource logs retention period in days"
         }
       },
+      "diagnosticsLogsInKubernetesMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Resource logs in Azure Kubernetes Service should be enabled",
+          "description": "Enable or disable the monitoring of resource logs in Kubernetes managed clusters. Enabling Azure Kubernetes Service's resource logs can help recreate activity trails when investigating future security incidents"
+        }
+      },
+      "diagnosticsLogsInKubernetesRetentionDays": {
+        "type": "string",
+        "defaultValue": "1",
+        "metadata": {
+          "displayName": "Required retention (in days) of logs in Kubernetes managed clusters",
+          "description": "The required resource logs retention period in days"
+        }
+      },
       "diagnosticsLogsInLogicAppsMonitoringEffect": {
         "type": "string",
         "defaultValue": "AuditIfNotExists",
@@ -1192,14 +1273,15 @@
       },
       "sqlDbDataClassificationMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Sensitive data in your SQL databases should be classified",
-          "description": "Enable or disable the monitoring of sensitive data classification in databases."
+          "description": "Enable or disable the monitoring of sensitive data classification in databases.",
+          "deprecated": true
         }
       },
       "identityDesignateLessThanOwnersMonitoringEffect": {
@@ -2086,7 +2168,8 @@
         ],
         "metadata": {
           "displayName": "SQL server TDE protector should be encrypted with your own key",
-          "description": "Enable or disable the monitoring of Transparent Data Encryption (TDE) with your own key support. TDE with your own key support provides increased transparency and control over the TDE Protector, increased security with an HSM-backed external service, and promotion of separation of duties."
+          "description": "Enable or disable the monitoring of Transparent Data Encryption (TDE) with your own key support. TDE with your own key support provides increased transparency and control over the TDE Protector, increased security with an HSM-backed external service, and promotion of separation of duties.",
+          "deprecated": true
         }
       },
       "ensureManagedInstanceTDEIsEncryptedWithYourOwnKeyMonitoringEffect": {
@@ -2094,6 +2177,33 @@
         "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "SQL Managed Instance TDE protector should be encrypted with your own key",
+          "description": "Enable or disable the monitoring of Transparent Data Encryption (TDE) with your own key support. TDE with your own key support provides increased transparency and control over the TDE Protector, increased security with an HSM-backed external service, and promotion of separation of duties.",
+          "deprecated": true
+        }
+      },
+      "ensureServerTDEIsEncryptedWithYourOwnKeyWithDenyMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "Disabled",
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "SQL server TDE protector should be encrypted with your own key",
+          "description": "Enable or disable the monitoring of Transparent Data Encryption (TDE) with your own key support. TDE with your own key support provides increased transparency and control over the TDE Protector, increased security with an HSM-backed external service, and promotion of separation of duties."
+        }
+      },
+      "ensureManagedInstanceTDEIsEncryptedWithYourOwnKeyWithDenyMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "Disabled",
+        "allowedValues": [
+          "Audit",
+          "Deny",
           "Disabled"
         ],
         "metadata": {
@@ -2235,17 +2345,31 @@
       },
       "containerRegistryAdvancedThreatProtectionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Azure Defender for container registries should be enabled",
-          "description": "Enable or disable Azure Defender for container registries"
+          "description": "Enable or disable Azure Defender for container registries",
+          "deprecated": true
         }
       },
       "kubernetesServiceAdvancedThreatProtectionMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "Disabled",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Defender for Kubernetes should be enabled",
+          "description": "Enable or disable Azure Defender for Kubernetes",
+          "deprecated": true
+        }
+      },
+      "containersAdvancedThreatProtectionMonitoringEffect": {
         "type": "string",
         "defaultValue": "AuditIfNotExists",
         "allowedValues": [
@@ -2253,8 +2377,8 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Azure Defender for Kubernetes should be enabled",
-          "description": "Enable or disable Azure Defender for Kubernetes"
+          "displayName": "Microsoft Defender for Containers should be enabled",
+          "description": "Enable or disable Microsoft Defender for Containers"
         }
       },
       "virtualMachinesAdvancedThreatProtectionMonitoringEffect": {
@@ -2281,6 +2405,18 @@
           "description": "Enable or disable reporting of the Azure Policy Add-on is enabled on Azure Kubernetes managed cluster"
         }
       },
+      "arcEnabledKubernetesClustersShouldHaveAzurePolicyExtensionInstalledEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Arc enabled Kubernetes clusters should have Azure Policy's extension installed",
+          "description": "Enable or disable monitoring of Arc enabled Kubernetes clusters without Azure Policy's extension installed"
+        }
+      },
       "allowedContainerImagesInKubernetesClusterEffect": {
         "type": "string",
         "defaultValue": "audit",
@@ -2298,8 +2434,8 @@
         "type": "string",
         "defaultValue": "^(.+){0}$",
         "metadata": {
-          "displayName": "Allowed container images regex",
-          "description": "The RegEx rule used to match allowed container images in a Kubernetes cluster. For example, to allow any Azure Container Registry image by matching partial path: ^.+azurecr.io/.+$"
+          "displayName": "Allowed registry or registries regex",
+          "description": "The RegEx rule used to match allowed container image field in a Kubernetes cluster. For example, to allow any Azure Container Registry image by matching partial path: ^[^\\/]+\\.azurecr\\.io\\/.+$ and for multiple registries: ^([^\\/]+\\.azurecr\\.io|registry\\.io)\\/.+$"
         }
       },
       "allowedContainerImagesNamespaceExclusion": {
@@ -2311,7 +2447,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of allowed container images",
-          "description": "List of Kubernetes namespaces to exclude from evaluation of allowed container images in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation of allowed container images in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "privilegedContainersShouldBeAvoidedEffect": {
@@ -2336,7 +2472,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of privileged containers",
-          "description": "List of Kubernetes namespaces to exclude from evaluation of privileged containers in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation of privileged containers in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "allowedContainerPortsInKubernetesClusterEffect": {
@@ -2349,7 +2485,8 @@
         ],
         "metadata": {
           "displayName": "Containers should listen on allowed ports only",
-          "description": "Enable or disable monitoring of allowed container ports in Kubernetes clusters"
+          "description": "Enable or disable monitoring of allowed container ports in Kubernetes clusters",
+          "deprecated": true
         }
       },
       "allowedContainerPortsInKubernetesClusterPorts": {
@@ -2358,8 +2495,9 @@
           "-1"
         ],
         "metadata": {
-          "displayName": "Allowed container ports list",
-          "description": "List of container ports allowed in Kubernetes cluster. Use ; to separate values"
+          "displayName": "Allowed container ports list in Kubernetes cluster",
+          "description": "List of container ports allowed in Kubernetes cluster. Use ; to separate values",
+          "deprecated": true
         }
       },
       "allowedContainerPortsInKubernetesClusterNamespaceExclusion": {
@@ -2371,7 +2509,8 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of allowed container port",
-          "description": "List of Kubernetes namespaces to exclude from evaluation of allowed container ports in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation of allowed container ports in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design.",
+          "deprecated": true
         }
       },
       "allowedServicePortsInKubernetesClusterEffect": {
@@ -2393,7 +2532,7 @@
           "-1"
         ],
         "metadata": {
-          "displayName": "Allowed service ports list",
+          "displayName": "Allowed service ports list in Kubernetes cluster",
           "description": "List of service ports allowed in Kubernetes cluster. Use ; to separate values"
         }
       },
@@ -2406,7 +2545,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of allowed service ports",
-          "description": "List of Kubernetes namespaces to exclude from evaluation of allowed service ports in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation of allowed service ports in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "NoPrivilegeEscalationInKubernetesClusterEffect": {
@@ -2431,7 +2570,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of privileged escalation containers",
-          "description": "List of Kubernetes namespaces to exclude from evaluation of privileged escalation containers in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation of privileged escalation containers in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "NoSharingSensitiveHostNamespacesInKubernetesEffect": {
@@ -2456,7 +2595,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of sharing sensitive host namespaces in Kubernetes clusters",
-          "description": "List of Kubernetes namespaces to exclude from evaluation of  sharing sensitive host namespaces in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation of  sharing sensitive host namespaces in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "ReadOnlyRootFileSystemInKubernetesClusterEffect": {
@@ -2481,7 +2620,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers running with a read only root file system",
-          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers running with a read only root file system in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers running with a read only root file system in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "AllowedCapabilitiesInKubernetesClusterEffect": {
@@ -2506,7 +2645,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers use only allowed capabilities",
-          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers using only allowed capabilities in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers using only allowed capabilities in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "AllowedCapabilitiesInKubernetesClusterList": {
@@ -2547,7 +2686,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers modification of AppArmor profile",
-          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers modifying of AppArmor profile in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers modifying of AppArmor profile in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "AllowedAppArmorProfilesInKubernetesClusterList": {
@@ -2580,7 +2719,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers host networking and ports",
-          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers host networking and ports in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers host networking and ports in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "AllowHostNetworkingInKubernetesCluster": {
@@ -2595,7 +2734,7 @@
         "type": "Integer",
         "defaultValue": 0,
         "metadata": {
-          "displayName": "Min host port",
+          "displayName": "Min host port for pod in Kubernetes cluster",
           "description": "The minimum value in the allowable host port range that pods can use in the host network namespace."
         }
       },
@@ -2603,7 +2742,7 @@
         "type": "Integer",
         "defaultValue": 0,
         "metadata": {
-          "displayName": "Max host port",
+          "displayName": "Max host port for pod in Kubernetes cluster",
           "description": "The maximum value in the allowable host port range that pods can use in the host network namespace."
         }
       },
@@ -2629,13 +2768,13 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of pod HostPath volume mounts",
-          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of pod HostPath volume mounts in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of pod HostPath volume mounts in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "AllowedHostPathVolumesInKubernetesClusterList": {
         "type": "Object",
         "metadata": {
-          "displayName": "Allowed host paths",
+          "displayName": "Allowed host paths for pod in Kubernetes cluster",
           "description": "The host paths allowed for pod hostPath volumes to use. Provide an empty paths list to block all host paths.",
           "schema": {
             "type": "object",
@@ -2708,7 +2847,103 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of memory and CPU limits",
-          "description": "List of Kubernetes namespaces to exclude from evaluation of memory and CPU limits in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation of memory and CPU limits in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "BlockVulnerableImagesInKubernetesClusterEffect": {
+        "type": "string",
+        "defaultValue": "Disabled",
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes clusters should gate deployment of vulnerable images",
+          "description": "Enable or disable gating containers' with vulnerable images in Kubernetes clusters"
+        }
+      },
+      "BlockVulnerableImagesInKubernetesClusterNamespaceExclusion": {
+        "type": "Array",
+        "defaultValue": [
+          "kube-system",
+          "gatekeeper-system",
+          "azure-arc"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes namespaces to exclude from monitoring of containers with vulnerable images",
+          "description": "List of Kubernetes namespaces to exclude from evaluation of block vulnerable images in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "BlockVulnerableImagesNamespaces": {
+        "type": "Array",
+        "defaultValue": [],
+        "metadata": {
+          "displayName": "Namespace inclusions",
+          "description": "List of Kubernetes namespaces to only include in policy evaluation. An empty list means the policy is applied to all resources in all namespaces.",
+          "deprecated": true
+        }
+      },
+      "BlockVulnerableImagesExcludedImages": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "Excluded images regex for gating vulnerable images in Kubernetes cluster",
+          "description": "A list of RegEx rules used to exclude container images from policy evaluation. For example: exclude all images from the repo microsoft-defender-in-cluster-defense-repo in the blockreg ACR -  [\"(blockreg.azurecr.io/microsoft-defender-in-cluster-defense-repo).*\"]. Use an empty list to apply this policy to all container images."
+        },
+        "defaultValue": []
+      },
+      "BlockVulnerableImagesSeverityThresholdForExcludingNotPatchableFindings": {
+        "type": "string",
+        "metadata": {
+          "displayName": "Severity threshold for excluding gating of image vulnerabilities without a patch in Kubernetes cluster",
+          "description": "Specify the maximum severity for exempting vulnerabilities without a patch. For example, specify Medium to ignore Low and Medium vulnerabilities without a patch."
+        },
+        "allowedValues": [
+          "None",
+          "Low",
+          "Medium",
+          "High"
+        ],
+        "defaultValue": "None"
+      },
+      "BlockVulnerableImagesExcludeFindingIDs": {
+        "type": "Array",
+        "metadata": {
+          "displayName": "Exclude finding IDs for gating vulnerable images scan results in Kubernetes cluster",
+          "description": "A list of finding IDs that the policy should exempt."
+        },
+        "defaultValue": []
+      },
+      "severity": {
+        "type": "Object",
+        "metadata": {
+          "displayName": "Severity threshold for excluding gating of image vulnerabilities in Kubernetes cluster",
+          "description": "The number of allowed findings per severity for an image. e.g. \"{\"High\":0,\"Medium\":3,\"Low\":10}\""
+        },
+        "defaultValue": {
+          "High": 0,
+          "Medium": 0,
+          "Low": 0
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "High": {
+              "type": "integer"
+            },
+            "Medium": {
+              "type": "integer"
+            },
+            "Low": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "High",
+            "Medium",
+            "Low"
+          ],
+          "additionalProperties": false
         }
       },
       "MustRunAsNonRootNamespaceExclusion": {
@@ -2720,7 +2955,7 @@
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers running as root user",
-          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers running as root users. To list multiple namespaces, use semicolons (;) to separate them."
+          "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers running as root users. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "MustRunAsNonRootNamespaceEffect": {
@@ -2748,6 +2983,18 @@
           "description": "Enable or disable the monitoring of Arc enabled Kubernetes clusters without Azure Defender's extension installed"
         }
       },
+      "azureKubernetesServiceClustersShouldHaveSecurityProfileEnabled": {
+        "type": "string",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Kubernetes Service clusters should have Azure Defender profile enabled",
+          "description": "Enable or disable the monitoring of Azure Kubernetes Service clusters without Azure Defender's profile enabled"
+        }
+      },
       "containerRegistryVulnerabilityAssessmentEffect": {
         "type": "string",
         "defaultValue": "AuditIfNotExists",
@@ -2758,6 +3005,18 @@
         "metadata": {
           "displayName": "Vulnerabilities in Azure Container Registry images should be remediated",
           "description": "Enable or disable monitoring of Azure container registries by Azure Security Center vulnerability assessment (powered by Qualys)"
+        }
+      },
+      "kubernetesRunningImagesVulnerabilityAssessmentEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Vulnerabilities in running images should be remediated",
+          "description": "Enable or disable monitoring of Kubernetes Service clusters by Defender for Containers running images vulnerability assessment"
         }
       },
       "disallowPublicBlobAccessEffect": {
@@ -3342,7 +3601,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Web Application Firewall (WAF) should be enabled for Azure Front Door Service service",
+          "displayName": "Azure Web Application Firewall should be enabled for Azure Front Door entry-points",
           "description": "Deploy Azure Web Application Firewall (WAF) in front of public facing web applications for additional inspection of incoming traffic. Web Application Firewall (WAF) provides centralized protection of your web applications from common exploits and vulnerabilities such as SQL injections, Cross-Site Scripting, local and remote file executions. You can also restrict access to your web applications by countries, IP address ranges, and other http(s) parameters via custom rules."
         }
       },
@@ -3598,8 +3857,8 @@
           "azure-arc"
         ],
         "metadata": {
-          "displayName": "Namespace exclusions",
-          "description": "List of Kubernetes namespaces to exclude from policy evaluation."
+          "displayName": "Kubernetes namespaces to exclude from evaluation of HTTPS only access",
+          "description": "List of Kubernetes namespaces to exclude from evaluation of HTTPS only access. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "kubernetesClustersShouldBeAccessibleOnlyOverHTTPSNamespaces": {
@@ -3607,7 +3866,8 @@
         "defaultValue": [],
         "metadata": {
           "displayName": "Namespace inclusions",
-          "description": "List of Kubernetes namespaces to only include in policy evaluation. An empty list means the policy is applied to all resources in all namespaces."
+          "description": "This parameter is deprecated. The policy is applied to all Kubernetes resources in all Kubernetes namespaces.",
+          "deprecated": true
         }
       },
       "windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsMonitoringEffect": {
@@ -3624,19 +3884,19 @@
       },
       "windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsIncludeArcMachines": {
         "type": "string",
-        "defaultValue": "false",
+        "defaultValue": "true",
         "allowedValues": [
           "true",
           "false"
         ],
         "metadata": {
           "displayName": "Include Arc connected servers",
-          "description": "By selecting this option, you agree to be charged monthly per Arc connected machine."
+          "description": "By selecting this option, you choose to include Arc connected servers in the scope of this policy."
         }
       },
       "windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsMinimumTLSVersion": {
         "type": "string",
-        "defaultValue": "1.1",
+        "defaultValue": "1.2",
         "allowedValues": [
           "1.1",
           "1.2"
@@ -3797,6 +4057,18 @@
           "description": "Azure Defender for DNS provides an additional layer of protection for your cloud resources by continuously monitoring all DNS queries from your Azure resources. Azure Defender alerts you about suspicious activity at the DNS layer. Learn more about the capabilities of Azure Defender for DNS at https://aka.ms/defender-for-dns . Enabling this Azure Defender plan results in charges. Learn about the pricing details per region on Security Center's pricing page: https://aka.ms/pricing-security-center ."
         }
       },
+      "AzureDefenderForOpenSourceRelationalDatabasesShouldBeEnabledMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Azure Defender for open-source relational databases should be enabled",
+          "description": "Azure Defender for open-source relational databases detects anomalous activities indicating unusual and potentially harmful attempts to access or exploit databases. Learn more about the capabilities of Azure Defender for open-source relational databases at https://aka.ms/AzDforOpenSourceDBsDocu. Important: Enabling this plan will result in charges for protecting your open-source relational databases. Learn about the pricing on Security Center's pricing page: https://aka.ms/pricing-security-center."
+        }
+      },
       "KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect": {
         "type": "string",
         "defaultValue": "audit",
@@ -3823,6 +4095,18 @@
           "description": "Disable automounting API credentials to prevent a potentially compromised Pod resource to run API commands against Kubernetes clusters. For more information, see https://aka.ms/kubepolicydoc."
         }
       },
+      "KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringNamespaceExclusion": {
+        "type": "Array",
+        "defaultValue": [
+          "kube-system",
+          "gatekeeper-system",
+          "azure-arc"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes namespaces to exclude from restricting automounting API credentials",
+          "description": "List of Kubernetes namespaces to exclude from evaluation to restrict automounting API credentials. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
       "KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect": {
         "type": "string",
         "defaultValue": "audit",
@@ -3834,6 +4118,18 @@
         "metadata": {
           "displayName": "Kubernetes clusters should not grant CAPSYSADMIN security capabilities",
           "description": "To reduce the attack surface of your containers, restrict CAP_SYS_ADMIN Linux capabilities. For more information, see https://aka.ms/kubepolicydoc."
+        }
+      },
+      "KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringNamespaceExclusion": {
+        "type": "Array",
+        "defaultValue": [
+          "kube-system",
+          "gatekeeper-system",
+          "azure-arc"
+        ],
+        "metadata": {
+          "displayName": "Kubernetes namespaces to exclude from restricting CAP_SYS_ADMIN Linux capabilities",
+          "description": "List of Kubernetes namespaces to exclude from evaluation to restrict CAP_SYS_ADMIN Linux capabilities. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
       "VtpmShouldBeEnabledOnSupportedVirtualMachinesMonitoringEffect": {
@@ -3907,6 +4203,30 @@
           "displayName": "Guest Attestation extension should be installed on supported Windows virtual machines scale sets",
           "description": "Install Guest Attestation extension on supported virtual machines scale sets to allow Azure Security Center to proactively attest and monitor the boot integrity. Once installed, boot integrity will be attested via Remote Attestation. This assessment only applies to trusted launch enabled virtual machine scale sets."
         }
+      },
+      "installEndpointProtectionMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Endpoint protection should be installed on your machines",
+          "description": "To protect your machines from threats and vulnerabilities, install a supported endpoint protection solution."
+        }
+      },
+      "endpointProtectionHealthIssuesMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Endpoint protection health issues should be resolved on your machines",
+          "description": "Resolve endpoint protection health issues on your virtual machines to protect them from latest threats and vulnerabilities. Azure Security Center supported endpoint protection solutions are documented here - https://docs.microsoft.com/azure/security-center/security-center-services?tabs=features-windows#supported-endpoint-protection-solutions. Endpoint protection assessment is documented here - https://docs.microsoft.com/azure/security-center/security-center-endpoint-protection."
+        }
       }
     },
     "policyDefinitions": [
@@ -3919,19 +4239,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d62cfe2b-3ab0-4d41-980d-76803b58ca65",
-        "policyDefinitionReferenceId": "resolveLogAnalyticsHealthIssuesMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('resolveLogAnalyticsHealthIssuesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-5"
+          "Azure_Security_Benchmark_v3.0_IM-3"
         ]
       },
       {
@@ -3943,7 +4251,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-5"
+          "Azure_Security_Benchmark_v3.0_LT-5"
         ]
       },
       {
@@ -3955,7 +4263,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-5"
+          "Azure_Security_Benchmark_v3.0_LT-5"
         ]
       },
       {
@@ -3970,8 +4278,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-5",
-          "Azure_Security_Benchmark_v2.0_IM-7"
+          "Azure_Security_Benchmark_v3.0_DP-7"
         ]
       },
       {
@@ -3983,8 +4290,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-5",
-          "Azure_Security_Benchmark_v2.0_IM-7"
+          "Azure_Security_Benchmark_v3.0_DP-6"
         ]
       },
       {
@@ -3996,8 +4302,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-5",
-          "Azure_Security_Benchmark_v2.0_IM-7"
+          "Azure_Security_Benchmark_v3.0_DP-6"
         ]
       },
       {
@@ -4009,7 +4314,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-4"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -4021,8 +4326,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_ES-2",
-          "Azure_Security_Benchmark_v2.0_ES-3"
+          "Azure_Security_Benchmark_v3.0_ES-2"
         ]
       },
       {
@@ -4034,7 +4338,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -4046,7 +4350,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-5"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -4058,7 +4362,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-5"
+          "Azure_Security_Benchmark_v3.0_IM-3",
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -4068,12 +4373,17 @@
           "effect": {
             "value": "[parameters('windowsDefenderExploitGuardMonitoringEffect')]"
           },
+          "IncludeArcMachines": {
+            "value": "[parameters('windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsIncludeArcMachines')]"
+          },
           "NotAvailableMachineState": {
             "value": "Compliant"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_ES-2"
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_ES-2"
         ]
       },
       {
@@ -4082,10 +4392,13 @@
         "parameters": {
           "effect": {
             "value": "[parameters('windowsGuestConfigBaselinesMonitoringEffect')]"
+          },
+          "IncludeArcMachines": {
+            "value": "[parameters('windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsIncludeArcMachines')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-4"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -4094,10 +4407,13 @@
         "parameters": {
           "effect": {
             "value": "[parameters('linuxGuestConfigBaselinesMonitoringEffect')]"
+          },
+          "IncludeArcMachines": {
+            "value": "[parameters('windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsIncludeArcMachines')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-4"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -4112,7 +4428,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4124,7 +4440,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4136,8 +4452,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -4149,7 +4464,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-7"
+          "Azure_Security_Benchmark_v3.0_PA-7"
         ]
       },
       {
@@ -4164,7 +4479,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4176,7 +4491,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -4188,7 +4503,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-1"
+          "Azure_Security_Benchmark_v3.0_IM-1"
         ]
       },
       {
@@ -4203,7 +4518,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4215,7 +4530,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-4"
         ]
       },
       {
@@ -4227,7 +4542,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-1"
+          "Azure_Security_Benchmark_v3.0_IM-1"
         ]
       },
       {
@@ -4242,7 +4557,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4254,7 +4569,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -4269,7 +4584,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4284,7 +4599,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_DP-8",
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4299,7 +4615,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4314,7 +4630,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4329,7 +4645,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4341,7 +4657,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_AM-3"
+          "Azure_Security_Benchmark_v3.0_AM-2"
         ]
       },
       {
@@ -4353,7 +4669,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_AM-3"
+          "Azure_Security_Benchmark_v3.0_AM-2"
         ]
       },
       {
@@ -4368,7 +4684,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4380,7 +4696,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-4"
         ]
       },
       {
@@ -4392,8 +4708,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-2",
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-4"
         ]
       },
       {
@@ -4405,7 +4720,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -4417,7 +4732,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -4429,8 +4744,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-3",
+          "Azure_Security_Benchmark_v3.0_PA-2"
         ]
       },
       {
@@ -4442,7 +4757,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_AM-6"
+          "Azure_Security_Benchmark_v3.0_AM-5"
         ]
       },
       {
@@ -4454,7 +4769,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_AM-6"
+          "Azure_Security_Benchmark_v3.0_AM-5"
         ]
       },
       {
@@ -4466,8 +4781,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-1"
         ]
       },
       {
@@ -4479,8 +4793,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-1"
         ]
       },
       {
@@ -4492,7 +4805,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-1"
         ]
       },
       {
@@ -4504,7 +4817,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-4"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -4516,8 +4829,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_ES-2",
-          "Azure_Security_Benchmark_v2.0_ES-3"
+          "Azure_Security_Benchmark_v3.0_ES-2"
         ]
       },
       {
@@ -4529,8 +4841,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-2",
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-4"
         ]
       },
       {
@@ -4542,7 +4853,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-6"
+          "Azure_Security_Benchmark_v3.0_PV-5"
         ]
       },
       {
@@ -4554,8 +4865,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-1"
         ]
       },
       {
@@ -4567,7 +4877,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-6"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -4579,19 +4889,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cc9835f2-9f6b-4cc8-ab4a-f8ef615eb349",
-        "policyDefinitionReferenceId": "sqlDbDataClassificationMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('sqlDbDataClassificationMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-1"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -4603,7 +4901,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-1"
+          "Azure_Security_Benchmark_v3.0_PA-1"
         ]
       },
       {
@@ -4615,7 +4913,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-1"
+          "Azure_Security_Benchmark_v3.0_PA-1"
         ]
       },
       {
@@ -4627,7 +4925,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-4"
+          "Azure_Security_Benchmark_v3.0_IM-6"
         ]
       },
       {
@@ -4639,7 +4937,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-4"
+          "Azure_Security_Benchmark_v3.0_IM-6"
         ]
       },
       {
@@ -4651,7 +4949,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-4"
+          "Azure_Security_Benchmark_v3.0_IM-6"
         ]
       },
       {
@@ -4663,8 +4961,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-1",
-          "Azure_Security_Benchmark_v2.0_PA-3"
+          "Azure_Security_Benchmark_v3.0_PA-1",
+          "Azure_Security_Benchmark_v3.0_PA-4"
         ]
       },
       {
@@ -4676,7 +4974,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-3"
+          "Azure_Security_Benchmark_v3.0_PA-4"
         ]
       },
       {
@@ -4688,8 +4986,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-1",
-          "Azure_Security_Benchmark_v2.0_PA-3"
+          "Azure_Security_Benchmark_v3.0_PA-1",
+          "Azure_Security_Benchmark_v3.0_PA-4"
         ]
       },
       {
@@ -4701,7 +4999,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-3"
+          "Azure_Security_Benchmark_v3.0_PA-4"
         ]
       },
       {
@@ -4713,7 +5011,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-3"
+          "Azure_Security_Benchmark_v3.0_PA-4"
         ]
       },
       {
@@ -4725,7 +5023,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -4737,7 +5035,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -4749,7 +5047,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -4761,7 +5059,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -4773,7 +5071,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -4785,7 +5083,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -4797,7 +5095,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -4809,7 +5107,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -4821,7 +5119,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -4833,7 +5131,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-5"
         ]
       },
       {
@@ -4843,7 +5141,13 @@
           "effect": {
             "value": "[parameters('sqlServerAdvancedDataSecurityMonitoringEffect')]"
           }
-        }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
+        ]
       },
       {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abfb7388-5bf4-4ad7-ba99-2cd2f41cebb9",
@@ -4854,12 +5158,11 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-2",
-          "Azure_Security_Benchmark_v2.0_DP-3",
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_DP-2",
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -4871,7 +5174,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PA-7"
+          "Azure_Security_Benchmark_v3.0_PA-7"
         ]
       },
       {
@@ -4883,8 +5186,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -4896,7 +5198,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-6"
+          "Azure_Security_Benchmark_v3.0_PV-5"
         ]
       },
       {
@@ -4908,7 +5210,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-6"
+          "Azure_Security_Benchmark_v3.0_PV-5"
         ]
       },
       {
@@ -4920,8 +5222,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-1",
+          "Azure_Security_Benchmark_v3.0_NS-7"
         ]
       },
       {
@@ -4933,7 +5235,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-3"
         ]
       },
       {
@@ -4945,32 +5247,31 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-3"
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0d134df8-db83-46fb-ad72-fe0c9428c8dd",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a370ff3-6cab-4e85-8995-295fd854c5b8",
         "policyDefinitionReferenceId": "ensureServerTDEIsEncryptedWithYourOwnKeyMonitoring",
         "parameters": {
           "effect": {
-            "value": "[parameters('ensureServerTDEIsEncryptedWithYourOwnKeyMonitoringEffect')]"
+            "value": "[parameters('ensureServerTDEIsEncryptedWithYourOwnKeyWithDenyMonitoringEffect')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/048248b0-55cd-46da-b1ff-39efd52db260",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac01ad65-10e5-46df-bdd9-6b0cad13e1d2",
         "policyDefinitionReferenceId": "ensureManagedInstanceTDEIsEncryptedWithYourOwnKeyMonitoring",
         "parameters": {
           "effect": {
-            "value": "[parameters('ensureManagedInstanceTDEIsEncryptedWithYourOwnKeyMonitoringEffect')]"
+            "value": "[parameters('ensureManagedInstanceTDEIsEncryptedWithYourOwnKeyWithDenyMonitoringEffect')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
@@ -4982,7 +5283,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-4"
+          "Azure_Security_Benchmark_v3.0_PV-6",
+          "Azure_Security_Benchmark_v3.0_DS-6"
         ]
       },
       {
@@ -4994,7 +5296,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-3"
+          "Azure_Security_Benchmark_v3.0_LT-4"
         ]
       },
       {
@@ -5006,7 +5308,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-3"
+          "Azure_Security_Benchmark_v3.0_LT-4"
         ]
       },
       {
@@ -5018,9 +5320,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4",
-          "Azure_Security_Benchmark_v2.0_NS-5"
+          "Azure_Security_Benchmark_v3.0_NS-3"
         ]
       },
       {
@@ -5032,7 +5332,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-5"
+          "Azure_Security_Benchmark_v3.0_LT-5"
         ]
       },
       {
@@ -5044,7 +5344,31 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-5"
+          "Azure_Security_Benchmark_v3.0_LT-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4078e558-bda6-41fb-9b3c-361e8875200d",
+        "policyDefinitionReferenceId": "ArcWindowsMonitoringByGC",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ArcWindowsMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e7fed80-8321-4605-b42c-65fc300f23a3",
+        "policyDefinitionReferenceId": "ArcLinuxMonitoringByGC",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('ArcLinuxMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-5"
         ]
       },
       {
@@ -5056,10 +5380,11 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_DP-8",
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -5071,12 +5396,11 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-2",
-          "Azure_Security_Benchmark_v2.0_DP-3",
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_DP-2",
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -5088,12 +5412,11 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-2",
-          "Azure_Security_Benchmark_v2.0_DP-3",
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_DP-2",
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -5105,12 +5428,11 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-2",
-          "Azure_Security_Benchmark_v2.0_DP-3",
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_DP-2",
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -5122,40 +5444,25 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c25d9a16-bc35-4e15-a7e5-9db606bf9ed4",
-        "policyDefinitionReferenceId": "containerRegistryAdvancedThreatProtectionMonitoringEffect",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1c988dd6-ade4-430f-a608-2a3e5b0a6d38",
+        "policyDefinitionReferenceId": "containersAdvancedThreatProtectionMonitoringEffect",
         "parameters": {
           "effect": {
-            "value": "[parameters('containerRegistryAdvancedThreatProtectionMonitoringEffect')]"
+            "value": "[parameters('containersAdvancedThreatProtectionMonitoringEffect')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/523b5cd1-3e23-492f-a539-13118b6d1e3a",
-        "policyDefinitionReferenceId": "kubernetesServiceAdvancedThreatProtectionMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('kubernetesServiceAdvancedThreatProtectionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -5167,11 +5474,11 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5",
-          "Azure_Security_Benchmark_v2.0_ES-1"
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_ES-1",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -5183,7 +5490,19 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b2122c1-8120-4ff5-801b-17625a355590",
+        "policyDefinitionReferenceId": "arcEnabledKubernetesClustersShouldHaveAzurePolicyExtensionInstalled",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('arcEnabledKubernetesClustersShouldHaveAzurePolicyExtensionInstalledEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5201,7 +5520,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5216,25 +5535,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/440b515e-a580-421e-abeb-b159a61ddcbc",
-        "policyDefinitionReferenceId": "allowedContainerPortsInKubernetesCluster",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('allowedContainerPortsInKubernetesClusterEffect')]"
-          },
-          "allowedContainerPortsList": {
-            "value": "[parameters('allowedContainerPortsInKubernetesClusterPorts')]"
-          },
-          "excludedNamespaces": {
-            "value": "[parameters('allowedContainerPortsInKubernetesClusterNamespaceExclusion')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5252,7 +5553,34 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/13cd7ae3-5bc0-4ac4-a62d-4f7c120b9759",
+        "policyDefinitionReferenceId": "BlockVulnerableImagesInKubernetesCluster",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('BlockVulnerableImagesInKubernetesClusterEffect')]"
+          },
+          "excludedNamespaces": {
+            "value": "[parameters('BlockVulnerableImagesInKubernetesClusterNamespaceExclusion')]"
+          },
+          "excludedImages": {
+            "value": "[parameters('BlockVulnerableImagesExcludedImages')]"
+          },
+          "severityThresholdForExcludingNotPatchableFindings": {
+            "value": "[parameters('BlockVulnerableImagesSeverityThresholdForExcludingNotPatchableFindings')]"
+          },
+          "excludeFindingIDs": {
+            "value": "[parameters('BlockVulnerableImagesExcludeFindingIDs')]"
+          },
+          "severity": {
+            "value": "[parameters('severity')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5273,7 +5601,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5335,7 +5663,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5347,8 +5675,21 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2"
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a1840de2-8088-4ea8-b153-b4c723e9cb01",
+        "policyDefinitionReferenceId": "azureKubernetesServiceClustersShouldHaveSecurityProfileEnabled",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('azureKubernetesServiceClustersShouldHaveSecurityProfileEnabled')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2"
         ]
       },
       {
@@ -5360,7 +5701,21 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-6"
+          "Azure_Security_Benchmark_v3.0_PV-6",
+          "Azure_Security_Benchmark_v3.0_DS-6"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0fc39691-5a3f-4e3e-94ee-2e6447309ad9",
+        "policyDefinitionReferenceId": "kubernetesRunningImagesVulnerabilityAssessment",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('kubernetesRunningImagesVulnerabilityAssessmentEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-6",
+          "Azure_Security_Benchmark_v3.0_DS-6"
         ]
       },
       {
@@ -5375,7 +5730,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5390,7 +5745,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5405,7 +5760,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5426,7 +5781,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5444,7 +5799,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5468,7 +5823,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5486,7 +5841,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5498,7 +5853,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-2"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -5510,8 +5865,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_BR-1",
-          "Azure_Security_Benchmark_v2.0_BR-2"
+          "Azure_Security_Benchmark_v3.0_BR-1",
+          "Azure_Security_Benchmark_v3.0_BR-2"
         ]
       },
       {
@@ -5523,8 +5878,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-1",
-          "Azure_Security_Benchmark_v2.0_IM-2"
+          "Azure_Security_Benchmark_v3.0_IM-3"
         ]
       },
       {
@@ -5536,8 +5890,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_BR-1",
-          "Azure_Security_Benchmark_v2.0_BR-2"
+          "Azure_Security_Benchmark_v3.0_BR-1",
+          "Azure_Security_Benchmark_v3.0_BR-2"
         ]
       },
       {
@@ -5549,8 +5903,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-1",
-          "Azure_Security_Benchmark_v2.0_IM-2"
+          "Azure_Security_Benchmark_v3.0_IM-3"
         ]
       },
       {
@@ -5562,8 +5915,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_BR-1",
-          "Azure_Security_Benchmark_v2.0_BR-2"
+          "Azure_Security_Benchmark_v3.0_BR-1",
+          "Azure_Security_Benchmark_v3.0_BR-2"
         ]
       },
       {
@@ -5575,7 +5928,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5587,8 +5940,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_BR-1",
-          "Azure_Security_Benchmark_v2.0_BR-2"
+          "Azure_Security_Benchmark_v3.0_BR-1",
+          "Azure_Security_Benchmark_v3.0_BR-2"
         ]
       },
       {
@@ -5600,11 +5953,12 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_NS-8",
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b607c5de-e7d9-4eee-9e5c-83f1bcee4fa0",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/91a78b24-f231-4a8a-8da9-02c35b2b6510",
         "policyDefinitionReferenceId": "diagnosticLogsInAppServicesShouldBeEnabledMonitoringEffect",
         "parameters": {
           "effect": {
@@ -5612,7 +5966,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-4"
+          "Azure_Security_Benchmark_v3.0_LT-3"
         ]
       },
       {
@@ -5624,8 +5978,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-1",
-          "Azure_Security_Benchmark_v2.0_IM-2"
+          "Azure_Security_Benchmark_v3.0_IM-3"
         ]
       },
       {
@@ -5637,7 +5990,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -5649,7 +6002,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -5661,7 +6014,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_NS-8",
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -5673,7 +6027,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_NS-8",
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -5685,7 +6040,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5697,7 +6052,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5709,7 +6064,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5721,7 +6076,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5733,7 +6088,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5745,7 +6100,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5757,7 +6112,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5769,7 +6124,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-7"
+          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5781,8 +6136,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -5794,8 +6148,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -5807,8 +6160,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -5820,7 +6172,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-6"
+          "Azure_Security_Benchmark_v3.0_LT-6"
         ]
       },
       {
@@ -5832,7 +6184,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -5844,7 +6196,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -5856,7 +6208,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -5868,7 +6220,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -5880,7 +6232,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
@@ -5892,7 +6244,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
@@ -5904,7 +6256,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_BR-4"
+          "Azure_Security_Benchmark_v3.0_DP-8"
         ]
       },
       {
@@ -5916,7 +6268,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_BR-4"
+          "Azure_Security_Benchmark_v3.0_DP-8"
         ]
       },
       {
@@ -5928,7 +6280,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -5940,7 +6292,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
@@ -5952,7 +6304,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -5964,7 +6316,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
@@ -5976,7 +6328,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -5988,8 +6340,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6001,8 +6352,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6014,8 +6364,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6027,8 +6376,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6040,8 +6388,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6053,7 +6400,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
@@ -6065,8 +6412,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6078,7 +6424,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-6"
         ]
       },
       {
@@ -6090,7 +6436,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-6"
         ]
       },
       {
@@ -6102,7 +6448,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6114,7 +6460,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6126,7 +6472,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
@@ -6138,7 +6484,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6150,7 +6496,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-5"
+          "Azure_Security_Benchmark_v3.0_DP-5"
         ]
       },
       {
@@ -6162,8 +6508,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6175,8 +6520,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-2",
+          "Azure_Security_Benchmark_v3.0_DP-8"
         ]
       },
       {
@@ -6188,8 +6533,8 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2",
+          "Azure_Security_Benchmark_v3.0_DP-8"
         ]
       },
       {
@@ -6201,7 +6546,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6213,7 +6558,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IR-2"
+          "Azure_Security_Benchmark_v3.0_IR-2"
         ]
       },
       {
@@ -6225,7 +6570,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-5"
+          "Azure_Security_Benchmark_v3.0_LT-5"
         ]
       },
       {
@@ -6237,7 +6582,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IR-2"
+          "Azure_Security_Benchmark_v3.0_IR-2"
         ]
       },
       {
@@ -6249,7 +6594,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IR-2"
+          "Azure_Security_Benchmark_v3.0_IR-2"
         ]
       },
       {
@@ -6261,8 +6606,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6271,10 +6615,13 @@
         "parameters": {
           "effect": {
             "value": "[parameters('authenticationToLinuxMachinesShouldRequireSSHKeysMonitoringEffect')]"
+          },
+          "IncludeArcMachines": {
+            "value": "[parameters('windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsIncludeArcMachines')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_IM-4"
+          "Azure_Security_Benchmark_v3.0_IM-6"
         ]
       },
       {
@@ -6286,8 +6633,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-2",
-          "Azure_Security_Benchmark_v2.0_NS-3"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6299,7 +6645,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6311,7 +6657,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -6323,13 +6669,10 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('kubernetesClustersShouldBeAccessibleOnlyOverHTTPSExcludedNamespaces')]"
-          },
-          "namespaces": {
-            "value": "[parameters('kubernetesClustersShouldBeAccessibleOnlyOverHTTPSNamespaces')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -6347,7 +6690,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_DP-4"
+          "Azure_Security_Benchmark_v3.0_DP-3"
         ]
       },
       {
@@ -6359,7 +6702,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6371,7 +6714,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6386,7 +6729,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6398,8 +6741,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_NS-1",
-          "Azure_Security_Benchmark_v2.0_NS-4"
+          "Azure_Security_Benchmark_v3.0_NS-2"
         ]
       },
       {
@@ -6414,7 +6756,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-3"
+          "Azure_Security_Benchmark_v3.0_IR-4"
         ]
       },
       {
@@ -6426,10 +6768,10 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -6441,10 +6783,11 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_LT-1",
-          "Azure_Security_Benchmark_v2.0_LT-2",
-          "Azure_Security_Benchmark_v2.0_IR-3",
-          "Azure_Security_Benchmark_v2.0_IR-5"
+          "Azure_Security_Benchmark_v3.0_NS-10",
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       },
       {
@@ -6456,7 +6799,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -6465,10 +6808,13 @@
         "parameters": {
           "effect": {
             "value": "[parameters('KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringEffect')]"
+          },
+          "excludedNamespaces": {
+            "value": "[parameters('KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringNamespaceExclusion')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -6477,10 +6823,13 @@
         "parameters": {
           "effect": {
             "value": "[parameters('KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect')]"
+          },
+          "excludedNamespaces": {
+            "value": "[parameters('KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringNamespaceExclusion')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-2"
+          "Azure_Security_Benchmark_v3.0_PV-2"
         ]
       },
       {
@@ -6492,7 +6841,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-3"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -6504,7 +6853,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-3"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -6516,7 +6865,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-3"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -6528,7 +6877,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-3"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -6540,7 +6889,7 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-3"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -6552,7 +6901,61 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v2.0_PV-3"
+          "Azure_Security_Benchmark_v3.0_PV-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1f7c564c-0a90-4d44-b7e1-9d456cffaee8",
+        "policyDefinitionReferenceId": "installEndpointProtection",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('installEndpointProtectionMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_ES-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e42c1f2-a2ab-49bc-994a-12bcd0dc4ac2",
+        "policyDefinitionReferenceId": "endpointProtectionHealthIssuesMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('endpointProtectionHealthIssuesMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_ES-2",
+          "Azure_Security_Benchmark_v3.0_ES-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/245fc9df-fa96-4414-9a0b-3738c2f7341c",
+        "policyDefinitionReferenceId": "diagnosticsLogsInKubernetesMonitoring",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('diagnosticsLogsInKubernetesMonitoringEffect')]"
+          },
+          "requiredRetentionDays": {
+            "value": "[parameters('diagnosticsLogsInKubernetesRetentionDays')]"
+          }
+        },
+        "groupNames": []
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a9fbe0d-c5c4-4da8-87d8-f4fd77338835",
+        "policyDefinitionReferenceId": "AzureDefenderForOpenSourceRelationalDatabasesShouldBeEnabledMonitoringEffect",
+        "parameters": {
+          "effect": {
+            "value": "[parameters('AzureDefenderForOpenSourceRelationalDatabasesShouldBeEnabledMonitoringEffect')]"
+          }
+        },
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-2",
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
         ]
       }
     ]
