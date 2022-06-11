@@ -6,7 +6,7 @@
     "description": "Configure machines to automatically create the Azure Security Center pipeline for Azure Monitor Agent. Security Center collects events from the agent and uses them to provide security alerts and tailored hardening tasks (recommendations). Create a resource group and Log Analytics workspace in the same region as the machine to store audit records. Target virtual machines must be in a supported location.",
     "metadata": {
       "category": "Security Center",
-      "version": "5.0.0-preview",
+      "version": "5.0.1-preview",
       "preview": true
     },
     "parameters": {
@@ -225,7 +225,7 @@
                           {
                             "type": "Microsoft.OperationalInsights/workspaces",
                             "name": "[parameters('workspaceName')]",
-                            "apiVersion": "2015-11-01-preview",
+                            "apiVersion": "2021-06-01",
                             "location": "[parameters('defaultRGLocation')]",
                             "properties": {
                               "sku": {

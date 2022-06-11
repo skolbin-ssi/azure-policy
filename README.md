@@ -39,15 +39,16 @@ Check here for a current list of [**known issues**](#known-issues) for Azure Pol
   - [Policy](https://docs.microsoft.com/powershell/module/az.resources/#policies)
   - [Guest Configuration (preview)](https://www.powershellgallery.com/packages/AzureRM.GuestConfiguration)
 - REST API
-  - [Events](https://docs.microsoft.com/rest/api/policy-insights/policyevents)
-  - [States](https://docs.microsoft.com/rest/api/policy-insights/policystates)
-  - [Assignments](https://docs.microsoft.com/rest/api/resources/policyassignments)
-  - [Policy Definitions](https://docs.microsoft.com/rest/api/resources/policydefinitions)
-  - [Initiative Definitions](https://docs.microsoft.com/rest/api/resources/policysetdefinitions)
-  - [Policy Tracked Resources](https://docs.microsoft.com/rest/api/policy-insights/policytrackedresources)
-  - [Remediations](https://docs.microsoft.com/rest/api/policy-insights/remediations)
+  - [Policy Definitions](https://docs.microsoft.com/en-us/rest/api/policy/policy-definitions)
+  - [Initiative Definitions](https://docs.microsoft.com/en-us/rest/api/policy/policy-set-definitions)
+  - [Assignments](https://docs.microsoft.com/en-us/rest/api/policy/policy-assignments)
+  - [Exemptions](https://docs.microsoft.com/en-us/rest/api/policy/policy-exemptions)
+  - [States](https://docs.microsoft.com/en-us/rest/api/policy/policy-states)
+  - [Events](https://docs.microsoft.com/en-us/rest/api/policy/policy-events)
+  - [Remediations](https://docs.microsoft.com/en-us/rest/api/policy/remediations)
+  - [Metadata](https://docs.microsoft.com/en-us/rest/api/policy/policy-metadata)
+  - [Policy Tracked Resources](https://docs.microsoft.com/en-us/rest/api/policy/policy-tracked-resources)
   - [Guest Configuration (preview)](https://docs.microsoft.com/rest/api/guestconfiguration/)
-
 
 ## Getting Support
 
@@ -67,10 +68,10 @@ Previously, this repository was the official channel to open requests for new al
 If you have questions you haven't been able to answer from the [**Azure Policy documentation**](https://docs.microsoft.com/azure/governance/policy), there are a few places that host discussions on Azure Policy:
 
  - [Microsoft Tech Community](https://techcommunity.microsoft.com/) [**Azure Governance conversation space**](https://techcommunity.microsoft.com/t5/Azure-Governance/bd-p/AzureGovernance)
- - Join the Customer Call on Azure Governance (register [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRxn7UD7lweFDnmuLj72r6E1UN1dLNTBZUVMyNVpHUjJLRE5PVDVGNlkyOC4u)) Latest Customer call (December 9th) recording can be found [here](https://www.youtube.com/watch?v=oYC5Ns7kLCY)
+ - Join the Customer Call on Azure Governance (register [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRxn7UD7lweFDnmuLj72r6E1UN1dLNTBZUVMyNVpHUjJLRE5PVDVGNlkyOC4u)) Latest Customer call (June) recording can be found [here](https://youtu.be/WJUU5tEQicw)
  - Search old [**issues in this repo**](https://github.com/Azure/azure-policy/issues)
  - Search or add to Azure Policy discussions on [**StackOverflow**](https://stackoverflow.com/questions/tagged/azure-policy+or+azure+policy)
- - Feature request please add or vote on [**Ideas**](https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0#)
+ - Feature request please add or vote on [**Ideas**](https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0#) with Category: "Azure Policy"
 
 If your questions are more in-depth or involve information that is not public, open a new [**Azure Customer Support ticket**](https://azure.microsoft.com/support/create-ticket/).
 
@@ -80,7 +81,7 @@ To report issues in the Azure Policy online documentation, look for a feedback a
 
 ### New built-in Policy Proposals
 
-If you have ideas for new built-in policies you want to suggest to Microsoft, you can submit them to [**Azure Governance User Voice**](https://feedback.azure.com/forums/915958-azure-governance). These suggestions are actively reviewed and prioritized for implementation.
+If you have ideas for new built-in policies you want to suggest to Microsoft, you can submit them to [**Ideas**](https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0) with Category: "Azure Policy". These suggestions are actively reviewed and prioritized for implementation.
 
 ### Other Support for Azure Policy
 
@@ -111,7 +112,9 @@ Currently, there is no plan to change this behavior for the above Microsoft.Web 
             }
    ```
 - Microsoft.DataLakeStore/accounts
-  - This type behaves similarly to Microsoft.Sql/servers/auditingSettings. Compliance of some fields cannot be determined except in AuditIfNotExits and DeployIfNotExists.
+  - This type behaves similarly to Microsoft.Sql/servers/auditingSettings. Compliance of some fields cannot be determined except in `AuditIfNotExists` and `DeployIfNotExists` policies.
+- Microsoft.DataLakeStore/accounts/encryptionState 
+  - This property of this type is populated differently when queried than when created or updated unless non-standard parameters are provided. This means deny policies will work, but compliance audits will generally not be correct.
 - Microsoft.Sql 'master' database 
    - This type behaves similarly to Microsoft.Sql/servers/auditingSettings. Compliance of some fields cannot be determined except in `AuditIfNotExists` and `DeployIfNotExists` policies.
 - Microsoft.Compute/virtualMachines/instanceView
