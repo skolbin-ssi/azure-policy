@@ -4,7 +4,7 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes audit and virtual machine extension deployment policies that address a subset of SWIFT CSP-CSCF v2020 controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/swift2020-init.",
     "metadata": {
-      "version": "3.1.1-preview",
+      "version": "6.0.0-preview",
       "category": "Regulatory Compliance",
       "preview": true
     },
@@ -224,11 +224,6 @@
         "parameters": {}
       },
       {
-        "policyDefinitionReferenceId": "ApiAppShouldOnlyBeAccessibleOverHttps",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b7ddfbdc-1260-477d-91fd-98bd9be789a6",
-        "parameters": {}
-      },
-      {
         "policyDefinitionReferenceId": "AMaximumOf3OwnersShouldBeDesignatedForYourSubscription",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4f11b553-d42e-4e3a-89be-32ca364cad4c",
         "parameters": {}
@@ -251,11 +246,6 @@
       {
         "policyDefinitionReferenceId": "RemoteDebuggingShouldBeTurnedOffForWebApplication",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cb510bfd-1cba-4d9f-a230-cb0976f4bb71",
-        "parameters": {}
-      },
-      {
-        "policyDefinitionReferenceId": "RemoteDebuggingShouldBeTurnedOffForApiApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9c8d085-d9cc-4b17-9cdc-059f1f01f19e",
         "parameters": {}
       },
       {

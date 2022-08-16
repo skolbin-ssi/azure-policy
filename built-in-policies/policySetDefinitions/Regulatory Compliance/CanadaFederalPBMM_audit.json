@@ -4,7 +4,7 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes policies that address a subset of Canada Federal PBMM controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/canadafederalpbmm-init.",
     "metadata": {
-      "version": "5.1.1",
+      "version": "8.0.0",
       "category": "Regulatory Compliance"
     },
     "policyDefinitionGroups": [
@@ -1678,14 +1678,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "ApiAppShouldOnlyBeAccessibleOverHttps",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b7ddfbdc-1260-477d-91fd-98bd9be789a6",
-        "parameters": {},
-        "groupNames": [
-          "CCCS_SC-8(1)"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "PreviewAuditLogAnalyticsAgentDeploymentVmImageOsUnlisted",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/32133ab0-ee4b-4b44-98d6-042180979d50",
         "parameters": {},
@@ -1757,14 +1749,6 @@
       {
         "policyDefinitionReferenceId": "RemoteDebuggingShouldBeTurnedOffForWebApplication",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cb510bfd-1cba-4d9f-a230-cb0976f4bb71",
-        "parameters": {},
-        "groupNames": [
-          "CCCS_AC-17(1)"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "RemoteDebuggingShouldBeTurnedOffForApiApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9c8d085-d9cc-4b17-9cdc-059f1f01f19e",
         "parameters": {},
         "groupNames": [
           "CCCS_AC-17(1)"

@@ -4,7 +4,7 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes audit and virtual machine extension deployment policies that address a subset of UK OFFICIAL and UK NHS controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/ukofficial-init and https://aka.ms/uknhs-init.",
     "metadata": {
-      "version": "6.0.1",
+      "version": "9.0.0",
       "category": "Regulatory Compliance"
     },
     "policyDefinitionGroups": [
@@ -700,14 +700,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "AuditRemoteDebuggingStateForAnAPIApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9c8d085-d9cc-4b17-9cdc-059f1f01f19e",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_11"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "AuditHttpsOnlyAccessForAWebApplication",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4af4a39-4135-47fb-b175-47fbdf85311d",
         "parameters": {},
@@ -718,14 +710,6 @@
       {
         "policyDefinitionReferenceId": "AuditHttpsOnlyAccessForAFunctionApp",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6d555dd1-86f2-4f1c-8ed7-5abae7c6cbab",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_1"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "AuditHttpsOnlyAccessForAnApiApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b7ddfbdc-1260-477d-91fd-98bd9be789a6",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_1"

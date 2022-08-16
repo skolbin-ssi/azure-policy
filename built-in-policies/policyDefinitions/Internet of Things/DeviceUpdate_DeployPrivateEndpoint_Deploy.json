@@ -5,7 +5,7 @@
     "mode": "Indexed",
     "description": "A private endpoint is a private IP address allocated inside a customer-owned virtual network via which an Azure resource is reachable. This policy deploys a private endpoint for your Device Update for IoT hub to allow services inside your virtual network to reach this resource without requiring traffic to be sent to Device Update for IoT Hub's public endpoint.",
     "metadata": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "Internet of Things"
     },
     "parameters": {
@@ -122,7 +122,7 @@
                                   "properties": {
                                     "privateLinkServiceId": "[parameters('serviceId')]",
                                     "groupIds": [
-                                      "iotHub"
+                                      "DeviceUpdate"
                                     ],
                                     "requestMessage": "autoapprove"
                                   }
