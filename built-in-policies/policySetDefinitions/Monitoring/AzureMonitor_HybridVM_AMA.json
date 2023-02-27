@@ -1,12 +1,14 @@
 {
   "properties": {
-    "displayName": "Enable Azure Monitor for Hybrid VMs with AMA",
+    "displayName": "[Preview]: Enable Azure Monitor for Hybrid VMs with AMA",
     "policyType": "BuiltIn",
     "description": "Enable Azure Monitor for the hybrid virtual machines with AMA. Takes Log Analytics workspace as parameter and asks for an option to enable Processes and Dependencies.",
     "metadata": {
-      "version": "2.0.0",
-      "category": "Monitoring"
+      "version": "2.1.1-preview",
+      "category": "Monitoring",
+      "preview": true
     },
+    "version": "2.1.1-preview",
     "parameters": {
       "logAnalyticsWorkspace": {
         "type": "String",
@@ -53,6 +55,7 @@
       {
         "policyDefinitionReferenceId": "AzureMonitorAgent_Windows_HybridVM_Deploy",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94f686d6-9a24-4e19-91f1-de937dc171a4",
+        "definitionVersion": "2.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"
@@ -62,6 +65,7 @@
       {
         "policyDefinitionReferenceId": "AzureMonitorAgent_Linux_HybridVM_Deploy",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/845857af-0333-4c5d-bbbc-6076697da122",
+        "definitionVersion": "2.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"
@@ -71,24 +75,33 @@
       {
         "policyDefinitionReferenceId": "DependencyAgentExtension_AMA_Windows_HybridVM_Deploy",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/84cfed75-dfd4-421b-93df-725b479d356a",
+        "definitionVersion": "1.*.*-preview",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"
+          },
+          "enableProcessesAndDependencies": {
+            "value": "[parameters('enableProcessesAndDependencies')]"
           }
         }
       },
       {
         "policyDefinitionReferenceId": "DependencyAgentExtension_Linux_HybridVM_Deploy",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08a4470f-b26d-428d-97f4-7e3e9c92b366",
+        "definitionVersion": "1.*.*-preview",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"
+          },
+          "enableProcessesAndDependencies": {
+            "value": "[parameters('enableProcessesAndDependencies')]"
           }
         }
       },
       {
         "policyDefinitionReferenceId": "VMInsightsDCR_DCRA_HybridVM_Deploy",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7c4214e9-ea57-487a-b38e-310ec09bc21d",
+        "definitionVersion": "1.*.*-preview",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"

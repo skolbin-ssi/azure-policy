@@ -5,15 +5,17 @@
     "mode": "Microsoft.Kubernetes.Data",
     "description": "Block usage of naked Pods. Naked Pods will not be rescheduled in the event of a node failure. Pods should be managed by Deployment, Replicset, Daemonset or Jobs",
     "metadata": {
-      "version": "1.0.0",
+      "version": "3.0.1",
       "category": "Kubernetes"
     },
+    "version": "3.0.1",
     "parameters": {
       "effect": {
         "type": "String",
         "metadata": {
           "displayName": "Effect",
-          "description": "'Audit' allows a non-compliant resource to be created or updated, but flags it as non-compliant. 'Deny' blocks the non-compliant resource creation or update. 'Disabled' turns off the policy."
+          "description": "'Audit' allows a non-compliant resource to be created or updated, but flags it as non-compliant. 'Deny' blocks the non-compliant resource creation or update. 'Disabled' turns off the policy.",
+          "portalReview": true
         },
         "allowedValues": [
           "Audit",
@@ -106,6 +108,7 @@
       "if": {
         "field": "type",
         "in": [
+          "Microsoft.Kubernetes/connectedClusters",
           "Microsoft.ContainerService/managedClusters"
         ]
       },

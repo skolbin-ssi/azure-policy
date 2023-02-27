@@ -6,9 +6,10 @@
     "description": "Configure supported Windows virtual machines to automatically install the Guest Attestation extension to allow Azure Security Center to proactively attest and monitor the boot integrity. Boot integrity is attested via Remote Attestation.",
     "metadata": {
       "category": "Security Center",
-      "version": "4.0.0-preview",
+      "version": "5.0.0-preview",
       "preview": true
     },
+    "version": "5.0.0-preview",
     "parameters": {
       "effect": {
         "type": "string",
@@ -52,7 +53,10 @@
           },
           {
             "field": "Microsoft.Compute/virtualMachines/securityProfile.securityType",
-            "equals": "TrustedLaunch"
+            "in": [
+              "TrustedLaunch",
+              "ConfidentialVM"
+            ]
           },
           {
             "field": "Microsoft.Compute/virtualMachines/securityProfile.uefiSettings",
@@ -132,7 +136,7 @@
                 "resources": [
                   {
                     "type": "Microsoft.Compute/virtualMachines/extensions",
-                    "apiVersion": "2018-10-01",
+                    "apiVersion": "2019-12-01",
                     "name": "[concat(parameters('vmName'), '/', variables('extensionName'))]",
                     "location": "[parameters('location')]",
                     "properties": {
@@ -140,6 +144,7 @@
                       "type": "[variables('extensionName')]",
                       "typeHandlerVersion": "[variables('extensionVersion')]",
                       "autoUpgradeMinorVersion": true,
+                      "enableAutomaticUpgrade": true,
                       "settings": {
                         "AttestationConfig": {
                           "MaaSettings": {

@@ -1,12 +1,14 @@
 {
   "properties": {
-    "displayName": "Enable Azure Monitor for VMs with Azure Monitoring Agent(AMA)",
+    "displayName": "[Preview]: Enable Azure Monitor for VMs with Azure Monitoring Agent(AMA)",
     "policyType": "BuiltIn",
     "description": "Enable Azure Monitor for the virtual machines (VMs) with AMA. Takes Log Analytics workspace as parameter and asks for an option to enable Processes and Dependencies.",
     "metadata": {
-      "version": "1.0.0",
-      "category": "Monitoring"
+      "version": "1.1.1-preview",
+      "category": "Monitoring",
+      "preview": true
     },
+    "version": "1.1.1-preview",
     "parameters": {
       "logAnalyticsWorkspace": {
         "type": "String",
@@ -96,6 +98,7 @@
       {
         "policyDefinitionReferenceId": "AddUserAssignedManagedIdentity_VM",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d367bd60-64ca-4364-98ea-276775bddd94",
+        "definitionVersion": "1.*.*-preview",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"
@@ -113,6 +116,7 @@
       },
       {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ae8a10e6-19d6-44a3-a02d-a2bdfc707742",
+        "definitionVersion": "3.*.*",
         "policyDefinitionReferenceId": "DeployAzureMonitoringAgentLinuxVMWithUAI",
         "parameters": {
           "effect": {
@@ -134,6 +138,7 @@
       },
       {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/637125fd-7c39-4b94-bb0a-d331faf333a9",
+        "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "deployAzureMonitoringAgentWindowsVMWithUAI",
         "parameters": {
           "effect": {
@@ -156,30 +161,39 @@
       {
         "policyDefinitionReferenceId": "DependencyAgentExtension_Windows_VM_AMA_Deploy",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/89ca9cc7-25cd-4d53-97ba-445ca7a1f222",
+        "definitionVersion": "1.*.*-preview",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"
           },
           "listOfImageIdToInclude": {
             "value": "[parameters('listOfImageIdToInclude_windows')]"
+          },
+          "enableProcessesAndDependencies": {
+            "value": "[parameters('enableProcessesAndDependencies')]"
           }
         }
       },
       {
         "policyDefinitionReferenceId": "DependencyAgentExtension_Linux_VM_AMA_Deploy",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d55b81e1-984f-4a96-acab-fae204e3ca7f",
+        "definitionVersion": "3.*.*-preview",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"
           },
           "listOfImageIdToInclude": {
             "value": "[parameters('listOfImageIdToInclude_linux')]"
+          },
+          "enableProcessesAndDependencies": {
+            "value": "[parameters('enableProcessesAndDependencies')]"
           }
         }
       },
       {
         "policyDefinitionReferenceId": "VMInsightsDCR_DCRA_VM_Deploy",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a0f27bdc-5b15-4810-b81d-7c4df9df1a37",
+        "definitionVersion": "1.*.*-preview",
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"

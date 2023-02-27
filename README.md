@@ -10,7 +10,7 @@ To contribute, please submit your policies to our Community repo! (https://githu
 
 ## Reporting Samples Issues
 
-If you discover a problem with any of the samples published here that isn't already reported in [**Issues**](https://github.com/Azure/azure-policy/issues), open a [**New issue**](https://github.com/Azure/azure-policy/issues/new/choose).
+Previously, this repository was the official channel to open issue for sample built-in definitions. Since this repo is a direct representation of built-in definitons published to Azure, support for addressing built-in definition issues is now handled by Azure Customer Support. Open a new [**Azure Customer Support ticket**](https://azure.microsoft.com/support/create-ticket/) if you believe a definition has a bug or error.
 
 # Azure Policy Known Issues
 
@@ -27,8 +27,6 @@ Check here for a current list of [**known issues**](#known-issues) for Azure Pol
 - [Export and manage Azure Policy resources as code with GitHub](https://docs.microsoft.com/azure/governance/policy/tutorials/policy-as-code-github)
 - [Definition structure](https://docs.microsoft.com/azure/governance/policy/concepts/definition-structure)
 - [Understand Policy effects](https://docs.microsoft.com/azure/governance/policy/concepts/effects)
-- [Audit VMs with Guest Configuration](https://docs.microsoft.com/azure/governance/policy/concepts/guest-configuration)
-- [Programmatically create policies](https://docs.microsoft.com/azure/governance/policy/how-to/programmatically-create)
 - [Get compliance data](https://docs.microsoft.com/azure/governance/policy/how-to/get-compliance-data)
 - [Remediate non-compliant resources](https://docs.microsoft.com/azure/governance/policy/how-to/remediate-resources)
 
@@ -68,7 +66,7 @@ Previously, this repository was the official channel to open requests for new al
 If you have questions you haven't been able to answer from the [**Azure Policy documentation**](https://docs.microsoft.com/azure/governance/policy), there are a few places that host discussions on Azure Policy:
 
  - [Microsoft Tech Community](https://techcommunity.microsoft.com/) [**Azure Governance conversation space**](https://techcommunity.microsoft.com/t5/Azure-Governance/bd-p/AzureGovernance)
- - Join the Customer Call on Azure Governance (register [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRxn7UD7lweFDnmuLj72r6E1UN1dLNTBZUVMyNVpHUjJLRE5PVDVGNlkyOC4u)) Latest Customer call (June) recording can be found [here](https://youtu.be/WJUU5tEQicw)
+ - Join the Customer Call on Azure Governance (register [here](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbRxn7UD7lweFDnmuLj72r6E1UN1dLNTBZUVMyNVpHUjJLRE5PVDVGNlkyOC4u)) Latest customer call (December) recording can be found [here](https://youtu.be/SboRUcRZqyc)
  - Search old [**issues in this repo**](https://github.com/Azure/azure-policy/issues)
  - Search or add to Azure Policy discussions on [**StackOverflow**](https://stackoverflow.com/questions/tagged/azure-policy+or+azure+policy)
  - Feature request please add or vote on [**Ideas**](https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0#) with Category: "Azure Policy"
@@ -78,10 +76,6 @@ If your questions are more in-depth or involve information that is not public, o
 ### Documentation Corrections
 
 To report issues in the Azure Policy online documentation, look for a feedback area at the bottom of the page. If you don't see a place to enter feedback, you can also directly open a new issue at the [**Microsoft Docs GitHub**](https://github.com/MicrosoftDocs/feedback/issues).
-
-### New built-in Policy Proposals
-
-If you have ideas for new built-in policies you want to suggest to Microsoft, you can submit them to [**Ideas**](https://feedback.azure.com/d365community/forum/675ae472-f324-ec11-b6e6-000d3a4f0da0) with Category: "Azure Policy". These suggestions are actively reviewed and prioritized for implementation.
 
 ### Other Support for Azure Policy
 
@@ -164,7 +158,6 @@ Service Fabric applications created via direct requests to the Service Fabric cl
 
 In a few instances, the creation pattern of a resource type doesn't follow normal REST patterns. In these cases, deny policies may not work or may only work for some properties. For example, certain resource types may PUT only a subset of the properties of the resource type to create the entire resource. With such types the resource provider selects the values for properties not provided in the payload. Such a resource might be created with a non-compliant value even though a deny policy exists to prevent it. A similar result may occur if a set of resource types can be created using a collection PUT. Known resource types that exhibit this class of behavior:
 
-- Microsoft.Sql/servers/firewallRules
 - Microsoft.Automation/certificates
 - Microsoft.Security/securityContacts
 
@@ -218,9 +211,12 @@ All Databricks resources bypass policy enforcement at creation time. Databricks 
 
 ### Resources that are exempt from policy evaluation
 
-- Microsoft.Resources/deployments
+- Microsoft.Resources/*, except resource groups and subscriptions. 
+   - For example, `Microsoft.Resources/deployments` and `Microsoft.Resources/templateSpecs` are not evaluated by policy.
 - Microsoft.Billing/*
 - Microsoft.Capacity/reservationOrders/*
+- Microsoft.Help/*
+- Microsoft.Diagnostics/*
 
 ### Resource types that exceed current enforcement and compliance scale
 
@@ -236,12 +232,7 @@ These are resource types that have significant policy scenarios, but are not sup
 Work to increase the scale that policy can be performantly applied to resource types is in progress. Planned availability date is not yet determined.
 
 ### Azure Policy Add-on not compatible on AKS Kubernetes 1.19 (preview) version
-1.19 clusters will return this error via gatekeeper controller and policy webhook pods: 
- certificate relies on legacy Common Name field, use SANs or temporarily enable Common Name matching 
-
-Mitigation: Avoid using K8s 1.19 (preview) with the Azure Policy add-on. The add-on can be used with any GA supported version such as 1.16, 1.17, or 1.18. 
-Feature team is actively working on fixing this issue. GitHub issue tracking this on AKS side https://github.com/Azure/AKS/issues/1869 
-
+This issue has been resolved. 
 
 ### Indexed Resource types always non-complaint to tagging policies 
 As of February 2021, index resources that don't support tags aren't applicable to polices that inspect tags.
@@ -252,9 +243,7 @@ May 2020: Microsoft.DocumentDB/databaseAccounts/ipRangeFilter updated from a str
 July 2020: The alias Microsoft.Sql/servers/securityAlertPolicies/emailAddresses[] and related policies were deprecated. 
 
 ### Resources that exceed current Azure policy assignment delete latencies
-
-Microsoft.KeyVault.Data: a deleted policy assignment can take up to 24 hours to stop being enforced. 
-Mitigation: update the policy assignment's effect to 'Disabled'.
+The issue related to mode = Microsoft.KeyVault.Data has been resolved. 
 
 ### Microsoft.Kubernetes.Data policies that evaluate containers do not currently support container exclusions.  
 This issue has been resolved. 
@@ -277,4 +266,19 @@ This behavior is also seen in resource types from the following RPs:
 - Microsoft.DBforMySQL
 - Microsoft.HDInsight
 
+### Azure Policy Extension for Arc is not compatible on Kubernetes 1.25 (preview) version
+
+Policy extension for Arc installation will fail on 1.25 clusters with the following error code and message: 
+Code: ExtensionOperationFailed
+"err [unable to build kubernetes objects from release manifest:
+unable to recognize "": no matches for kind "PodSecurityPolicy" in version "policy/v1beta1"]} occurred while doing the operation :"
+
+Mitigation: Avoid using K8s 1.25 (preview) with the Azure Policy Extension for Arc. The extension can be used with any GA supported version such as 1.22, 1.23, or 1.24. 
+Feature team is actively working on fixing this issue. We will update this known issue once the resolution is available.
+
 For support involving these compliance message issues, please first follow up with the respective RP listed above.
+
+### Resource types that do not support creation of Policy exemptions
+These resource types do not allow Policy exemptions on resources due to [deny assignments](https://docs.microsoft.com/azure/role-based-access-control/deny-assignments). Workaround is to use [exclusions](https://docs.microsoft.com/azure/governance/policy/concepts/assignment-structure#excluded-scopes) at the assignment level. 
+
+- Microsoft.Databricks/* 

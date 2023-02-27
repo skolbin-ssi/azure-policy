@@ -5,9 +5,10 @@
     "description": "Enabling all Web Application Firewall (WAF) rules strengthens your application security and protects your web applications against common vulnerabilities. To learn more about Web Application Firewall (WAF) with Application Gateway, visit https://aka.ms/waf-ag",
     "mode": "Indexed",
     "metadata": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "Network"
     },
+    "version": "1.0.1",
     "parameters": {
       "effect": {
         "type": "String",
@@ -17,8 +18,8 @@
         },
         "allowedValues": [
           "Audit",
-          "Disabled",
-          "Deny"
+          "Deny",
+          "Disabled"
         ],
         "defaultValue": "Audit"
       }

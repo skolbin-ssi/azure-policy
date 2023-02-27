@@ -5,15 +5,17 @@
     "mode": "Microsoft.Kubernetes.Data",
     "description": "The Container Storage Interface (CSI) is a standard for exposing arbitrary block and file storage systems to containerized workloads on Kubernetes. In-tree provisioner StorageClass should be deprecated since AKS version 1.21. To learn more, https://aka.ms/aks-csi-driver",
     "metadata": {
-      "version": "1.0.0",
+      "version": "2.0.1",
       "category": "Kubernetes"
     },
+    "version": "2.0.1",
     "parameters": {
       "effect": {
         "type": "String",
         "metadata": {
           "displayName": "Effect",
-          "description": "'Audit' allows a non-compliant resource to be created or updated, but flags it as non-compliant. 'Deny' blocks the non-compliant resource creation or update. 'Disabled' turns off the policy."
+          "description": "'Audit' allows a non-compliant resource to be created or updated, but flags it as non-compliant. 'Deny' blocks the non-compliant resource creation or update. 'Disabled' turns off the policy.",
+          "portalReview": true
         },
         "allowedValues": [
           "Audit",
@@ -39,7 +41,8 @@
         "metadata": {
           "displayName": "Namespace inclusions",
           "description": "List of Kubernetes namespaces to only include in policy evaluation. An empty list means the policy is applied to all resources in all namespaces."
-        }
+        },
+        "defaultValue": []
       },
       "labelSelector": {
         "type": "object",
@@ -105,7 +108,6 @@
       "if": {
         "field": "type",
         "in": [
-          "AKS Engine",
           "Microsoft.Kubernetes/connectedClusters",
           "Microsoft.ContainerService/managedClusters"
         ]
