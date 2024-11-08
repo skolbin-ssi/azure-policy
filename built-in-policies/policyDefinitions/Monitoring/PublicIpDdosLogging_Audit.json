@@ -1,14 +1,14 @@
 {
   "properties": {
-    "displayName": "Public IP addresses should have resource logs enabled for Azure DDoS Protection Standard",
+    "displayName": "Public IP addresses should have resource logs enabled for Azure DDoS Protection",
     "policyType": "BuiltIn",
     "mode": "Indexed",
     "description": "Enable resource logs for public IP addressess in diagnostic settings to stream to a Log Analytics workspace. Get detailed visibility into attack traffic and actions taken to mitigate DDoS attacks via notifications, reports and flow logs.",
     "metadata": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "Monitoring"
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "parameters": {
       "effect": {
         "type": "String",
@@ -179,7 +179,11 @@
           }
         }
       }
-    }
+    },
+    "versions": [
+      "1.0.1",
+      "1.0.0"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/752154a7-1e0f-45c6-a880-ac75a7e4f648",
   "name": "752154a7-1e0f-45c6-a880-ac75a7e4f648"

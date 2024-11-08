@@ -4,11 +4,11 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes policies that address a subset of the SWIFT Customer Security Program's Customer Security Controls Framework v2021 controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/swift2021-init.",
     "metadata": {
-      "version": "4.3.0-preview",
+      "version": "4.11.0-preview",
       "category": "Regulatory Compliance",
       "preview": true
     },
-    "version": "4.3.0-preview",
+    "version": "4.11.0-preview",
     "policyDefinitionGroups": [
       {
         "name": "SWIFT_CSCF_v2021_1.1",
@@ -505,15 +505,6 @@
     },
     "policyDefinitions": [
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_1.1"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6de0be7-9a8a-4b8a-b349-43cf02d22f7c",
         "definitionVersion": "3.*.*",
         "policyDefinitionReferenceId": "f6de0be7-9a8a-4b8a-b349-43cf02d22f7c",
@@ -658,15 +649,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
-        "definitionVersion": "4.*.*",
-        "policyDefinitionReferenceId": "86b3d65f-7626-441e-b690-81a8b71cff60",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_2.2"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/da0f98fe-a24b-4ad5-af69-bd0400233661",
         "definitionVersion": "2.*.*",
         "policyDefinitionReferenceId": "da0f98fe-a24b-4ad5-af69-bd0400233661",
@@ -758,15 +740,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
-        "definitionVersion": "2.*.*",
-        "policyDefinitionReferenceId": "0961003e-5a0a-4549-abde-af6a37f2724d",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_2.5A"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f9d614c5-c173-4d56-95a7-b4437057d193",
         "definitionVersion": "2.*.*",
         "policyDefinitionReferenceId": "f9d614c5-c173-4d56-95a7-b4437057d193",
@@ -811,18 +784,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_2.7"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/308fbb08-4ab8-4e67-9b29-592e93fb94fa",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/640d2586-54d2-465f-877f-9ffc1d2109f4",
         "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "308fbb08-4ab8-4e67-9b29-592e93fb94fa",
+        "policyDefinitionReferenceId": "640d2586-54d2-465f-877f-9ffc1d2109f4",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_2.7",
@@ -903,9 +867,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "6b1cbf55-e8b6-442f-ba4c-7246b6381474",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_5.1",
@@ -972,15 +936,6 @@
             "value": "[parameters('listOfImageIdToInclude_windows')]"
           }
         },
-        "groupNames": [
-          "SWIFT_CSCF_v2021_6.4"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_6.4"
         ]
@@ -1062,16 +1017,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_6.5A",
-          "SWIFT_CSCF_v2021_1.1"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/eb6f77b9-bd53-4e35-a23d-7f65d5f0e446",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "eb6f77b9-bd53-4e35-a23d-7f65d5f0e446",
@@ -1129,9 +1074,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9ac8f8e-ce22-4355-8f04-99b911d6be52",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "e9ac8f8e-ce22-4355-8f04-99b911d6be52",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_1.2",
@@ -1139,9 +1084,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "5c607a2e-c700-4744-8254-d77e7c9eb5e4",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_1.2",
@@ -1163,9 +1108,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5bb220d9-2698-4ee4-8404-b9c30c9df609",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "5bb220d9-2698-4ee4-8404-b9c30c9df609",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/19dd1db6-f442-49cf-a838-b0786b4401ef",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "19dd1db6-f442-49cf-a838-b0786b4401ef",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_2.1",
@@ -1210,15 +1155,6 @@
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_2.6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_2.7"
         ]
       },
       {
@@ -1270,27 +1206,27 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "aa633080-8b72-40c4-a2d7-d00c03e80bed",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "e3e008c3-56b9-4133-8fd7-d3347377402a",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_4.2"
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "9297c21d-2ed6-4474-b48f-163f75654ce3",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "931e118d-50a1-4457-a5e4-78550e086c52",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_4.2"
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0cfea604-3201-4e14-88fc-fae4c427a6c5",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "0cfea604-3201-4e14-88fc-fae4c427a6c5",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_5.1",
@@ -1323,15 +1259,6 @@
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_6.3"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3e596b57-105f-48a6-be97-03e9243bad6e",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "3e596b57-105f-48a6-be97-03e9243bad6e",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_6.4"
         ]
       },
       {
@@ -1560,15 +1487,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_2.2"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/17k78e20-9358-41c9-923c-fb736d382a12",
         "definitionVersion": "2.*.*",
         "policyDefinitionReferenceId": "17k78e20-9358-41c9-923c-fb736d382a12",
@@ -1608,31 +1526,13 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "f8456c1c-aa66-4dfb-861a-25d127b775c9",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/339353f6-2387-4a45-abe4-7f529d121046",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "339353f6-2387-4a45-abe4-7f529d121046",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_5.1",
           "SWIFT_CSCF_v2021_1.2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_6.1"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "parameters": {},
-        "groupNames": [
-          "SWIFT_CSCF_v2021_6.1"
         ]
       },
       {
@@ -1841,9 +1741,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "e3576e28-8b17-4677-84c3-db2990658d64",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
         "parameters": {},
         "groupNames": [
           "SWIFT_CSCF_v2021_4.2"
@@ -2011,6 +1911,16 @@
           "SWIFT_CSCF_v2021_6.3"
         ]
       }
+    ],
+    "versions": [
+      "4.11.0-PREVIEW",
+      "4.10.0-PREVIEW",
+      "4.9.0-PREVIEW",
+      "4.8.0-PREVIEW",
+      "4.7.0-PREVIEW",
+      "4.6.0-PREVIEW",
+      "4.5.0-PREVIEW",
+      "4.4.0-PREVIEW"
     ]
   },
   "id": "/providers/Microsoft.Authorization/policySetDefinitions/abf84fac-f817-a70c-14b5-47eec767458a",

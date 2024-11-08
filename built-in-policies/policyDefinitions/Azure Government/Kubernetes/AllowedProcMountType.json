@@ -3,12 +3,12 @@
     "displayName": "Kubernetes cluster containers should only use allowed ProcMountType",
     "policyType": "BuiltIn",
     "mode": "Microsoft.Kubernetes.Data",
-    "description": "Pod containers can only use allowed ProcMountTypes in a Kubernetes cluster. This recommendation is part of Pod Security Policies which are intended to improve the security of your Kubernetes environments. This policy is generally available for Kubernetes Service (AKS), and preview for Azure Arc enabled Kubernetes. For more information, see https://aka.ms/kubepolicydoc.",
+    "description": "Pod containers can only use allowed ProcMountTypes in a Kubernetes cluster. This policy is generally available for Kubernetes Service (AKS), and preview for Azure Arc enabled Kubernetes. For more information, see https://aka.ms/kubepolicydoc.",
     "metadata": {
-      "version": "9.0.1",
+      "version": "9.1.1",
       "category": "Kubernetes"
     },
-    "version": "9.0.1",
+    "version": "9.1.1",
     "parameters": {
       "effect": {
         "type": "String",
@@ -28,12 +28,13 @@
         "type": "Array",
         "metadata": {
           "displayName": "Namespace exclusions",
-          "description": "List of Kubernetes namespaces to exclude from policy evaluation. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+          "description": "List of Kubernetes namespaces to exclude from policy evaluation. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design. \"azure-extensions-usage-system\" is optional to remove."
         },
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ]
       },
       "namespaces": {
@@ -165,7 +166,10 @@
           }
         }
       }
-    }
+    },
+    "versions": [
+      "9.1.1"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/f85eb0dd-92ee-40e9-8a76-db25a507d6d3",
   "name": "f85eb0dd-92ee-40e9-8a76-db25a507d6d3"

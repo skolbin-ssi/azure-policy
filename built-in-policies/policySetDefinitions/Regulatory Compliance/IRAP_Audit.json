@@ -4,11 +4,11 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes policies that address a subset of Australian Government Information Security Manual (ISM) controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/auism-initiative.",
     "metadata": {
-      "version": "8.1.0-preview",
+      "version": "8.6.0-preview",
       "category": "Regulatory Compliance",
       "preview": true
     },
-    "version": "8.1.0-preview",
+    "version": "8.6.0-preview",
     "policyDefinitionGroups": [
       {
         "name": "AU_ISM_100",
@@ -3241,14 +3241,15 @@
       },
       "adaptiveNetworkHardeningsMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Adaptive network hardening recommendations should be applied on internet facing virtual machines",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "identityDesignateMoreThanOneOwnerMonitoringEffect": {
@@ -3265,14 +3266,15 @@
       },
       "diskEncryptionMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Disk encryption should be applied on virtual machines",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "functionAppDisableRemoteDebuggingMonitoringEffect": {
@@ -3319,7 +3321,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Effect for policy: An Azure Active Directory administrator should be provisioned for SQL servers",
+          "displayName": "Effect for policy: A Microsoft Entra administrator should be provisioned for SQL servers",
           "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
@@ -3338,14 +3340,15 @@
       },
       "vmssEndpointProtectionMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Endpoint protection solution should be installed on virtual machine scale sets",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "auditUnrestrictedNetworkToStorageAccountMonitoringEffect": {
@@ -3363,14 +3366,15 @@
       },
       "vmssOsVulnerabilitiesMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Vulnerabilities in security configuration on your virtual machine scale sets should be remediated",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "secureTransferToStorageAccountMonitoringEffect": {
@@ -3388,14 +3392,15 @@
       },
       "adaptiveApplicationControlsMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Adaptive application controls for defining safe applications should be enabled on your machines",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "identityDesignateLessThanOwnersMonitoringEffect": {
@@ -3472,14 +3477,15 @@
       },
       "systemUpdatesMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: System updates should be installed on your machines",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "apiAppRequireLatestTlsMonitoringEffect": {
@@ -3539,7 +3545,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Effect for policy: Azure DDoS Protection Standard should be enabled",
+          "displayName": "Effect for policy: Azure DDoS Protection should be enabled",
           "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
@@ -3581,14 +3587,15 @@
       },
       "endpointProtectionMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Monitor missing Endpoint Protection in Azure Security Center",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "jitNetworkAccessMonitoringEffect": {
@@ -3612,7 +3619,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Effect for policy: Service Fabric clusters should only use Azure Active Directory for client authentication",
+          "displayName": "Effect for policy: Service Fabric clusters should only use Microsoft Entra ID for client authentication",
           "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
@@ -3631,14 +3638,15 @@
       },
       "vmssSystemUpdatesMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: System updates on virtual machine scale sets should be installed",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "webAppDisableRemoteDebuggingMonitoringEffect": {
@@ -3679,14 +3687,15 @@
       },
       "containerBenchmarkMonitoringEffect": {
         "type": "String",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Vulnerabilities in container security configurations should be remediated",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "apiAppDisableRemoteDebuggingMonitoringEffect": {
@@ -3842,19 +3851,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "adaptiveNetworkHardeningsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('adaptiveNetworkHardeningsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1182"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "identityDesignateMoreThanOneOwnerMonitoring",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/09024ccc-0c5f-475e-9457-b7c0d9ed487b",
         "definitionVersion": "3.*.*",
@@ -3866,20 +3862,6 @@
         "groupNames": [
           "AU_ISM_1503",
           "AU_ISM_1508"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "diskEncryptionMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
-        "definitionVersion": "2.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('diskEncryptionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1425",
-          "AU_ISM_459"
         ]
       },
       {
@@ -3978,20 +3960,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "vmssEndpointProtectionMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssEndpointProtectionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1288",
-          "AU_ISM_1417"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "previewAuditLinuxVmAccountsWithNoPasswords",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f6ec09a3-78bf-4f8f-99dc-6c77182d0f99",
         "definitionVersion": "3.*.*",
@@ -4020,24 +3988,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "vmssOsVulnerabilitiesMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssOsVulnerabilitiesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1144",
-          "AU_ISM_1472",
-          "AU_ISM_1494",
-          "AU_ISM_1495",
-          "AU_ISM_1496",
-          "AU_ISM_940"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "secureTransferToStorageAccountMonitoring",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/404c3081-a854-4457-ae30-26a93ef643f9",
         "definitionVersion": "2.*.*",
@@ -4048,19 +3998,6 @@
         },
         "groupNames": [
           "AU_ISM_1277"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "adaptiveApplicationControlsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('adaptiveApplicationControlsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1490"
         ]
       },
       {
@@ -4110,8 +4047,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityRemoveExternalAccountWithWritePermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveExternalAccountWithWritePermissionsMonitoringEffect')]"
@@ -4123,8 +4060,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveDeprecatedAccountMonitoringEffect')]"
@@ -4170,22 +4107,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "systemUpdatesMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
-        "definitionVersion": "4.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('systemUpdatesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1407"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "identityEnableMFAForWritePermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityEnableMFAForWritePermissionsMonitoringEffect')]"
@@ -4239,8 +4163,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityEnableMFAForOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityEnableMFAForOwnerPermissionsMonitoringEffect')]"
@@ -4276,20 +4200,6 @@
         },
         "groupNames": [
           "AU_ISM_1537"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "endpointProtectionMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('endpointProtectionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1288",
-          "AU_ISM_1417"
         ]
       },
       {
@@ -4337,19 +4247,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "vmssSystemUpdatesMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssSystemUpdatesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1407"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "webAppDisableRemoteDebuggingMonitoring",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cb510bfd-1cba-4d9f-a230-cb0976f4bb71",
         "definitionVersion": "2.*.*",
@@ -4382,8 +4279,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityEnableMFAForReadPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityEnableMFAForReadPermissionsMonitoringEffect')]"
@@ -4483,27 +4380,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "containerBenchmarkMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('containerBenchmarkMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "AU_ISM_1144",
-          "AU_ISM_1472",
-          "AU_ISM_1494",
-          "AU_ISM_1495",
-          "AU_ISM_1496",
-          "AU_ISM_940"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0cfea604-3201-4e14-88fc-fae4c427a6c5",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoringEffect')]"
@@ -4587,8 +4466,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityRemoveExternalAccountWithOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/339353f6-2387-4a45-abe4-7f529d121046",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveExternalAccountWithOwnerPermissionsMonitoringEffect')]"
@@ -4629,6 +4508,14 @@
           "AU_ISM_940"
         ]
       }
+    ],
+    "versions": [
+      "8.6.0-PREVIEW",
+      "8.5.0-PREVIEW",
+      "8.4.0-PREVIEW",
+      "8.3.0-PREVIEW",
+      "8.2.2-PREVIEW",
+      "8.2.1-PREVIEW"
     ]
   },
   "id": "/providers/Microsoft.Authorization/policySetDefinitions/27272c0b-c225-4cc3-b8b0-f2534b093077",

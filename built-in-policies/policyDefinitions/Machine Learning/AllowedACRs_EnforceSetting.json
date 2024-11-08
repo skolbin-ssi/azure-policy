@@ -5,11 +5,11 @@
     "mode": "Microsoft.MachineLearningServices.Data",
     "description": "Provide registries that are allowed in specified Azure Machine Learning computes and can be assigned at the workspace. For more information, visit https://aka.ms/amlpolicydoc.",
     "metadata": {
-      "version": "6.0.0-preview",
+      "version": "6.3.0-preview",
       "category": "Machine Learning",
       "preview": true
     },
-    "version": "6.0.0-preview",
+    "version": "6.3.0-preview",
     "parameters": {
       "computeNames": {
         "type": "Array",
@@ -27,6 +27,10 @@
         },
         "allowedValues": [
           "MachineLearningCompute",
+          "ComputeInstance",
+          "ManagedEndpoint",
+          "Singularity",
+          "Automatic",
           "Any"
         ],
         "defaultValue": "Any"
@@ -181,7 +185,10 @@
           }
         }
       }
-    }
+    },
+    "versions": [
+      "6.3.0-PREVIEW"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/5853517a-63de-11ea-bc55-0242ac130003",
   "name": "5853517a-63de-11ea-bc55-0242ac130003"

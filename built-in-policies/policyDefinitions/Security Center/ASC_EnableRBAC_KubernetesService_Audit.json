@@ -5,10 +5,10 @@
     "mode": "All",
     "description": "To provide granular filtering on the actions that users can perform, use Role-Based Access Control (RBAC) to manage permissions in Kubernetes Service Clusters and configure relevant authorization policies.",
     "metadata": {
-      "version": "1.0.2",
+      "version": "1.0.4",
       "category": "Security Center"
     },
-    "version": "1.0.2",
+    "version": "1.0.4",
     "parameters": {
       "effect": {
         "type": "string",
@@ -47,7 +47,11 @@
       "then": {
         "effect": "[parameters('effect')]"
       }
-    }
+    },
+    "versions": [
+      "1.0.4",
+      "1.0.3"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/ac4a19c2-fa67-49b4-8ae5-0b2e78c49457",
   "name": "ac4a19c2-fa67-49b4-8ae5-0b2e78c49457"

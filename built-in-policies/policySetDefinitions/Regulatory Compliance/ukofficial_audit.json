@@ -4,10 +4,10 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes audit and virtual machine extension deployment policies that address a subset of UK OFFICIAL and UK NHS controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/ukofficial-init and https://aka.ms/uknhs-init.",
     "metadata": {
-      "version": "9.0.0",
+      "version": "9.5.0",
       "category": "Regulatory Compliance"
     },
-    "version": "9.0.0",
+    "version": "9.5.0",
     "policyDefinitionGroups": [
       {
         "name": "UK_NCSC_CSP_1",
@@ -221,8 +221,8 @@
     "policyDefinitions": [
       {
         "policyDefinitionReferenceId": "PreviewAuditAccountsWithOwnerPermissionsWhoAreNotMfaEnabledOnASubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_9.1",
@@ -231,8 +231,8 @@
       },
       {
         "policyDefinitionReferenceId": "PreviewAuditAccountsWithReadPermissionsWhoAreNotMfaEnabledOnASubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_9.1",
@@ -241,8 +241,8 @@
       },
       {
         "policyDefinitionReferenceId": "PreviewAuditAccountsWithWritePermissionsWhoAreNotMfaEnabledOnASubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_9.1",
@@ -251,8 +251,8 @@
       },
       {
         "policyDefinitionReferenceId": "PreviewAuditDeprecatedAccountsOnASubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_10"
@@ -260,8 +260,8 @@
       },
       {
         "policyDefinitionReferenceId": "PreviewAuditDeprecatedAccountsWithOwnerPermissionsOnASubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0cfea604-3201-4e14-88fc-fae4c427a6c5",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_10"
@@ -269,8 +269,8 @@
       },
       {
         "policyDefinitionReferenceId": "PreviewAuditExternalAccountsWithOwnerPermissionsOnASubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/339353f6-2387-4a45-abe4-7f529d121046",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_9.1",
@@ -279,8 +279,8 @@
       },
       {
         "policyDefinitionReferenceId": "PreviewAuditExternalAccountsWithWritePermissionsOnASubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_9.1",
@@ -289,8 +289,8 @@
       },
       {
         "policyDefinitionReferenceId": "PreviewAuditExternalAccountsWithReadPermissionsOnASubscription",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9ac8f8e-ce22-4355-8f04-99b911d6be52",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_9.1",
@@ -430,40 +430,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "PreviewMonitorMissingEndpointProtectionInAzureSecurityCenter",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_5.2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "PreviewMonitorMissingSystemUpdatesInAzureSecurityCenter",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
-        "definitionVersion": "4.*.*",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_5.2"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "PreviewMonitorOSVulnerabilitiesInAzureSecurityCenter",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e1e5fd5d-3e4c-4ce1-8661-7d1873ae6b15",
         "definitionVersion": "3.*.*",
         "parameters": {},
         "groupNames": [
           "UK_NCSC_CSP_5.2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "PreviewMonitorPossibleAppWhitelistingInAzureSecurityCenter",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_5.3",
-          "UK_NCSC_CSP_11"
         ]
       },
       {
@@ -487,15 +459,6 @@
       {
         "policyDefinitionReferenceId": "PreviewMonitorUnencryptedSQLDatabaseInAzureSecurityCenter",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/17k78e20-9358-41c9-923c-fb736d382a12",
-        "definitionVersion": "2.*.*",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_2.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "PreviewMonitorUnencryptedVmDisksInAzureSecurityCenter",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
         "definitionVersion": "2.*.*",
         "parameters": {},
         "groupNames": [
@@ -629,15 +592,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "AuditAnyMissingSystemUpdatesOnVirtualMachineScaleSetsInAzureSecurityCenter",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_5.2"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "AuditSQLManagedInstancesWithoutAdvancedDataSecurity",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abfb7388-5bf4-4ad7-ba99-2cd2f41cebb9",
         "definitionVersion": "1.*.*",
@@ -675,15 +629,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "PreviewAuditOSVulnerabilitiesOnYourVirtualMachineScaleSetsInAzureSecurityCenter",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_5.2"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "AuditVirtualMachinesWithoutDisasterRecoveryConfigured",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0015ea4d-51ff-4ce3-8d8c-f3f8f0179a56",
         "definitionVersion": "1.*.*",
@@ -704,24 +649,6 @@
       {
         "policyDefinitionReferenceId": "MonitorUnprotectedNetworkEndpointsInAzureSecurityCenter",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9daedab3-fb2d-461e-b861-71790eead4f6",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_11"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "MonitorInternetFacingVirtualMachinesForNetworkSecurityGroupTrafficHardeningRecommendations",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "UK_NCSC_CSP_11"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "AuditTheEndpointProtectionSolutionOnVirtualMachineScaleSetsInAzureSecurityCenter",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
         "definitionVersion": "3.*.*",
         "parameters": {},
         "groupNames": [
@@ -773,6 +700,13 @@
           "UK_NCSC_CSP_1"
         ]
       }
+    ],
+    "versions": [
+      "9.5.0",
+      "9.4.0",
+      "9.3.0",
+      "9.2.0",
+      "9.1.0"
     ]
   },
   "id": "/providers/Microsoft.Authorization/policySetDefinitions/3937f550-eedd-4639-9c5e-294358be442e",

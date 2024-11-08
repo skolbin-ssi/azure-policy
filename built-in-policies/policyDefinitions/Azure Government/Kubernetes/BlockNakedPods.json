@@ -5,10 +5,10 @@
     "mode": "Microsoft.Kubernetes.Data",
     "description": "Block usage of naked Pods. Naked Pods will not be rescheduled in the event of a node failure. Pods should be managed by Deployment, Replicset, Daemonset or Jobs",
     "metadata": {
-      "version": "3.0.1",
+      "version": "3.2.0",
       "category": "Kubernetes"
     },
-    "version": "3.0.1",
+    "version": "3.2.0",
     "parameters": {
       "effect": {
         "type": "String",
@@ -28,12 +28,13 @@
         "type": "Array",
         "metadata": {
           "displayName": "Namespace exclusions",
-          "description": "List of Kubernetes namespaces to exclude from policy evaluation. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+          "description": "List of Kubernetes namespaces to exclude from policy evaluation. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design. \"azure-extensions-usage-system\" is optional to remove."
         },
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ]
       },
       "namespaces": {
@@ -115,6 +116,7 @@
       "then": {
         "effect": "[parameters('effect')]",
         "details": {
+          "source": "Original",
           "templateInfo": {
             "sourceType": "PublicURL",
             "url": "https://store.policy.azure.us/kubernetes/block-naked-pods/v1/template.yaml"
@@ -130,7 +132,11 @@
           "labelSelector": "[parameters('labelSelector')]"
         }
       }
-    }
+    },
+    "versions": [
+      "3.2.0",
+      "3.1.0"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/65280eef-c8b4-425e-9aec-af55e55bf581",
   "name": "65280eef-c8b4-425e-9aec-af55e55bf581"

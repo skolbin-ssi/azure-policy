@@ -1,14 +1,14 @@
 {
   "properties": {
-    "displayName": "Synapse Workspaces should use only Azure Active Directory identities for authentication",
-    "description": "Azure Active Directory (AAD) only authentication methods improves security by ensuring that Synapse Workspaces exclusively require AAD identities for authentication. Learn more at: https://aka.ms/Synapse.",
+    "displayName": "Synapse Workspaces should use only Microsoft Entra identities for authentication during workspace creation",
+    "description": "Require Synapse Workspaces to be created with Microsoft Entra-only authentication. This policy doesn't block local authentication from being re-enabled on resources after create. Consider using the 'Microsoft Entra-only authentication' initiative instead to require both. Learn more at: https://aka.ms/Synapse.",
     "policyType": "BuiltIn",
     "mode": "indexed",
     "metadata": {
-      "version": "1.0.0",
+      "version": "1.2.0",
       "category": "Synapse"
     },
-    "version": "1.0.0",
+    "version": "1.2.0",
     "parameters": {
       "effect": {
         "type": "String",
@@ -47,17 +47,17 @@
             "anyOf": [
               {
                 "field": "Microsoft.Synapse/workspaces/azureADOnlyAuthentication",
-                "exists": "false"
+                "exists": false
               },
               {
-                "value": "[field('Microsoft.Synapse/workspaces/azureADOnlyAuthentication')]",
-                "notEquals": "true"
+                "field": "Microsoft.Synapse/workspaces/azureADOnlyAuthentication",
+                "equals": false
               },
               {
                 "allOf": [
                   {
                     "field": "Microsoft.Synapse/workspaces/settings",
-                    "exists": "true"
+                    "exists": true
                   },
                   {
                     "value": "[if(empty(field('Microsoft.Synapse/workspaces/settings')), 0, length(intersection(field('Microsoft.Synapse/workspaces/settings'), createObject('azureADOnlyAuthentication', createObject('value', 'true', 'state', 'Inconsistent')))))]",
@@ -72,7 +72,11 @@
       "then": {
         "effect": "[parameters('effect')]"
       }
-    }
+    },
+    "versions": [
+      "1.2.0",
+      "1.1.0"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/2158ddbe-fefa-408e-b43f-d4faef8ff3b8",
   "name": "2158ddbe-fefa-408e-b43f-d4faef8ff3b8"

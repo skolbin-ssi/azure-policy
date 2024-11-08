@@ -5,10 +5,10 @@
     "mode": "Indexed",
     "description": "Linux virtual machines should be monitored and secured through the deployed Azure Monitor Agent. The Azure Monitor Agent collects telemetry data from the guest OS. This policy will audit virtual machines with supported OS images in supported regions. Learn more: https://aka.ms/AMAOverview.",
     "metadata": {
-      "version": "3.0.0",
+      "version": "3.3.0",
       "category": "Monitoring"
     },
-    "version": "3.0.0",
+    "version": "3.3.0",
     "parameters": {
       "effect": {
         "type": "String",
@@ -21,6 +21,18 @@
           "Disabled"
         ],
         "defaultValue": "AuditIfNotExists"
+      },
+      "scopeToSupportedImages": {
+        "type": "Boolean",
+        "metadata": {
+          "displayName": "Scope Policy to Azure Monitor Agent-Supported Operating Systems",
+          "description": "If set to true, the policy will apply only to virtual machines with supported operating systems. Otherwise, the policy will apply to all virtual machine resources in the assignment scope. For supported operating systems, see https://aka.ms/AMAOverview."
+        },
+        "allowedValues": [
+          true,
+          false
+        ],
+        "defaultValue": true
       },
       "listOfLinuxImageIdToInclude": {
         "type": "Array",
@@ -42,9 +54,11 @@
             "field": "location",
             "in": [
               "australiacentral",
+              "australiacentral2",
               "australiaeast",
               "australiasoutheast",
               "brazilsouth",
+              "brazilsoutheast",
               "canadacentral",
               "canadaeast",
               "centralindia",
@@ -55,22 +69,38 @@
               "eastus2",
               "eastus2euap",
               "francecentral",
+              "francesouth",
+              "germanynorth",
               "germanywestcentral",
+              "israelcentral",
+              "italynorth",
               "japaneast",
               "japanwest",
+              "jioindiacentral",
               "jioindiawest",
               "koreacentral",
               "koreasouth",
+              "malaysiasouth",
+              "mexicocentral",
               "northcentralus",
               "northeurope",
               "norwayeast",
+              "norwaywest",
+              "polandcentral",
               "qatarcentral",
               "southafricanorth",
+              "southafricawest",
               "southcentralus",
               "southeastasia",
               "southindia",
+              "spaincentral",
               "swedencentral",
+              "swedensouth",
               "switzerlandnorth",
+              "switzerlandwest",
+              "taiwannorth",
+              "taiwannorthwest",
+              "uaecentral",
               "uaenorth",
               "uksouth",
               "ukwest",
@@ -84,6 +114,18 @@
           },
           {
             "anyOf": [
+              {
+                "allOf": [
+                  {
+                    "value": "[parameters('scopeToSupportedImages')]",
+                    "equals": false
+                  },
+                  {
+                    "field": "Microsoft.Compute/virtualMachines/storageProfile.osDisk.osType",
+                    "like": "Linux*"
+                  }
+                ]
+              },
               {
                 "field": "Microsoft.Compute/imageId",
                 "in": "[parameters('listOfLinuxImageIdToInclude')]"
@@ -118,11 +160,19 @@
                       },
                       {
                         "field": "Microsoft.Compute/imageSku",
+                        "like": "9*"
+                      },
+                      {
+                        "field": "Microsoft.Compute/imageSku",
                         "like": "rhel-lvm7*"
                       },
                       {
                         "field": "Microsoft.Compute/imageSku",
                         "like": "rhel-lvm8*"
+                      },
+                      {
+                        "field": "Microsoft.Compute/imageSku",
+                        "like": "rhel-lvm9*"
                       }
                     ]
                   }
@@ -267,6 +317,18 @@
                       {
                         "field": "Microsoft.Compute/imageSku",
                         "like": "8*"
+                      },
+                      {
+                        "field": "Microsoft.Compute/imageSku",
+                        "like": "ol7*"
+                      },
+                      {
+                        "field": "Microsoft.Compute/imageSku",
+                        "like": "ol8*"
+                      },
+                      {
+                        "field": "Microsoft.Compute/imageSku",
+                        "like": "ol9*"
                       }
                     ]
                   }
@@ -288,10 +350,6 @@
                   },
                   {
                     "anyOf": [
-                      {
-                        "field": "Microsoft.Compute/imageSku",
-                        "like": "6*"
-                      },
                       {
                         "field": "Microsoft.Compute/imageSku",
                         "like": "7*"
@@ -328,11 +386,19 @@
                   },
                   {
                     "field": "Microsoft.Compute/imageOffer",
-                    "equals": "almalinux"
+                    "like": "almalinux*"
                   },
                   {
-                    "field": "Microsoft.Compute/imageSku",
-                    "like": "8*"
+                    "anyOf": [
+                      {
+                        "field": "Microsoft.Compute/imageSku",
+                        "like": "8*"
+                      },
+                      {
+                        "field": "Microsoft.Compute/imageSku",
+                        "like": "9*"
+                      }
+                    ]
                   }
                 ]
               },
@@ -442,7 +508,12 @@
           }
         }
       }
-    }
+    },
+    "versions": [
+      "3.3.0",
+      "3.2.0",
+      "3.1.0"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/1afdc4b6-581a-45fb-b630-f1e6051e3e7a",
   "name": "1afdc4b6-581a-45fb-b630-f1e6051e3e7a"

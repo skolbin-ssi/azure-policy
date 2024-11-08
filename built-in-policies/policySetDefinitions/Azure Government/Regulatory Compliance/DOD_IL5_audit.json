@@ -4,10 +4,10 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes policies that address a subset of DoD Impact Level 5 (IL5) controls. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/dodil5-initiative.",
     "metadata": {
-      "version": "19.1.0",
+      "version": "19.12.0",
       "category": "Regulatory Compliance"
     },
-    "version": "19.1.0",
+    "version": "19.12.0",
     "policyDefinitionGroups": [
       {
         "name": "DoD_IL5_R4_AC-1",
@@ -3020,10 +3020,23 @@
       },
       "effect-40cec1dd-a100-4920-b15b-3024fe8901ab": {
         "type": "String",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "(Deprecated) Effect for policy: Azure Machine Learning workspaces should use private link",
+          "description": "This policy has been deprecated to remove a parameter's allowed value, replacement policy is 45e05259-1eb5-4f70-9574-baf73e9d219b.",
+          "deprecated": true
+        }
+      },
+      "effect-45e05259-1eb5-4f70-9574-baf73e9d219b": {
+        "type": "String",
+        "defaultValue": "Audit",
+        "allowedValues": [
+          "Audit",
           "Disabled"
         ],
         "metadata": {
@@ -3033,7 +3046,7 @@
       },
       "effect-0725b4dd-7e76-479c-a735-68e7ee23d5ca": {
         "type": "String",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
@@ -3041,7 +3054,8 @@
         ],
         "metadata": {
           "displayName": "Effect for policy: Cognitive Services accounts should disable public network access",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "effect-a049bf77-880b-470f-ba6d-9f21c530cf83": {
@@ -3110,14 +3124,15 @@
       },
       "diskEncryptionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Disk encryption should be applied on virtual machines",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "emailNotificationToSubscriptionOwnerHighSeverityAlertsEnabledEffect": {
@@ -3195,38 +3210,41 @@
       },
       "vmssEndpointProtectionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Endpoint protection solution should be installed on virtual machine scale sets",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "vmssOsVulnerabilitiesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Vulnerabilities in security configuration on your virtual machine scale sets should be remediated",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "adaptiveApplicationControlsMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Adaptive application controls for defining safe applications should be enabled on your machines",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "geoRedundantBackupShouldBeEnabledForAzureDatabaseForPostgreSQLEffect": {
@@ -3243,14 +3261,15 @@
       },
       "ensureJavaVersionLatestForWebAppEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Ensure that 'Java version' is the latest, if used as a part of the Web app",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "identityDesignateLessThanOwnersMonitoringEffect": {
@@ -3339,38 +3358,41 @@
       },
       "ensurePythonVersionLatestForWebAppEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Ensure that 'Python version' is the latest, if used as a part of the Web app",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "ensurePythonVersionLatestForFunctionAppEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Ensure that 'Python version' is the latest, if used as a part of the Function app",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "ensurePHPVersionLatestForWebAppEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Ensure that 'PHP version' is the latest, if used as a part of the WEB app",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "ensurePythonVersionLatestForAPIAppEffect": {
@@ -3400,14 +3422,15 @@
       },
       "systemUpdatesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: System updates should be installed on your machines",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "ensureJavaVersionLatestForAPIAppEffect": {
@@ -3475,14 +3498,15 @@
       },
       "ensureJavaVersionLatestForFunctionAppEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Ensure that 'Java version' is the latest, if used as a part of the Function app",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "nextGenerationFirewallMonitoringEffect": {
@@ -3541,7 +3565,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Effect for policy: Azure DDoS Protection Standard should be enabled",
+          "displayName": "Effect for policy: Azure DDoS Protection should be enabled",
           "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         }
       },
@@ -3583,14 +3607,15 @@
       },
       "endpointProtectionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Monitor missing Endpoint Protection in Azure Security Center",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "jitNetworkAccessMonitoringEffect": {
@@ -3632,14 +3657,15 @@
       },
       "vmssSystemUpdatesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: System updates on virtual machine scale sets should be installed",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "webAppDisableRemoteDebuggingMonitoringEffect": {
@@ -3704,14 +3730,15 @@
       },
       "containerBenchmarkMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Effect for policy: Vulnerabilities in container security configurations should be remediated",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         }
       },
       "apiAppDisableRemoteDebuggingMonitoringEffect": {
@@ -5622,33 +5649,18 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "40cec1dd-a100-4920-b15b-3024fe8901ab",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/40cec1dd-a100-4920-b15b-3024fe8901ab",
+        "policyDefinitionReferenceId": "45e05259-1eb5-4f70-9574-baf73e9d219b",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/45e05259-1eb5-4f70-9574-baf73e9d219b",
         "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
-            "value": "[parameters('effect-40cec1dd-a100-4920-b15b-3024fe8901ab')]"
+            "value": "[parameters('effect-45e05259-1eb5-4f70-9574-baf73e9d219b')]"
           }
         },
         "groupNames": [
           "DoD_IL5_R4_AC-4",
           "DoD_IL5_R4_AC-17",
           "DoD_IL5_R4_AC-17(1)",
-          "DoD_IL5_R4_SC-7",
-          "DoD_IL5_R4_SC-7(3)"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "0725b4dd-7e76-479c-a735-68e7ee23d5ca",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0725b4dd-7e76-479c-a735-68e7ee23d5ca",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('effect-0725b4dd-7e76-479c-a735-68e7ee23d5ca')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_AC-4",
           "DoD_IL5_R4_SC-7",
           "DoD_IL5_R4_SC-7(3)"
         ]
@@ -5713,8 +5725,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveDeprecatedAccountMonitoringEffect')]"
@@ -5878,23 +5890,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "adaptiveApplicationControlsShouldBeEnabledOnVirtualMachines",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('adaptiveApplicationControlsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_CM-7",
-          "DoD_IL5_R4_CM-7(2)",
-          "DoD_IL5_R4_CM-7(5)",
-          "DoD_IL5_R4_CM-10",
-          "DoD_IL5_R4_CM-11"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "0ec47710-77ff-4a3d-9181-6aa50af424d0",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0ec47710-77ff-4a3d-9181-6aa50af424d0",
         "definitionVersion": "1.*.*",
@@ -5925,8 +5920,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityEnableMFAForOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityEnableMFAForOwnerPermissionsMonitoringEffect')]"
@@ -5940,8 +5935,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityEnableMFAForReadPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityEnableMFAForReadPermissionsMonitoringEffect')]"
@@ -5983,20 +5978,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "vulnerabilitiesInSecurityConfigurationOnYourVirtualMachineScaleSetsShouldBeRemediated",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssOsVulnerabilitiesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_RA-5",
-          "DoD_IL5_R4_SI-2"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "dDoSProtectionStandardShouldBeEnabled",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a7aca53f-2ed4-4466-a25e-0b45ade68efd",
         "definitionVersion": "3.*.*",
@@ -6033,51 +6014,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "diskEncryptionShouldBeAppliedOnVirtualMachines",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
-        "definitionVersion": "2.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('diskEncryptionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SC-28",
-          "DoD_IL5_R4_SC-28(1)"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "vmssSystemUpdatesMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssSystemUpdatesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SI-2"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "endpointProtectionSolutionShouldBeInstalledOnVirtualMachineScaleSets",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssEndpointProtectionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SC-3",
-          "DoD_IL5_R4_SI-3",
-          "DoD_IL5_R4_SI-3(1)"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0cfea604-3201-4e14-88fc-fae4c427a6c5",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoringEffect')]"
@@ -6135,19 +6074,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "123a3936-f020-408a-ba0c-47873faf1534",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/123a3936-f020-408a-ba0c-47873faf1534",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "DoD_IL5_R4_CM-7",
-          "DoD_IL5_R4_CM-7(2)",
-          "DoD_IL5_R4_CM-7(5)",
-          "DoD_IL5_R4_CM-10",
-          "DoD_IL5_R4_CM-11"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "geoRedundantBackupShouldBeEnabledForAzureDatabaseForPostgreSQL",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/48af4db5-9b8b-401c-8e74-076be876a430",
         "definitionVersion": "1.*.*",
@@ -6164,8 +6090,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityEnableMFAForWritePermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityEnableMFAForWritePermissionsMonitoringEffect')]"
@@ -6281,24 +6207,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "monitorMissingEndpointProtectionInAzureSecurityCenter",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('endpointProtectionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SC-3",
-          "DoD_IL5_R4_SI-3",
-          "DoD_IL5_R4_SI-3(1)"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "identityRemoveExternalAccountWithOwnerPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/339353f6-2387-4a45-abe4-7f529d121046",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveExternalAccountWithOwnerPermissionsMonitoringEffect')]"
@@ -6378,22 +6289,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "systemUpdatesShouldBeInstalledOnYourMachines",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('systemUpdatesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SI-2"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "identityRemoveExternalAccountWithReadPermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9ac8f8e-ce22-4355-8f04-99b911d6be52",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveExternalAccountWithReadPermissionsMonitoringEffect')]"
@@ -6482,8 +6380,8 @@
       },
       {
         "policyDefinitionReferenceId": "identityRemoveExternalAccountWithWritePermissionsMonitoring",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+        "definitionVersion": "1.*.*",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveExternalAccountWithWritePermissionsMonitoringEffect')]"
@@ -6502,19 +6400,6 @@
           "DoD_IL5_R4_AC-4",
           "DoD_IL5_R4_SC-7",
           "DoD_IL5_R4_SC-7(3)"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "a4fe33eb-e377-4efb-ab31-0784311bc499",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4fe33eb-e377-4efb-ab31-0784311bc499",
-        "definitionVersion": "1.*.*",
-        "parameters": {},
-        "groupNames": [
-          "DoD_IL5_R4_AU-6(4)",
-          "DoD_IL5_R4_AU-6(5)",
-          "DoD_IL5_R4_AU-12",
-          "DoD_IL5_R4_AU-12(1)",
-          "DoD_IL5_R4_SI-4"
         ]
       },
       {
@@ -6553,19 +6438,6 @@
           "DoD_IL5_R4_IR-5",
           "DoD_IL5_R4_RA-5",
           "DoD_IL5_R4_SI-2",
-          "DoD_IL5_R4_SI-4"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "a3a6ea0c-e018-4933-9ef0-5aaa1501449b",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a3a6ea0c-e018-4933-9ef0-5aaa1501449b",
-        "definitionVersion": "1.*.*",
-        "parameters": {},
-        "groupNames": [
-          "DoD_IL5_R4_AU-6(4)",
-          "DoD_IL5_R4_AU-6(5)",
-          "DoD_IL5_R4_AU-12",
-          "DoD_IL5_R4_AU-12(1)",
           "DoD_IL5_R4_SI-4"
         ]
       },
@@ -6632,19 +6504,6 @@
           "DoD_IL5_R4_AU-12",
           "DoD_IL5_R4_AU-12(1)",
           "DoD_IL5_R4_SI-4"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "vulnerabilitiesSecurityConfigurationsRemediated",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('containerBenchmarkMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_RA-5"
         ]
       },
       {
@@ -6730,19 +6589,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "definitionVersion": "1.*.*",
-        "parameters": {},
-        "groupNames": [
-          "DoD_IL5_R4_AU-6(4)",
-          "DoD_IL5_R4_AU-6(5)",
-          "DoD_IL5_R4_AU-12",
-          "DoD_IL5_R4_AU-12(1)",
-          "DoD_IL5_R4_SI-4"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "0049a6b3-a662-4f3e-8635-39cf44ace45a",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0049a6b3-a662-4f3e-8635-39cf44ace45a",
         "definitionVersion": "1.*.*",
@@ -6806,25 +6652,6 @@
         "groupNames": [
           "DoD_IL5_R4_SC-8",
           "DoD_IL5_R4_SC-8(1)"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "bdc59948-5574-49b3-bb91-76b7c986428d",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bdc59948-5574-49b3-bb91-76b7c986428d",
-        "definitionVersion": "1.*.*",
-        "parameters": {},
-        "groupNames": [
-          "DoD_IL5_R4_AC-2(12)",
-          "DoD_IL5_R4_AU-6",
-          "DoD_IL5_R4_AU-6(4)",
-          "DoD_IL5_R4_AU-6(5)",
-          "DoD_IL5_R4_AU-12",
-          "DoD_IL5_R4_AU-12(1)",
-          "DoD_IL5_R4_IR-4",
-          "DoD_IL5_R4_IR-5",
-          "DoD_IL5_R4_RA-5",
-          "DoD_IL5_R4_SI-2",
-          "DoD_IL5_R4_SI-4"
         ]
       },
       {
@@ -6946,40 +6773,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "ensurePHPVersionLatestForWebApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7261b898-8a84-4db8-9e04-18527132abb3",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensurePHPVersionLatestForWebAppEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SI-2",
-          "DoD_IL5_R4_SI-2(6)"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "5bb220d9-2698-4ee4-8404-b9c30c9df609",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5bb220d9-2698-4ee4-8404-b9c30c9df609",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "19dd1db6-f442-49cf-a838-b0786b4401ef",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/19dd1db6-f442-49cf-a838-b0786b4401ef",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "DoD_IL5_R4_CM-6"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ensureJavaVersionLatestForWebApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/496223c3-ad65-4ecd-878a-bae78737e9ed",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensureJavaVersionLatestForWebAppEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SI-2",
-          "DoD_IL5_R4_SI-2(6)"
         ]
       },
       {
@@ -6989,20 +6788,6 @@
         "parameters": {},
         "groupNames": [
           "DoD_IL5_R4_CM-6"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ensureJavaVersionLatestForFunctionApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensureJavaVersionLatestForFunctionAppEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SI-2",
-          "DoD_IL5_R4_SI-2(6)"
         ]
       },
       {
@@ -7019,20 +6804,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "ensurePythonVersionLatestForWebApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7008174a-fd10-4ef0-817e-fc820a951d73",
-        "definitionVersion": "4.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensurePythonVersionLatestForWebAppEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SI-2",
-          "DoD_IL5_R4_SI-2(6)"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "7698e800-9299-47a6-b3b6-5a0fee576eed",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7698e800-9299-47a6-b3b6-5a0fee576eed",
         "definitionVersion": "1.*.*",
@@ -7043,20 +6814,6 @@
           "DoD_IL5_R4_AC-17(1)",
           "DoD_IL5_R4_SC-7",
           "DoD_IL5_R4_SC-7(3)"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ensurePythonVersionLatestForFunctionApp",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7238174a-fd10-4ef0-817e-fc820a951d73",
-        "definitionVersion": "4.*.*",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensurePythonVersionLatestForFunctionAppEffect')]"
-          }
-        },
-        "groupNames": [
-          "DoD_IL5_R4_SI-2",
-          "DoD_IL5_R4_SI-2(6)"
         ]
       },
       {
@@ -7274,6 +7031,17 @@
           "DoD_IL5_R4_SI-2(6)"
         ]
       }
+    ],
+    "versions": [
+      "19.12.0",
+      "19.11.0",
+      "19.10.0",
+      "19.9.0",
+      "19.8.0",
+      "19.7.0",
+      "19.6.1",
+      "19.5.0",
+      "19.4.0"
     ]
   },
   "id": "/providers/Microsoft.Authorization/policySetDefinitions/f9a961fa-3241-4b20-adc4-bbf8ad9d7197",

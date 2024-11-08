@@ -5,11 +5,11 @@
     "mode": "Microsoft.MachineLearningServices.Data",
     "description": "Provide allowed Python packages in specified Azure Machine Learning computes and can be assigned at the workspace. For more information, visit https://aka.ms/amlpolicydoc.",
     "metadata": {
-      "version": "5.1.0-preview",
+      "version": "5.4.0-preview",
       "category": "Machine Learning",
       "preview": true
     },
-    "version": "5.1.0-preview",
+    "version": "5.4.0-preview",
     "parameters": {
       "computeNames": {
         "type": "Array",
@@ -28,6 +28,10 @@
         "allowedValues": [
           "MachineLearningCompute",
           "SynapseSpark",
+          "ComputeInstance",
+          "ManagedEndpoint",
+          "Singularity",
+          "Automatic",
           "Any"
         ],
         "defaultValue": "Any"
@@ -166,7 +170,10 @@
           }
         }
       }
-    }
+    },
+    "versions": [
+      "5.4.0-PREVIEW"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/77eeea86-7e81-4a7d-9067-de844d096752",
   "name": "77eeea86-7e81-4a7d-9067-de844d096752"

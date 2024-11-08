@@ -1,14 +1,14 @@
 {
   "properties": {
-    "displayName": "Configure diagnostic settings for Azure Databricks Workspace to Log Analytics workspace",
-    "description": "Deploys the diagnostic settings for Azure Databricks Workspace to stream resource logs to a Log Analytics workspace when any Azure Databricks Workspace which is missing this diagnostic settings is created or updated.",
+    "displayName": "Configure diagnostic settings for Azure Databricks Workspaces to Log Analytics workspace",
+    "description": "Deploys the diagnostic settings for Azure Databricks Workspaces to stream resource logs to a Log Analytics Workspace when any Azure Databricks Workspace which is missing this diagnostic settings is created or updated.",
     "policyType": "BuiltIn",
     "mode": "Indexed",
     "metadata": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "category": "Azure Databricks"
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "parameters": {
       "effect": {
         "type": "String",
@@ -148,7 +148,10 @@
           }
         }
       }
-    }
+    },
+    "versions": [
+      "1.0.1"
+    ]
   },
   "id": "/providers/Microsoft.Authorization/policyDefinitions/23057b42-ca8d-4aa0-a3dc-96a98b5b5a3d",
   "name": "23057b42-ca8d-4aa0-a3dc-96a98b5b5a3d"

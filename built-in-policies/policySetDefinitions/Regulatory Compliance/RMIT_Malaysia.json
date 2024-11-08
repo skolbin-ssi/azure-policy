@@ -4,10 +4,10 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes policies that address a subset of RMIT requirements. Additional policies will be added in upcoming releases. For more information, visit aka.ms/rmit-initiative.",
     "metadata": {
-      "version": "9.2.0",
+      "version": "9.13.0",
       "category": "Regulatory Compliance"
     },
-    "version": "9.2.0",
+    "version": "9.13.0",
     "policyDefinitionGroups": [
       {
         "name": "RMiT_v1.0_10.1",
@@ -536,7 +536,8 @@
         "defaultValue": "7.3",
         "metadata": {
           "displayName": "Enforce that the PHP version for App Services is later than specified",
-          "description": "Enforce that the PHP version for App Services is later than specified, if specified value is 7.3, any PHP version greater than or equal 7.3 will be allowed."
+          "description": "Enforce that the PHP version for App Services is later than specified, if specified value is 7.3, any PHP version greater than or equal 7.3 will be allowed.",
+          "deprecated": true
         }
       },
       "JavaLatestVersion": {
@@ -544,7 +545,8 @@
         "defaultValue": "11",
         "metadata": {
           "displayName": "Enforce that the Java version for App Services is later than specified",
-          "description": "Enforce that the Java version for App Services is later than specified, if specified value is 11, any Java version greater than or equal 11 will be allowed."
+          "description": "Enforce that the Java version for App Services is later than specified, if specified value is 11, any Java version greater than or equal 11 will be allowed.",
+          "deprecated": true
         }
       },
       "LinuxPythonLatestVersion": {
@@ -552,7 +554,8 @@
         "defaultValue": "3.8",
         "metadata": {
           "displayName": "Enforce that the Python version for Linux for App Services is later than specified",
-          "description": "Enforce that the Python version for Linux for App Services is later than specified, if specified value is 3.8, any Python version greater than or equal 3.8 will be allowed."
+          "description": "Enforce that the Python version for Linux for App Services is later than specified, if specified value is 3.8, any Python version greater than or equal 3.8 will be allowed.",
+          "deprecated": true
         }
       },
       "requiredRetentionDays": {
@@ -2259,19 +2262,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "496223c3-ad65-4ecd-878a-bae78737e9ed",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/496223c3-ad65-4ecd-878a-bae78737e9ed",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "JavaLatestVersion": {
-            "value": "[parameters('JavaLatestVersion')]"
-          }
-        },
-        "groupNames": [
-          "RMiT_v1.0_Appendix_5.3"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "4d24b6d4-5e53-4a4f-a7f4-618fa573ee4b",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4d24b6d4-5e53-4a4f-a7f4-618fa573ee4b",
         "definitionVersion": "3.*.*",
@@ -2290,9 +2280,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "5bb220d9-2698-4ee4-8404-b9c30c9df609",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5bb220d9-2698-4ee4-8404-b9c30c9df609",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "19dd1db6-f442-49cf-a838-b0786b4401ef",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/19dd1db6-f442-49cf-a838-b0786b4401ef",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.20"
@@ -2303,45 +2293,6 @@
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6d555dd1-86f2-4f1c-8ed7-5abae7c6cbab",
         "definitionVersion": "5.*.*",
         "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_Appendix_5.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "7008174a-fd10-4ef0-817e-fc820a951d73",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7008174a-fd10-4ef0-817e-fc820a951d73",
-        "definitionVersion": "4.*.*",
-        "parameters": {
-          "LinuxPythonLatestVersion": {
-            "value": "[parameters('LinuxPythonLatestVersion')]"
-          }
-        },
-        "groupNames": [
-          "RMiT_v1.0_Appendix_5.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "7238174a-fd10-4ef0-817e-fc820a951d73",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7238174a-fd10-4ef0-817e-fc820a951d73",
-        "definitionVersion": "4.*.*",
-        "parameters": {
-          "LinuxPythonLatestVersion": {
-            "value": "[parameters('LinuxPythonLatestVersion')]"
-          }
-        },
-        "groupNames": [
-          "RMiT_v1.0_Appendix_5.3"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "7261b898-8a84-4db8-9e04-18527132abb3",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7261b898-8a84-4db8-9e04-18527132abb3",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "PHPLatestVersion": {
-            "value": "[parameters('PHPLatestVersion')]"
-          }
-        },
         "groupNames": [
           "RMiT_v1.0_Appendix_5.3"
         ]
@@ -2375,19 +2326,6 @@
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
-        "definitionVersion": "3.*.*",
-        "parameters": {
-          "JavaLatestVersion": {
-            "value": "[parameters('JavaLatestVersion')]"
-          }
-        },
-        "groupNames": [
-          "RMiT_v1.0_Appendix_5.3"
         ]
       },
       {
@@ -3306,15 +3244,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "3e596b57-105f-48a6-be97-03e9243bad6e",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3e596b57-105f-48a6-be97-03e9243bad6e",
-        "definitionVersion": "1.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_10.66"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "41388f1c-2db0-4c25-95b2-35d7f5ccbfa9",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/41388f1c-2db0-4c25-95b2-35d7f5ccbfa9",
         "definitionVersion": "2.*.*",
@@ -3930,26 +3859,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_10.49",
-          "RMiT_v1.0_10.51"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "0961003e-5a0a-4549-abde-af6a37f2724d",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
-        "definitionVersion": "2.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_10.33",
-          "RMiT_v1.0_Appendix_5.7"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "0b15565f-aa9e-48ba-8619-45960f2c314d",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b15565f-aa9e-48ba-8619-45960f2c314d",
         "definitionVersion": "2.*.*",
@@ -3977,30 +3886,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "123a3936-f020-408a-ba0c-47873faf1534",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/123a3936-f020-408a-ba0c-47873faf1534",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_11.17"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "22730e10-96f6-4aac-ad84-9383d35b5917",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22730e10-96f6-4aac-ad84-9383d35b5917",
         "definitionVersion": "3.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.49"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_11.17"
         ]
       },
       {
@@ -4013,40 +3904,12 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "308fbb08-4ab8-4e67-9b29-592e93fb94fa",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/308fbb08-4ab8-4e67-9b29-592e93fb94fa",
+        "policyDefinitionReferenceId": "640d2586-54d2-465f-877f-9ffc1d2109f4",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/640d2586-54d2-465f-877f-9ffc1d2109f4",
         "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_11.5"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_10.65"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "definitionVersion": "1.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_11.18",
-          "RMiT_v1.0_Appendix_5.7"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_Appendix_5.2"
         ]
       },
       {
@@ -4079,27 +3942,18 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54"
         ]
       },
       {
-        "policyDefinitionReferenceId": "5f0f936f-2f01-4bf5-b6be-d423792fa562",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f0f936f-2f01-4bf5-b6be-d423792fa562",
-        "definitionVersion": "2.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_11.8"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "e9ac8f8e-ce22-4355-8f04-99b911d6be52",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9ac8f8e-ce22-4355-8f04-99b911d6be52",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54"
@@ -4116,9 +3970,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54",
@@ -4159,15 +4013,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "86b3d65f-7626-441e-b690-81a8b71cff60",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
-        "definitionVersion": "4.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_10.65"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "8e7da0a5-0a0e-4bbc-bfc0-7773c018b616",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e7da0a5-0a0e-4bbc-bfc0-7773c018b616",
         "definitionVersion": "1.*.*",
@@ -4184,9 +4029,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "931e118d-50a1-4457-a5e4-78550e086c52",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54",
@@ -4204,26 +4049,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "a3a6ea0c-e018-4933-9ef0-5aaa1501449b",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a3a6ea0c-e018-4933-9ef0-5aaa1501449b",
-        "definitionVersion": "1.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_11.18",
-          "RMiT_v1.0_Appendix_5.7"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "a4fe33eb-e377-4efb-ab31-0784311bc499",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4fe33eb-e377-4efb-ab31-0784311bc499",
-        "definitionVersion": "1.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_11.18",
-          "RMiT_v1.0_Appendix_5.7"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "a7aca53f-2ed4-4466-a25e-0b45ade68efd",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a7aca53f-2ed4-4466-a25e-0b45ade68efd",
         "definitionVersion": "3.*.*",
@@ -4234,9 +4059,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54",
@@ -4264,15 +4089,6 @@
         "groupNames": [
           "RMiT_v1.0_10.54",
           "RMiT_v1.0_10.61"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_Appendix_5.7"
         ]
       },
       {
@@ -4316,15 +4132,6 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_10.63"
-        ]
-      },
-      {
         "policyDefinitionReferenceId": "d26f7642-7545-4e18-9b75-8c9bbdee3a9a",
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d26f7642-7545-4e18-9b75-8c9bbdee3a9a",
         "definitionVersion": "1.*.*",
@@ -4344,9 +4151,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "e3576e28-8b17-4677-84c3-db2990658d64",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54",
@@ -4365,18 +4172,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "definitionVersion": "3.*.*",
-        "parameters": {},
-        "groupNames": [
-          "RMiT_v1.0_Appendix_5.7"
-        ]
-      },
-      {
-        "policyDefinitionReferenceId": "ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "0cfea604-3201-4e14-88fc-fae4c427a6c5",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0cfea604-3201-4e14-88fc-fae4c427a6c5",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54",
@@ -4394,9 +4192,9 @@
         ]
       },
       {
-        "policyDefinitionReferenceId": "f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "339353f6-2387-4a45-abe4-7f529d121046",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/339353f6-2387-4a45-abe4-7f529d121046",
+        "definitionVersion": "1.*.*",
         "parameters": {},
         "groupNames": [
           "RMiT_v1.0_10.54"
@@ -5002,6 +4800,18 @@
           "RMiT_v1.0_10.55"
         ]
       }
+    ],
+    "versions": [
+      "9.13.0",
+      "9.12.0",
+      "9.11.0",
+      "9.10.0",
+      "9.9.0",
+      "9.8.0",
+      "9.7.0",
+      "9.6.0",
+      "9.5.0",
+      "9.4.0"
     ]
   },
   "id": "/providers/Microsoft.Authorization/policySetDefinitions/97a6d4f1-3bed-4cf4-ac5b-0e444c0408d6",

@@ -4,11 +4,11 @@
     "policyType": "BuiltIn",
     "description": "This initiative includes policies that address a subset of CMMC 2.0 Level 2 practices. Additional policies will be added in upcoming releases. For more information, visit https://aka.ms/cmmc2l2-initiative.",
     "metadata": {
-      "version": "2.2.0-preview",
+      "version": "2.15.0-preview",
       "category": "Regulatory Compliance",
       "preview": true
     },
-    "version": "2.2.0-preview",
+    "version": "2.15.0-preview",
     "policyDefinitionGroups": [
       {
         "name": "CMMC_2.0_L2_AC.L1-3.1.1",
@@ -1163,14 +1163,15 @@
         "type": "string",
         "metadata": {
           "displayName": "Effect for policy: Cognitive Services accounts should disable public network access",
-          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
+          "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects",
+          "deprecated": true
         },
         "allowedValues": [
           "Audit",
           "Deny",
           "Disabled"
         ],
-        "defaultValue": "Audit"
+        "defaultValue": "Disabled"
       },
       "effect-037eea7a-bd0a-46c5-9a66-03aea78705d3": {
         "type": "string",
@@ -1604,7 +1605,7 @@
       "effect-b54ed75b-3e1a-44ac-a333-05ba39b99ff0": {
         "type": "string",
         "metadata": {
-          "displayName": "Effect for policy: Service Fabric clusters should only use Azure Active Directory for client authentication",
+          "displayName": "Effect for policy: Service Fabric clusters should only use Microsoft Entra ID for client authentication",
           "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         },
         "allowedValues": [
@@ -1682,12 +1683,25 @@
       "effect-40cec1dd-a100-4920-b15b-3024fe8901ab": {
         "type": "String",
         "metadata": {
+          "displayName": "(Deprecated) Effect for policy: Azure Machine Learning workspaces should use private link",
+          "description": "This policy has been deprecated to remove a parameter's allowed value, replacement policy is 45e05259-1eb5-4f70-9574-baf73e9d219b.",
+          "deprecated": true
+        },
+        "allowedValues": [
+          "Audit",
+          "Deny",
+          "Disabled"
+        ],
+        "defaultValue": "Disabled"
+      },
+      "effect-45e05259-1eb5-4f70-9574-baf73e9d219b": {
+        "type": "String",
+        "metadata": {
           "displayName": "Effect for policy: Azure Machine Learning workspaces should use private link",
           "description": "The effect determines what happens when the policy rule is evaluated to match; for more information about effects, visit https://aka.ms/policyeffects"
         },
         "allowedValues": [
           "Audit",
-          "Deny",
           "Disabled"
         ],
         "defaultValue": "Audit"
@@ -2294,9 +2308,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "6b1cbf55-e8b6-442f-ba4c-7246b6381474",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_AC.L1-3.1.1",
@@ -2305,9 +2319,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "f8456c1c-aa66-4dfb-861a-25d127b775c9",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/339353f6-2387-4a45-abe4-7f529d121046",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "339353f6-2387-4a45-abe4-7f529d121046",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_AC.L1-3.1.1",
@@ -2315,9 +2329,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e9ac8f8e-ce22-4355-8f04-99b911d6be52",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "e9ac8f8e-ce22-4355-8f04-99b911d6be52",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_AC.L1-3.1.1",
@@ -2353,9 +2367,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "9297c21d-2ed6-4474-b48f-163f75654ce3",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "931e118d-50a1-4457-a5e4-78550e086c52",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_AC.L1-3.1.1",
@@ -2365,12 +2379,12 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/40cec1dd-a100-4920-b15b-3024fe8901ab",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/45e05259-1eb5-4f70-9574-baf73e9d219b",
         "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "40cec1dd-a100-4920-b15b-3024fe8901ab",
+        "policyDefinitionReferenceId": "45e05259-1eb5-4f70-9574-baf73e9d219b",
         "parameters": {
           "effect": {
-            "value": "[parameters('effect-40cec1dd-a100-4920-b15b-3024fe8901ab')]"
+            "value": "[parameters('effect-45e05259-1eb5-4f70-9574-baf73e9d219b')]"
           }
         },
         "groupNames": [
@@ -2601,9 +2615,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "aa633080-8b72-40c4-a2d7-d00c03e80bed",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "e3e008c3-56b9-4133-8fd7-d3347377402a",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_AC.L1-3.1.2",
@@ -2627,9 +2641,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "e3576e28-8b17-4677-84c3-db2990658d64",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "81b3ccb4-e6e8-4e4a-8d05-5df25cd29fd4",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_AC.L1-3.1.2",
@@ -2846,16 +2860,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f0f936f-2f01-4bf5-b6be-d423792fa562",
-        "definitionVersion": "2.*.*",
-        "policyDefinitionReferenceId": "5f0f936f-2f01-4bf5-b6be-d423792fa562",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_RA.L2-3.11.2",
-          "CMMC_2.0_L2_RA.L2-3.11.3"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abfb7388-5bf4-4ad7-ba99-2cd2f41cebb9",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "abfb7388-5bf4-4ad7-ba99-2cd2f41cebb9",
@@ -2890,16 +2894,6 @@
           "CMMC_2.0_L2_AU.L2-3.3.1",
           "CMMC_2.0_L2_SI.L2-3.14.3",
           "CMMC_2.0_L2_SI.L2-3.14.6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_RA.L2-3.11.3",
-          "CMMC_2.0_L2_RA.L2-3.11.2"
         ]
       },
       {
@@ -3343,9 +3337,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/308fbb08-4ab8-4e67-9b29-592e93fb94fa",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/640d2586-54d2-465f-877f-9ffc1d2109f4",
         "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "308fbb08-4ab8-4e67-9b29-592e93fb94fa",
+        "policyDefinitionReferenceId": "640d2586-54d2-465f-877f-9ffc1d2109f4",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_SI.L1-3.14.1",
@@ -3378,15 +3372,6 @@
           "CMMC_2.0_L2_RA.L2-3.11.3",
           "CMMC_2.0_L2_AU.L2-3.3.1",
           "CMMC_2.0_L2_AU.L2-3.3.4"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/496223c3-ad65-4ecd-878a-bae78737e9ed",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "496223c3-ad65-4ecd-878a-bae78737e9ed",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L1-3.14.1"
         ]
       },
       {
@@ -3457,19 +3442,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L2-3.14.3",
-          "CMMC_2.0_L2_SI.L1-3.14.4",
-          "CMMC_2.0_L2_SI.L1-3.14.1",
-          "CMMC_2.0_L2_SI.L1-3.14.2",
-          "CMMC_2.0_L2_SI.L1-3.14.5"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d69b1763-b96d-40b8-a2d9-ca31e9fd0d3e",
         "definitionVersion": "1.*.*-preview",
         "policyDefinitionReferenceId": "d69b1763-b96d-40b8-a2d9-ca31e9fd0d3e",
@@ -3501,18 +3473,6 @@
           "CMMC_2.0_L2_SI.L2-3.14.6",
           "CMMC_2.0_L2_SI.L2-3.14.3",
           "CMMC_2.0_L2_IR.L2-3.6.2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a3a6ea0c-e018-4933-9ef0-5aaa1501449b",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "a3a6ea0c-e018-4933-9ef0-5aaa1501449b",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L2-3.14.7",
-          "CMMC_2.0_L2_AU.L2-3.3.1",
-          "CMMC_2.0_L2_AU.L2-3.3.2",
-          "CMMC_2.0_L2_SI.L2-3.14.6"
         ]
       },
       {
@@ -3631,37 +3591,6 @@
           "CMMC_2.0_L2_AU.L2-3.3.1",
           "CMMC_2.0_L2_SI.L2-3.14.6",
           "CMMC_2.0_L2_SI.L2-3.14.7"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_AU.L2-3.3.2",
-          "CMMC_2.0_L2_SI.L2-3.14.7",
-          "CMMC_2.0_L2_AU.L2-3.3.1",
-          "CMMC_2.0_L2_SI.L2-3.14.6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bdc59948-5574-49b3-bb91-76b7c986428d",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "bdc59948-5574-49b3-bb91-76b7c986428d",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_AU.L2-3.3.2",
-          "CMMC_2.0_L2_SI.L1-3.14.2",
-          "CMMC_2.0_L2_SI.L2-3.14.6",
-          "CMMC_2.0_L2_RA.L2-3.11.3",
-          "CMMC_2.0_L2_AU.L2-3.3.4",
-          "CMMC_2.0_L2_AU.L2-3.3.5",
-          "CMMC_2.0_L2_RA.L2-3.11.2",
-          "CMMC_2.0_L2_SI.L1-3.14.1",
-          "CMMC_2.0_L2_SI.L2-3.14.3",
-          "CMMC_2.0_L2_SI.L2-3.14.7",
-          "CMMC_2.0_L2_AU.L2-3.3.1"
         ]
       },
       {
@@ -3945,9 +3874,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5bb220d9-2698-4ee4-8404-b9c30c9df609",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "5bb220d9-2698-4ee4-8404-b9c30c9df609",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/19dd1db6-f442-49cf-a838-b0786b4401ef",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "19dd1db6-f442-49cf-a838-b0786b4401ef",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_CM.L2-3.4.2",
@@ -4227,9 +4156,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "5c607a2e-c700-4744-8254-d77e7c9eb5e4",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_AC.L1-3.1.1",
@@ -4354,17 +4283,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_RA.L2-3.11.3",
-          "CMMC_2.0_L2_RA.L2-3.11.2",
-          "CMMC_2.0_L2_SI.L1-3.14.1"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/037eea7a-bd0a-46c5-9a66-03aea78705d3",
         "definitionVersion": "3.*.*",
         "policyDefinitionReferenceId": "037eea7a-bd0a-46c5-9a66-03aea78705d3",
@@ -4382,39 +4300,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0725b4dd-7e76-479c-a735-68e7ee23d5ca",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "0725b4dd-7e76-479c-a735-68e7ee23d5ca",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('effect-0725b4dd-7e76-479c-a735-68e7ee23d5ca')]"
-          }
-        },
-        "groupNames": [
-          "CMMC_2.0_L2_SC.L1-3.13.1",
-          "CMMC_2.0_L2_SC.L1-3.13.5",
-          "CMMC_2.0_L2_SC.L2-3.13.6",
-          "CMMC_2.0_L2_AC.L2-3.1.3",
-          "CMMC_2.0_L2_SC.L2-3.13.2"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b52376f7-9612-48a1-81cd-1ffe4b61032c",
         "definitionVersion": "2.*.*",
         "policyDefinitionReferenceId": "b52376f7-9612-48a1-81cd-1ffe4b61032c",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SC.L1-3.13.1",
-          "CMMC_2.0_L2_SC.L2-3.13.2",
-          "CMMC_2.0_L2_AC.L2-3.1.3",
-          "CMMC_2.0_L2_SC.L1-3.13.5",
-          "CMMC_2.0_L2_SC.L2-3.13.6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_SC.L1-3.13.1",
@@ -4562,15 +4450,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
-        "definitionVersion": "2.*.*",
-        "policyDefinitionReferenceId": "0961003e-5a0a-4549-abde-af6a37f2724d",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SC.L2-3.13.16"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fb74e86f-d351-4b8d-b034-93da7391c01f",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "fb74e86f-d351-4b8d-b034-93da7391c01f",
@@ -4629,45 +4508,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
-        "definitionVersion": "4.*.*",
-        "policyDefinitionReferenceId": "86b3d65f-7626-441e-b690-81a8b71cff60",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L1-3.14.1"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7008174a-fd10-4ef0-817e-fc820a951d73",
-        "definitionVersion": "4.*.*",
-        "policyDefinitionReferenceId": "7008174a-fd10-4ef0-817e-fc820a951d73",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L1-3.14.1"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7238174a-fd10-4ef0-817e-fc820a951d73",
-        "definitionVersion": "4.*.*",
-        "policyDefinitionReferenceId": "7238174a-fd10-4ef0-817e-fc820a951d73",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L1-3.14.1"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L1-3.14.1",
-          "CMMC_2.0_L2_SI.L1-3.14.2",
-          "CMMC_2.0_L2_SI.L1-3.14.4",
-          "CMMC_2.0_L2_SI.L1-3.14.5"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bed48b13-6647-468e-aa2f-1af1d3f4dd40",
         "definitionVersion": "2.*.*",
         "policyDefinitionReferenceId": "bed48b13-6647-468e-aa2f-1af1d3f4dd40",
@@ -4696,18 +4536,6 @@
           "CMMC_2.0_L2_AU.L2-3.3.1",
           "CMMC_2.0_L2_SI.L2-3.14.7",
           "CMMC_2.0_L2_AU.L2-3.3.2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4fe33eb-e377-4efb-ab31-0784311bc499",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "a4fe33eb-e377-4efb-ab31-0784311bc499",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L2-3.14.7",
-          "CMMC_2.0_L2_AU.L2-3.3.2",
-          "CMMC_2.0_L2_SI.L2-3.14.6",
-          "CMMC_2.0_L2_AU.L2-3.3.1"
         ]
       },
       {
@@ -4945,18 +4773,6 @@
         "groupNames": [
           "CMMC_2.0_L2_CM.L2-3.4.2",
           "CMMC_2.0_L2_CM.L2-3.4.1"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_CM.L2-3.4.6",
-          "CMMC_2.0_L2_CM.L2-3.4.9",
-          "CMMC_2.0_L2_CM.L2-3.4.7",
-          "CMMC_2.0_L2_CM.L2-3.4.8"
         ]
       },
       {
@@ -5323,15 +5139,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L1-3.14.1"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c43e4a30-77cb-48ab-a4dd-93f175c63b57",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "c43e4a30-77cb-48ab-a4dd-93f175c63b57",
@@ -5406,18 +5213,6 @@
         "groupNames": [
           "CMMC_2.0_L2_CM.L2-3.4.1",
           "CMMC_2.0_L2_CM.L2-3.4.2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/123a3936-f020-408a-ba0c-47873faf1534",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "123a3936-f020-408a-ba0c-47873faf1534",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_CM.L2-3.4.7",
-          "CMMC_2.0_L2_CM.L2-3.4.9",
-          "CMMC_2.0_L2_CM.L2-3.4.6",
-          "CMMC_2.0_L2_CM.L2-3.4.8"
         ]
       },
       {
@@ -5513,9 +5308,9 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0cfea604-3201-4e14-88fc-fae4c427a6c5",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "0cfea604-3201-4e14-88fc-fae4c427a6c5",
         "parameters": {},
         "groupNames": [
           "CMMC_2.0_L2_AC.L1-3.1.1",
@@ -5696,24 +5491,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L1-3.14.1"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7261b898-8a84-4db8-9e04-18527132abb3",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "7261b898-8a84-4db8-9e04-18527132abb3",
-        "parameters": {},
-        "groupNames": [
-          "CMMC_2.0_L2_SI.L1-3.14.1"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4330a05-a843-4bc8-bf9a-cacce50c67f4",
         "definitionVersion": "5.*.*",
         "policyDefinitionReferenceId": "b4330a05-a843-4bc8-bf9a-cacce50c67f4",
@@ -5818,6 +5595,19 @@
           "CMMC_2.0_L2_AU.L2-3.3.1"
         ]
       }
+    ],
+    "versions": [
+      "2.15.0-PREVIEW",
+      "2.14.0-PREVIEW",
+      "2.13.0-PREVIEW",
+      "2.12.0-PREVIEW",
+      "2.11.0-PREVIEW",
+      "2.10.0-PREVIEW",
+      "2.9.0-PREVIEW",
+      "2.8.0-PREVIEW",
+      "2.7.0-PREVIEW",
+      "2.6.0-PREVIEW",
+      "2.5.0-PREVIEW"
     ]
   },
   "id": "/providers/Microsoft.Authorization/policySetDefinitions/4e50fd13-098b-3206-61d6-d1d78205cb45",

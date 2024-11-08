@@ -1,13 +1,13 @@
 {
   "properties": {
-    "displayName": "Azure Security Benchmark",
+    "displayName": "Microsoft cloud security benchmark",
     "policyType": "BuiltIn",
-    "description": "The Azure Security Benchmark initiative represents the policies and controls implementing security recommendations defined in Azure Security Benchmark v3, see https://aka.ms/azsecbm. This also serves as the Microsoft Defender for Cloud default policy initiative. You can directly assign this initiative, or manage its policies and compliance results within Microsoft Defender for Cloud.",
+    "description": "The Microsoft cloud security benchmark initiative represents the policies and controls implementing security recommendations defined in Microsoft cloud security benchmark, see https://aka.ms/azsecbm. This also serves as the Microsoft Defender for Cloud default policy initiative. You can directly assign this initiative, or manage its policies and compliance results within Microsoft Defender for Cloud.",
     "metadata": {
-      "version": "57.1.0",
+      "version": "57.45.0",
       "category": "Security Center"
     },
-    "version": "57.1.0",
+    "version": "57.45.0",
     "policyDefinitionGroups": [
       {
         "name": "Azure_Security_Benchmark_v3.0_NS-1",
@@ -392,26 +392,28 @@
       },
       "installLogAnalyticsAgentOnVmMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Log Analytics agent should be installed on your virtual machine for Microsoft Defender for Cloud monitoring",
-          "description": "This policy audits any Windows/Linux virtual machines (VMs) if the Log Analytics agent is not installed which Security Center uses to monitor for security vulnerabilities and threats"
+          "description": "This policy audits any Windows/Linux virtual machines (VMs) if the Log Analytics agent is not installed which Security Center uses to monitor for security vulnerabilities and threats",
+          "deprecated": true
         }
       },
       "installLogAnalyticsAgentOnVmssMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Log Analytics agent should be installed on your virtual machine scale sets for Microsoft Defender for Cloud monitoring",
-          "description": "Security Center collects data from your Azure virtual machines (VMs) to monitor for security vulnerabilities and threats."
+          "description": "Security Center collects data from your Azure virtual machines (VMs) to monitor for security vulnerabilities and threats.",
+          "deprecated": true
         }
       },
       "certificatesValidityPeriodMonitoringEffect": {
@@ -523,50 +525,54 @@
       },
       "vmssSystemUpdatesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "System updates on virtual machine scale sets should be installed",
-          "description": "Enable or disable virtual machine scale sets reporting of system updates"
+          "description": "Enable or disable virtual machine scale sets reporting of system updates",
+          "deprecated": true
         }
       },
       "vmssEndpointProtectionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Endpoint protection solution should be installed on virtual machine scale sets",
-          "description": "Enable or disable virtual machine scale sets endpoint protection monitoring"
+          "description": "Enable or disable virtual machine scale sets endpoint protection monitoring",
+          "deprecated": true
         }
       },
       "vmssOsVulnerabilitiesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Vulnerabilities in security configuration on your virtual machine scale sets should be remediated",
-          "description": "Enable or disable virtual machine scale sets OS vulnerabilities monitoring"
+          "description": "Enable or disable virtual machine scale sets OS vulnerabilities monitoring",
+          "deprecated": true
         }
       },
       "systemUpdatesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "System updates should be installed on your machines",
-          "description": "Enable or disable reporting of system updates"
+          "description": "Enable or disable reporting of system updates",
+          "deprecated": true
         }
       },
       "systemUpdatesV2MonitoringEffect": {
@@ -607,26 +613,28 @@
       },
       "endpointProtectionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Monitor missing Endpoint Protection in Microsoft Defender for Cloud",
-          "description": "Enable or disable endpoint protection monitoring"
+          "description": "Enable or disable endpoint protection monitoring",
+          "deprecated": true
         }
       },
       "diskEncryptionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Virtual machines should encrypt temp disks, caches, and data flows between Compute and Storage resources",
-          "description": "Enable or disable the monitoring for VM disk encryption"
+          "description": "Enable or disable the monitoring for VM disk encryption",
+          "deprecated": true
         }
       },
       "gcLinuxDiskEncryptionMonitoringEffect": {
@@ -637,7 +645,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Linux machines should encrypt temp disks, caches, and data flows between Compute and Storage resources",
+          "displayName": "Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost",
           "description": "Enable or disable the guest configuration monitoring for disk encryption on Linux machines"
         }
       },
@@ -649,7 +657,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Windows machines should encrypt temp disks, caches, and data flows between Compute and Storage resources",
+          "displayName": "Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost",
           "description": "Enable or disable the guest configuration monitoring for disk encryption on Windows machines"
         }
       },
@@ -779,26 +787,28 @@
       },
       "adaptiveApplicationControlsMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Adaptive application controls for defining safe applications should be enabled on your machines",
-          "description": "Enable or disable application controls to define the list of known-safe applications running on your machines, and alert you when other applications run"
+          "description": "Enable or disable application controls to define the list of known-safe applications running on your machines, and alert you when other applications run",
+          "deprecated": true
         }
       },
       "adaptiveApplicationControlsUpdateMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Allowlist rules in your adaptive application control policy should be updated",
-          "description": "Enable or disable the monitoring for changes in behavior on groups of machines configured for auditing by Microsoft Defender for Cloud's adaptive application controls"
+          "description": "Enable or disable the monitoring for changes in behavior on groups of machines configured for auditing by Microsoft Defender for Cloud's adaptive application controls",
+          "deprecated": true
         }
       },
       "sqlAuditingMonitoringEffect": {
@@ -2068,7 +2078,7 @@
           "Disabled"
         ],
         "metadata": {
-          "displayName": "Azure DDoS Protection Standard should be enabled",
+          "displayName": "Azure DDoS Protection should be enabled",
           "description": "Enable or disable the monitoring of DDoS protection for virtual network"
         }
       },
@@ -2282,14 +2292,15 @@
       },
       "adaptiveNetworkHardeningsMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Adaptive network hardening recommendations should be applied on internet facing virtual machines",
-          "description": "Enable or disable the monitoring of Internet-facing virtual machines for Network Security Group traffic hardening recommendations"
+          "description": "Enable or disable the monitoring of Internet-facing virtual machines for Network Security Group traffic hardening recommendations",
+          "deprecated": true
         }
       },
       "restrictAccessToManagementPortsMonitoringEffect": {
@@ -2383,14 +2394,15 @@
       },
       "containerBenchmarkMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Vulnerabilities in container security configurations should be remediated",
-          "description": "Enable or disable container benchmark monitoring"
+          "description": "Enable or disable container benchmark monitoring",
+          "deprecated": true
         }
       },
       "ASCDependencyAgentAuditWindowsEffect": {
@@ -2431,14 +2443,15 @@
       },
       "ArcWindowsMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Log Analytics agent should be installed on your  Windows Azure Arc machines",
-          "description": "Enable or disable Log Analytics agent should be installed on your  Windows Azure Arc machines"
+          "description": "Enable or disable Log Analytics agent should be installed on your  Windows Azure Arc machines",
+          "deprecated": true
         }
       },
       "ArcLinuxMonitoringEffect": {
@@ -2498,7 +2511,8 @@
         ],
         "metadata": {
           "displayName": "Azure Defender for Storage should be enabled",
-          "description": "Enable or disable Azure Defender for storage"
+          "description": "Enable or disable Azure Defender for storage",
+          "deprecated": true
         }
       },
       "appServicesAdvancedThreatProtectionMonitoringEffect": {
@@ -2626,11 +2640,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of allowed container images",
           "description": "List of Kubernetes namespaces to exclude from evaluation of allowed container images in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "allowedContainerImagesLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of allowed container images",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "privilegedContainersShouldBeAvoidedEffect": {
@@ -2656,16 +2730,76 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of privileged containers",
           "description": "List of Kubernetes namespaces to exclude from evaluation of privileged containers in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
         }
       },
+      "privilegedContainerLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of privileged containers",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
       "allowedContainerPortsInKubernetesClusterEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "audit",
           "Audit",
@@ -2696,7 +2830,8 @@
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of allowed container port",
@@ -2727,7 +2862,7 @@
         ],
         "metadata": {
           "displayName": "Allowed service ports list in Kubernetes cluster",
-          "description": "List of service ports allowed in Kubernetes cluster. Use ; to separate values"
+          "description": "The list of service ports allowed in a Kubernetes cluster. Array only accepts strings. Example: [\"443\", \"80\"]"
         }
       },
       "allowedServicePortsInKubernetesClusterNamespaceExclusion": {
@@ -2735,11 +2870,71 @@
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of allowed service ports",
           "description": "List of Kubernetes namespaces to exclude from evaluation of allowed service ports in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "allowedServicePortsInKubernetesClusterLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of allowed service ports",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "NoPrivilegeEscalationInKubernetesClusterEffect": {
@@ -2763,11 +2958,71 @@
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of privileged escalation containers",
           "description": "List of Kubernetes namespaces to exclude from evaluation of privileged escalation containers in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "NoPrivilegeEscalationInKubernetesClusterLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of privileged escalation containers",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "NoSharingSensitiveHostNamespacesInKubernetesEffect": {
@@ -2791,11 +3046,71 @@
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of sharing sensitive host namespaces in Kubernetes clusters",
           "description": "List of Kubernetes namespaces to exclude from evaluation of  sharing sensitive host namespaces in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "NoSharingSensitiveHostNamespacesInKubernetesLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of sharing sensitive host namespaces in Kubernetes clusters",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "ReadOnlyRootFileSystemInKubernetesClusterEffect": {
@@ -2821,11 +3136,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers running with a read only root file system",
           "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers running with a read only root file system in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "ReadOnlyRootFileSystemInKubernetesClusterLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of containers running with a read only root file system",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "AllowedCapabilitiesInKubernetesClusterEffect": {
@@ -2851,11 +3226,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers use only allowed capabilities",
           "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers using only allowed capabilities in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "AllowedCapabilitiesInKubernetesClusterLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of containers use only allowed capabilities",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "AllowedCapabilitiesInKubernetesClusterList": {
@@ -2897,11 +3332,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers modification of AppArmor profile",
           "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers modifying of AppArmor profile in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "AllowedAppArmorProfilesInKubernetesClusterLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of containers modification of AppArmor profile",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "AllowedAppArmorProfilesInKubernetesClusterList": {
@@ -2935,11 +3430,71 @@
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers host networking and ports",
           "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers host networking and ports in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "AllowedHostNetworkingAndPortsInKubernetesClusterLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of containers host networking and ports",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "AllowHostNetworkingInKubernetesCluster": {
@@ -2989,11 +3544,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of pod HostPath volume mounts",
           "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of pod HostPath volume mounts in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "AllowedHostPathVolumesInKubernetesClusterLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of pod HostPath volume mounts",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "AllowedHostPathVolumesInKubernetesClusterList": {
@@ -3073,11 +3688,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of memory and CPU limits",
           "description": "List of Kubernetes namespaces to exclude from evaluation of memory and CPU limits in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "memoryAndCPULimitsInKubernetesClusterLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of memory and CPU limits",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "BlockVulnerableImagesInKubernetesClusterEffect": {
@@ -3090,7 +3765,8 @@
         ],
         "metadata": {
           "displayName": "Kubernetes clusters should gate deployment of vulnerable images",
-          "description": "Enable or disable gating containers' with vulnerable images in Kubernetes clusters"
+          "description": "Enable or disable gating containers' with vulnerable images in Kubernetes clusters",
+          "deprecated": true
         }
       },
       "BlockVulnerableImagesInKubernetesClusterNamespaceExclusion": {
@@ -3098,11 +3774,13 @@
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers with vulnerable images",
-          "description": "List of Kubernetes namespaces to exclude from evaluation of block vulnerable images in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+          "description": "List of Kubernetes namespaces to exclude from evaluation of block vulnerable images in Kubernetes clusters. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design.",
+          "deprecated": true
         }
       },
       "BlockVulnerableImagesNamespaces": {
@@ -3118,7 +3796,8 @@
         "type": "Array",
         "metadata": {
           "displayName": "Excluded images regex for gating vulnerable images in Kubernetes cluster",
-          "description": "A list of RegEx rules used to exclude container images from policy evaluation. For example: exclude all images from the repo microsoft-defender-in-cluster-defense-repo in the blockreg ACR -  [\"(blockreg.azurecr.io/microsoft-defender-in-cluster-defense-repo).*\"]. Use an empty list to apply this policy to all container images."
+          "description": "A list of RegEx rules used to exclude container images from policy evaluation. For example: exclude all images from the repo microsoft-defender-in-cluster-defense-repo in the blockreg ACR -  [\"(blockreg.azurecr.io/microsoft-defender-in-cluster-defense-repo).*\"]. Use an empty list to apply this policy to all container images.",
+          "deprecated": true
         },
         "defaultValue": []
       },
@@ -3126,7 +3805,8 @@
         "type": "string",
         "metadata": {
           "displayName": "Severity threshold for excluding gating of image vulnerabilities without a patch in Kubernetes cluster",
-          "description": "Specify the maximum severity for exempting vulnerabilities without a patch. For example, specify Medium to ignore Low and Medium vulnerabilities without a patch."
+          "description": "Specify the maximum severity for exempting vulnerabilities without a patch. For example, specify Medium to ignore Low and Medium vulnerabilities without a patch.",
+          "deprecated": true
         },
         "allowedValues": [
           "None",
@@ -3140,7 +3820,8 @@
         "type": "Array",
         "metadata": {
           "displayName": "Exclude finding IDs for gating vulnerable images scan results in Kubernetes cluster",
-          "description": "A list of finding IDs that the policy should exempt."
+          "description": "A list of finding IDs that the policy should exempt.",
+          "deprecated": true
         },
         "defaultValue": []
       },
@@ -3148,7 +3829,8 @@
         "type": "Object",
         "metadata": {
           "displayName": "Severity threshold for excluding gating of image vulnerabilities in Kubernetes cluster",
-          "description": "The number of allowed findings per severity for an image. e.g. \"{\"High\":0,\"Medium\":3,\"Low\":10}\""
+          "description": "The number of allowed findings per severity for an image. e.g. \"{\"High\":0,\"Medium\":3,\"Low\":10}\"",
+          "deprecated": true
         },
         "defaultValue": {
           "High": 0,
@@ -3183,11 +3865,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from monitoring of containers running as root user",
           "description": "List of Kubernetes namespaces to exclude from evaluation to monitoring of containers running as root users. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "MustRunAsNonRootLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of containers running as root user",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "MustRunAsNonRootNamespaceEffect": {
@@ -3232,6 +3974,19 @@
       },
       "containerRegistryVulnerabilityAssessmentEffect": {
         "type": "string",
+        "defaultValue": "Disabled",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Vulnerabilities in Azure Container Registry images should be remediated",
+          "description": "Enable or disable monitoring of Azure container registries by Microsoft Defender for Cloud vulnerability assessment (powered by Qualys)",
+          "deprecated": true
+        }
+      },
+      "azureContainerRegistryVulnerabilityAssessmentEffect": {
+        "type": "string",
         "defaultValue": "AuditIfNotExists",
         "allowedValues": [
           "AuditIfNotExists",
@@ -3239,10 +3994,23 @@
         ],
         "metadata": {
           "displayName": "Vulnerabilities in Azure Container Registry images should be remediated",
-          "description": "Enable or disable monitoring of Azure container registries by Microsoft Defender for Cloud vulnerability assessment (powered by Qualys)"
+          "description": "Enable or disable monitoring of Azure container registries by Microsoft Defender for Cloud vulnerability assessment (powered by Microsoft Defender Vulnerability Management)"
         }
       },
       "kubernetesRunningImagesVulnerabilityAssessmentEffect": {
+        "type": "string",
+        "defaultValue": "Disabled",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Vulnerabilities in running images should be remediated",
+          "description": "Enable or disable monitoring of Kubernetes Service clusters by Defender for Containers running images vulnerability assessment",
+          "deprecated": true
+        }
+      },
+      "kubernetesRunningImagesVulnerabilityMDVMAssessmentEffect": {
         "type": "string",
         "defaultValue": "AuditIfNotExists",
         "allowedValues": [
@@ -3329,14 +4097,15 @@
       },
       "ensureWEBAppHasClientCertificatesIncomingClientCertificatesSetToOnMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Ensure WEB app has Client Certificates Incoming client certificates set to On",
-          "description": "Client certificates allow for the app to request a certificate for incoming requests. Only clients that have a valid certificate will be able to reach the app."
+          "description": "Client certificates allow for the app to request a certificate for incoming requests. Only clients that have a valid certificate will be able to reach the app.",
+          "deprecated": true
         }
       },
       "georedundantBackupShouldBeEnabledForAzureDatabaseForMysqlMonitoringEffect": {
@@ -3452,38 +4221,41 @@
       },
       "ensureThatPHPVersionIsTheLatestIfUsedAsAPartOfTheWEBAppMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Ensure that PHP version is the latest if used as a part of the WEB app",
-          "description": "Periodically, newer versions are released for PHP software either due to security flaws or to include additional functionality. Using the latest PHP version for web apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps."
+          "description": "Periodically, newer versions are released for PHP software either due to security flaws or to include additional functionality. Using the latest PHP version for web apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps.",
+          "deprecated": true
         }
       },
       "ensureThatJavaVersionIsTheLatestIfUsedAsAPartOfTheWebAppMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Ensure that Java version is the latest if used as a part of the Web app",
-          "description": "Periodically, newer versions are released for Java software either due to security flaws or to include additional functionality. Using the latest Java version for web apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps."
+          "description": "Periodically, newer versions are released for Java software either due to security flaws or to include additional functionality. Using the latest Java version for web apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps.",
+          "deprecated": true
         }
       },
       "ensureThatJavaVersionIsTheLatestIfUsedAsAPartOfTheFunctionAppMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Ensure that Java version is the latest if used as a part of the Function app",
-          "description": "Periodically, newer versions are released for Java software either due to security flaws or to include additional functionality. Using the latest Java version for Function apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps."
+          "description": "Periodically, newer versions are released for Java software either due to security flaws or to include additional functionality. Using the latest Java version for Function apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps.",
+          "deprecated": true
         }
       },
       "ensureThatJavaVersionIsTheLatestIfUsedAsAPartOfTheApiAppMonitoringEffect": {
@@ -3501,26 +4273,28 @@
       },
       "ensureThatPythonVersionIsTheLatestIfUsedAsAPartOfTheWebAppMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Ensure that Python version is the latest if used as a part of the Web app",
-          "description": "Periodically, newer versions are released for Python software either due to security flaws or to include additional functionality. Using the latest Python version for web apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps."
+          "description": "Periodically, newer versions are released for Python software either due to security flaws or to include additional functionality. Using the latest Python version for web apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps.",
+          "deprecated": true
         }
       },
       "ensureThatPythonVersionIsTheLatestIfUsedAsAPartOfTheFunctionAppMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Ensure that Python version is the latest if used as a part of the Function app",
-          "description": "Periodically, newer versions are released for Python software either due to security flaws or to include additional functionality. Using the latest Python version for Function apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps."
+          "description": "Periodically, newer versions are released for Python software either due to security flaws or to include additional functionality. Using the latest Python version for Function apps is recommended in order to take advantage of security fixes, if any, and/or new functionalities of the latest version. Currently, this policy only applies to Linux web apps.",
+          "deprecated": true
         }
       },
       "ensureThatPythonVersionIsTheLatestIfUsedAsAPartOfTheApiAppMonitoringEffect": {
@@ -4008,14 +4782,15 @@
       },
       "autoProvisioningOfTheLogAnalyticsAgentShouldBeEnabledOnYourSubscriptionMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Auto provisioning of the Log Analytics agent should be enabled on your subscription",
-          "description": "To monitor for security vulnerabilities and threats, Microsoft Defender for Cloud collects data from your Azure virtual machines. Data is collected by the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your Log Analytics workspace for analysis. We recommend enabling auto provisioning to automatically deploy the agent to all supported Azure VMs and any new ones that are created."
+          "description": "To monitor for security vulnerabilities and threats, Microsoft Defender for Cloud collects data from your Azure virtual machines. Data is collected by the Log Analytics agent, formerly known as the Microsoft Monitoring Agent (MMA), which reads various security-related configurations and event logs from the machine and copies the data to your Log Analytics workspace for analysis. We recommend enabling auto provisioning to automatically deploy the agent to all supported Azure VMs and any new ones that are created.",
+          "deprecated": true
         }
       },
       "emailNotificationForHighSeverityAlertsShouldBeEnabledMonitoringEffect": {
@@ -4125,11 +4900,71 @@
         "defaultValue": [
           "kube-system",
           "gatekeeper-system",
-          "azure-arc"
+          "azure-arc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from evaluation of HTTPS only access",
           "description": "List of Kubernetes namespaces to exclude from evaluation of HTTPS only access. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "kubernetesClustersShouldBeAccessibleOnlyOverHTTPSLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select evaluation of HTTPS only access",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "kubernetesClustersShouldBeAccessibleOnlyOverHTTPSNamespaces": {
@@ -4206,7 +5041,7 @@
       },
       "publicNetworkAccessShouldBeDisabledForCognitiveServicesAccountsMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Audit",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "Audit",
           "Deny",
@@ -4214,7 +5049,8 @@
         ],
         "metadata": {
           "displayName": "Public network access should be disabled for Cognitive Services accounts",
-          "description": "This policy audits any Cognitive Services account in your environment with public network access enabled. Public network access should be disabled so that only connections from private endpoints are allowed."
+          "description": "This policy audits any Cognitive Services account in your environment with public network access enabled. Public network access should be disabled so that only connections from private endpoints are allowed.",
+          "deprecated": true
         }
       },
       "cognitiveServicesAccountsShouldEnableDataEncryptionMonitoringEffect": {
@@ -4318,14 +5154,15 @@
       },
       "AzureDefenderForDNSShouldBeEnabledMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Azure Defender for DNS should be enabled",
-          "description": "Azure Defender for DNS provides an additional layer of protection for your cloud resources by continuously monitoring all DNS queries from your Azure resources. Azure Defender alerts you about suspicious activity at the DNS layer. Learn more about the capabilities of Azure Defender for DNS at https://aka.ms/defender-for-dns . Enabling this Azure Defender plan results in charges. Learn about the pricing details per region on Security Center's pricing page: https://aka.ms/pricing-security-center ."
+          "description": "Azure Defender for DNS provides an additional layer of protection for your cloud resources by continuously monitoring all DNS queries from your Azure resources. Azure Defender alerts you about suspicious activity at the DNS layer. Learn more about the capabilities of Azure Defender for DNS at https://aka.ms/defender-for-dns . Enabling this Azure Defender plan results in charges. Learn about the pricing details per region on Security Center's pricing page: https://aka.ms/pricing-security-center .",
+          "deprecated": true
         }
       },
       "AzureDefenderForOpenSourceRelationalDatabasesShouldBeEnabledMonitoringEffect": {
@@ -4342,7 +5179,7 @@
       },
       "MicrosoftDefenderCSPMShouldBeEnabledMonitoringEffect": {
         "type": "string",
-        "defaultValue": "Disabled",
+        "defaultValue": "AuditIfNotExists",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
@@ -4368,6 +5205,65 @@
           "description": "Prevent usage of the default namespace in Kubernetes clusters to protect against unauthorized access for ConfigMap, Pod, Secret, Service, and ServiceAccount resource types. For more information, see https://aka.ms/kubepolicydoc."
         }
       },
+      "KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of block default namespace",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
       "KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringEffect": {
         "type": "string",
         "defaultValue": "Audit",
@@ -4391,11 +5287,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from restricting automounting API credentials",
           "description": "List of Kubernetes namespaces to exclude from evaluation to restrict automounting API credentials. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of automounting API credentials",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringEffect": {
@@ -4421,11 +5377,71 @@
           "gatekeeper-system",
           "azure-arc",
           "azuredefender",
-          "mdc"
+          "mdc",
+          "azure-extensions-usage-system"
         ],
         "metadata": {
           "displayName": "Kubernetes namespaces to exclude from restricting CAP_SYS_ADMIN Linux capabilities",
           "description": "List of Kubernetes namespaces to exclude from evaluation to restrict CAP_SYS_ADMIN Linux capabilities. To list multiple namespaces, use semicolons (;) to separate them. System namespaces \"kube-system\", \"gatekeeper-system\" and \"azure-arc\" are always excluded by design."
+        }
+      },
+      "KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringLabelSelector": {
+        "type": "object",
+        "metadata": {
+          "displayName": "Kubernetes label selector to select monitoring of CAP_SYS_ADMIN Linux capabilities",
+          "description": "Label query to select Kubernetes resources for policy evaluation. An empty label selector matches all Kubernetes resources."
+        },
+        "defaultValue": {},
+        "schema": {
+          "description": "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all resources.",
+          "type": "object",
+          "properties": {
+            "matchLabels": {
+              "description": "matchLabels is a map of {key,value} pairs.",
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "minProperties": 1
+            },
+            "matchExpressions": {
+              "description": "matchExpressions is a list of values, a key, and an operator.",
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "description": "key is the label key that the selector applies to.",
+                    "type": "string"
+                  },
+                  "operator": {
+                    "description": "operator represents a key's relationship to a set of values.",
+                    "type": "string",
+                    "enum": [
+                      "In",
+                      "NotIn",
+                      "Exists",
+                      "DoesNotExist"
+                    ]
+                  },
+                  "values": {
+                    "description": "values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty.",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "key",
+                  "operator"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
         }
       },
       "VtpmShouldBeEnabledOnSupportedVirtualMachinesMonitoringEffect": {
@@ -4500,58 +5516,46 @@
           "description": "Install Guest Attestation extension on supported virtual machines scale sets to allow Microsoft Defender for Cloud to proactively attest and monitor the boot integrity. Once installed, boot integrity will be attested via Remote Attestation. This assessment only applies to trusted launch enabled virtual machine scale sets."
         }
       },
-      "installEndpointProtectionMonitoringEffect": {
+      "LinuxVirtualMachineShouldUseSignedAndTrustedBootComponentEffect": {
         "type": "string",
         "defaultValue": "AuditIfNotExists",
+        "allowedValues": [
+          "AuditIfNotExists",
+          "Disabled"
+        ],
+        "metadata": {
+          "displayName": "Linux virtual machines should use only signed and trusted boot components",
+          "description": "All OS boot components (boot loader, kernel, kernel drivers) must be signed by trusted publishers. Defender for Cloud has identified untrusted OS boot components on one or more of your Linux machines. To protect your machines from potentially malicious components, add them to your allow list or remove the identified components."
+        }
+      },
+      "installEndpointProtectionMonitoringEffect": {
+        "type": "string",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Endpoint protection should be installed on your machines",
-          "description": "To protect your machines from threats and vulnerabilities, install a supported endpoint protection solution."
+          "description": "To protect your machines from threats and vulnerabilities, install a supported endpoint protection solution.",
+          "deprecated": true
         }
       },
       "endpointProtectionHealthIssuesMonitoringEffect": {
         "type": "string",
-        "defaultValue": "AuditIfNotExists",
+        "defaultValue": "Disabled",
         "allowedValues": [
           "AuditIfNotExists",
           "Disabled"
         ],
         "metadata": {
           "displayName": "Endpoint protection health issues should be resolved on your machines",
-          "description": "Resolve endpoint protection health issues on your virtual machines to protect them from latest threats and vulnerabilities. Microsoft Defender for Cloud supported endpoint protection solutions are documented here - https://docs.microsoft.com/azure/security-center/security-center-services?tabs=features-windows#supported-endpoint-protection-solutions. Endpoint protection assessment is documented here - https://docs.microsoft.com/azure/security-center/security-center-endpoint-protection."
+          "description": "Resolve endpoint protection health issues on your virtual machines to protect them from latest threats and vulnerabilities. Microsoft Defender for Cloud supported endpoint protection solutions are documented here - https://docs.microsoft.com/azure/security-center/security-center-services?tabs=features-windows#supported-endpoint-protection-solutions. Endpoint protection assessment is documented here - https://docs.microsoft.com/azure/security-center/security-center-endpoint-protection.",
+          "deprecated": true
         }
       }
     },
     "policyDefinitions": [
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a4fe33eb-e377-4efb-ab31-0784311bc499",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "installLogAnalyticsAgentOnVmMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('installLogAnalyticsAgentOnVmMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_LT-5"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a3a6ea0c-e018-4933-9ef0-5aaa1501449b",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "installLogAnalyticsAgentOnVmssMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('installLogAnalyticsAgentOnVmssMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_LT-5"
-        ]
-      },
       {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a075868-4c26-42ef-914c-5bc007359560",
         "definitionVersion": "2.*.*-preview",
@@ -4592,45 +5596,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_DP-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3c735d8a-a4ba-4a3a-b7cf-db7754cf57f4",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "vmssOsVulnerabilitiesMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssOsVulnerabilitiesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/26a828e1-e88f-464e-bbb3-c134a282b9de",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "vmssEndpointProtectionMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssEndpointProtectionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_ES-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3f317a7-a95c-4547-b7e7-11017ebdf2fe",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "vmssSystemUpdatesMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('vmssSystemUpdatesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -5031,19 +5996,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/86b3d65f-7626-441e-b690-81a8b71cff60",
-        "definitionVersion": "4.*.*",
-        "policyDefinitionReferenceId": "systemUpdatesMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('systemUpdatesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f85bf3e0-d513-442e-89c3-1784ad63382b",
         "definitionVersion": "1.*.*-preview",
         "policyDefinitionReferenceId": "systemUpdatesV2Monitoring",
@@ -5081,32 +6033,6 @@
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_NS-3",
           "Azure_Security_Benchmark_v3.0_PA-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/47a6b606-51aa-4496-8bb7-64b11cf66adc",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "adaptiveApplicationControlsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('adaptiveApplicationControlsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_AM-5"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/123a3936-f020-408a-ba0c-47873faf1534",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "adaptiveApplicationControlsUpdateMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('adaptiveApplicationControlsUpdateMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_AM-5"
         ]
       },
       {
@@ -5159,32 +6085,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_PV-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/af6cd1bd-1635-48cb-bde7-5b15693900b9",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "endpointProtectionMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('endpointProtectionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_ES-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0961003e-5a0a-4549-abde-af6a37f2724d",
-        "definitionVersion": "2.*.*",
-        "policyDefinitionReferenceId": "diskEncryptionMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('diskEncryptionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_DP-4"
         ]
       },
       {
@@ -5266,19 +6166,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/aa633080-8b72-40c4-a2d7-d00c03e80bed",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "identityEnableMFAForOwnerPermissionsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('identityEnableMFAForOwnerPermissionsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_IM-6"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "identityEnableMFAForOwnerPermissionsMonitoringNew",
@@ -5292,38 +6179,12 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9297c21d-2ed6-4474-b48f-163f75654ce3",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "identityEnableMFAForWritePermissionsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('identityEnableMFAForWritePermissionsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_IM-6"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
         "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "identityEnableMFAForWritePermissionsMonitoringEffect",
+        "policyDefinitionReferenceId": "identityEnableMFAForWritePermissionsMonitoringNew",
         "parameters": {
           "effect": {
             "value": "[parameters('identityEnableMFAForWritePermissionsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_IM-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3576e28-8b17-4677-84c3-db2990658d64",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "identityEnableMFAForReadPermissionsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('identityEnableMFAForReadPermissionsMonitoringEffect')]"
           }
         },
         "groupNames": [
@@ -5344,20 +6205,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ebb62a0c-3560-49e1-89ed-27e074e9f8ad",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PA-1",
-          "Azure_Security_Benchmark_v3.0_PA-4"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0cfea604-3201-4e14-88fc-fae4c427a6c5",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountWithOwnerPermissionsMonitoringNew",
@@ -5372,19 +6219,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6b1cbf55-e8b6-442f-ba4c-7246b6381474",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('identityRemoveDeprecatedAccountMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PA-4"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8d7e1fde-fe26-4b5f-8108-f8e432cbc2be",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "identityRemoveDeprecatedAccountMonitoringNew",
@@ -5394,20 +6228,6 @@
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PA-4"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f8456c1c-aa66-4dfb-861a-25d127b775c9",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "identityRemoveExternalAccountWithOwnerPermissionsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('identityRemoveExternalAccountWithOwnerPermissionsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PA-1",
           "Azure_Security_Benchmark_v3.0_PA-4"
         ]
       },
@@ -5426,38 +6246,12 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5c607a2e-c700-4744-8254-d77e7c9eb5e4",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "identityRemoveExternalAccountWithWritePermissionsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('identityRemoveExternalAccountWithWritePermissionsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PA-4"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "identityRemoveExternalAccountWithWritePermissionsMonitoringNew",
         "parameters": {
           "effect": {
             "value": "[parameters('identityRemoveExternalAccountWithWritePermissionsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PA-4"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f76cf89-fbf2-47fd-a3f4-b891fa780b60",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "identityRemoveExternalAccountWithReadPermissionsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('identityRemoveExternalAccountWithReadPermissionsMonitoringEffect')]"
           }
         },
         "groupNames": [
@@ -5585,6 +6379,39 @@
         ]
       },
       {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d31e5c31-63b2-4f12-887b-e49456834fa1",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "synapseWorkspaceAdvancedDataSecurityMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d38668f5-d155-42c7-ab3d-9b57b50f8fbf",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "postgreSqlFlexibleServersAdvancedDataSecurityMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3bc8a0d5-38e0-4a3d-a657-2cb64468fc34",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "mySqlFlexibleServersAdvancedDataSecurityMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
+        ]
+      },
+      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/938c4981-c2c9-4168-9cd6-972b8675f906",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "arcEnabledSqlServerDefenderStatus",
@@ -5596,6 +6423,29 @@
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_LT-1",
           "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c6283572-73bb-4deb-bf2c-7a2b8f7462cb",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "SQLServerTargetedAutoprovisioningShouldBeEnabledForSQLServersOnMachinesPlan",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7926a6d1-b268-4586-8197-e8ae90c877d7",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "enableDefenderForApis",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-1",
+          "Azure_Security_Benchmark_v3.0_DP-2",
+          "Azure_Security_Benchmark_v3.0_LT-1",
           "Azure_Security_Benchmark_v3.0_IR-3",
           "Azure_Security_Benchmark_v3.0_IR-5"
         ]
@@ -5670,20 +6520,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/08e6af2d-db70-460a-bfe9-d5bd474ba9d6",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "adaptiveNetworkHardeningsMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('adaptiveNetworkHardeningsMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_NS-1",
-          "Azure_Security_Benchmark_v3.0_NS-7"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22730e10-96f6-4aac-ad84-9383d35b5917",
         "definitionVersion": "3.*.*",
         "policyDefinitionReferenceId": "restrictAccessToManagementPortsMonitoring",
@@ -5733,20 +6569,6 @@
         },
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_DP-5"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e8cbc669-f12d-49eb-93e7-9273119e9933",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "containerBenchmarkMonitoring",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('containerBenchmarkMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6",
-          "Azure_Security_Benchmark_v3.0_DS-6"
         ]
       },
       {
@@ -5815,38 +6637,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4078e558-bda6-41fb-9b3c-361e8875200d",
-        "definitionVersion": "2.*.*",
-        "policyDefinitionReferenceId": "ArcWindowsMonitoringByGC",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ArcWindowsMonitoringEffect')]"
-          },
-          "IncludeArcMachines": {
-            "value": "[parameters('windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsIncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_LT-5"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e7fed80-8321-4605-b42c-65fc300f23a3",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "ArcLinuxMonitoringByGC",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ArcLinuxMonitoringEffect')]"
-          },
-          "IncludeArcMachines": {
-            "value": "[parameters('windowsWebServersShouldBeConfiguredToUseSecureCommunicationProtocolsIncludeArcMachines')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_LT-5"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0e6763cc-5078-4e64-889d-ff4d9a839047",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "keyVaultsAdvancedDataSecurityMonitoringEffect",
@@ -5887,23 +6677,6 @@
         "parameters": {
           "effect": {
             "value": "[parameters('sqlServersVirtualMachinesAdvancedDataSecurityMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_DP-2",
-          "Azure_Security_Benchmark_v3.0_LT-1",
-          "Azure_Security_Benchmark_v3.0_LT-2",
-          "Azure_Security_Benchmark_v3.0_IR-3",
-          "Azure_Security_Benchmark_v3.0_IR-5"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/308fbb08-4ab8-4e67-9b29-592e93fb94fa",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "storageAccountsAdvancedDataSecurityMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('storageAccountsAdvancedDataSecurityMonitoringEffect')]"
           }
         },
         "groupNames": [
@@ -6002,6 +6775,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('allowedContainerImagesNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('allowedContainerImagesLabelSelector')]"
           }
         },
         "groupNames": [
@@ -6018,6 +6794,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('privilegedContainerNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('privilegedContainerLabelSelector')]"
           },
           "excludedImages": {
             "value": "[parameters('excludedImagesInKubernetesCluster')]"
@@ -6040,34 +6819,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('allowedServicePortsInKubernetesClusterNamespaceExclusion')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/13cd7ae3-5bc0-4ac4-a62d-4f7c120b9759",
-        "definitionVersion": "2.*.*-preview",
-        "policyDefinitionReferenceId": "BlockVulnerableImagesInKubernetesCluster",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('BlockVulnerableImagesInKubernetesClusterEffect')]"
           },
-          "excludedNamespaces": {
-            "value": "[parameters('BlockVulnerableImagesInKubernetesClusterNamespaceExclusion')]"
-          },
-          "excludedImages": {
-            "value": "[parameters('BlockVulnerableImagesExcludedImages')]"
-          },
-          "severityThresholdForExcludingNotPatchableFindings": {
-            "value": "[parameters('BlockVulnerableImagesSeverityThresholdForExcludingNotPatchableFindings')]"
-          },
-          "excludeFindingIDs": {
-            "value": "[parameters('BlockVulnerableImagesExcludeFindingIDs')]"
-          },
-          "severity": {
-            "value": "[parameters('severity')]"
+          "labelSelector": {
+            "value": "[parameters('allowedServicePortsInKubernetesClusterLabelSelector')]"
           }
         },
         "groupNames": [
@@ -6090,6 +6844,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('memoryAndCPULimitsInKubernetesClusterNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('memoryAndCPULimitsInKubernetesClusterLabelSelector')]"
           },
           "excludedImages": {
             "value": "[parameters('excludedImagesInKubernetesCluster')]"
@@ -6157,6 +6914,9 @@
           "excludedNamespaces": {
             "value": "[parameters('MustRunAsNonRootNamespaceExclusion')]"
           },
+          "labelSelector": {
+            "value": "[parameters('MustRunAsNonRootLabelSelector')]"
+          },
           "excludedImages": {
             "value": "[parameters('excludedImagesInKubernetesCluster')]"
           }
@@ -6194,12 +6954,12 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5f0f936f-2f01-4bf5-b6be-d423792fa562",
-        "definitionVersion": "2.*.*",
-        "policyDefinitionReferenceId": "containerRegistryVulnerabilityAssessment",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/090c7b07-b4ed-4561-ad20-e9075f3ccaff",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureContainerRegistryVulnerabilityAssessment",
         "parameters": {
           "effect": {
-            "value": "[parameters('containerRegistryVulnerabilityAssessmentEffect')]"
+            "value": "[parameters('azureContainerRegistryVulnerabilityAssessmentEffect')]"
           }
         },
         "groupNames": [
@@ -6208,12 +6968,12 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0fc39691-5a3f-4e3e-94ee-2e6447309ad9",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/17f4b1cc-c55c-4d94-b1f9-2978f6ac2957",
         "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "kubernetesRunningImagesVulnerabilityAssessment",
+        "policyDefinitionReferenceId": "kubernetesRunningImagesVulnerabilityMDVMAssessment",
         "parameters": {
           "effect": {
-            "value": "[parameters('kubernetesRunningImagesVulnerabilityAssessmentEffect')]"
+            "value": "[parameters('kubernetesRunningImagesVulnerabilityMDVMAssessmentEffect')]"
           }
         },
         "groupNames": [
@@ -6231,6 +6991,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('NoPrivilegeEscalationInKubernetesClusterNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('NoPrivilegeEscalationInKubernetesClusterLabelSelector')]"
           },
           "excludedImages": {
             "value": "[parameters('excludedImagesInKubernetesCluster')]"
@@ -6251,6 +7014,9 @@
           "excludedNamespaces": {
             "value": "[parameters('NoSharingSensitiveHostNamespacesInKubernetesNamespaceExclusion')]"
           },
+          "labelSelector": {
+            "value": "[parameters('NoSharingSensitiveHostNamespacesInKubernetesLabelSelector')]"
+          },
           "excludedImages": {
             "value": "[parameters('excludedImagesInKubernetesCluster')]"
           }
@@ -6270,6 +7036,9 @@
           "excludedNamespaces": {
             "value": "[parameters('ReadOnlyRootFileSystemInKubernetesClusterNamespaceExclusion')]"
           },
+          "labelSelector": {
+            "value": "[parameters('ReadOnlyRootFileSystemInKubernetesClusterLabelSelector')]"
+          },
           "excludedImages": {
             "value": "[parameters('excludedImagesInKubernetesCluster')]"
           }
@@ -6288,6 +7057,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('AllowedCapabilitiesInKubernetesClusterNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('AllowedCapabilitiesInKubernetesClusterLabelSelector')]"
           },
           "allowedCapabilities": {
             "value": "[parameters('AllowedCapabilitiesInKubernetesClusterList')]"
@@ -6314,6 +7086,9 @@
           "excludedNamespaces": {
             "value": "[parameters('AllowedAppArmorProfilesInKubernetesClusterNamespaceExclusion')]"
           },
+          "labelSelector": {
+            "value": "[parameters('AllowedAppArmorProfilesInKubernetesClusterLabelSelector')]"
+          },
           "allowedProfiles": {
             "value": "[parameters('AllowedAppArmorProfilesInKubernetesClusterList')]"
           },
@@ -6335,6 +7110,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('AllowedHostNetworkingAndPortsInKubernetesClusterNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('AllowedHostNetworkingAndPortsInKubernetesClusterLabelSelector')]"
           },
           "allowHostNetwork": {
             "value": "[parameters('AllowHostNetworkingInKubernetesCluster')]"
@@ -6363,6 +7141,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('AllowedHostPathVolumesInKubernetesClusterNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('AllowedHostPathVolumesInKubernetesClusterLabelSelector')]"
           },
           "allowedHostPaths": {
             "value": "[parameters('AllowedHostPathVolumesInKubernetesClusterList')]"
@@ -6457,14 +7238,10 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5bb220d9-2698-4ee4-8404-b9c30c9df609",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "ensureWEBAppHasClientCertificatesIncomingClientCertificatesSetToOnMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensureWEBAppHasClientCertificatesIncomingClientCertificatesSetToOnMonitoringEffect')]"
-          }
-        },
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/19dd1db6-f442-49cf-a838-b0786b4401ef",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "ensureWebAppHasIncomingClientCertificatesSetToOnMonitoringEffect",
+        "parameters": {},
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_PV-2"
         ]
@@ -6548,71 +7325,6 @@
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_NS-8",
           "Azure_Security_Benchmark_v3.0_DP-3"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7261b898-8a84-4db8-9e04-18527132abb3",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "ensureThatPHPVersionIsTheLatestIfUsedAsAPartOfTheWEBAppMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensureThatPHPVersionIsTheLatestIfUsedAsAPartOfTheWEBAppMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/496223c3-ad65-4ecd-878a-bae78737e9ed",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "ensureThatJavaVersionIsTheLatestIfUsedAsAPartOfTheWebAppMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensureThatJavaVersionIsTheLatestIfUsedAsAPartOfTheWebAppMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9d0b6ea4-93e2-4578-bf2f-6bb17d22b4bc",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "ensureThatJavaVersionIsTheLatestIfUsedAsAPartOfTheFunctionAppMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensureThatJavaVersionIsTheLatestIfUsedAsAPartOfTheFunctionAppMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7008174a-fd10-4ef0-817e-fc820a951d73",
-        "definitionVersion": "4.*.*",
-        "policyDefinitionReferenceId": "ensureThatPythonVersionIsTheLatestIfUsedAsAPartOfTheWebAppMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensureThatPythonVersionIsTheLatestIfUsedAsAPartOfTheWebAppMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7238174a-fd10-4ef0-817e-fc820a951d73",
-        "definitionVersion": "4.*.*",
-        "policyDefinitionReferenceId": "ensureThatPythonVersionIsTheLatestIfUsedAsAPartOfTheFunctionAppMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('ensureThatPythonVersionIsTheLatestIfUsedAsAPartOfTheFunctionAppMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_PV-6"
         ]
       },
       {
@@ -6915,7 +7627,7 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/40cec1dd-a100-4920-b15b-3024fe8901ab",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/45e05259-1eb5-4f70-9574-baf73e9d219b",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "azureMachineLearningWorkspacesShouldUsePrivateLinkMonitoringEffect",
         "parameters": {
@@ -7086,19 +7798,6 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/475aae12-b88a-4572-8b36-9b712b2b3a17",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "autoProvisioningOfTheLogAnalyticsAgentShouldBeEnabledOnYourSubscriptionMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('autoProvisioningOfTheLogAnalyticsAgentShouldBeEnabledOnYourSubscriptionMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_LT-5"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6e2593d9-add6-4083-9c9b-4b7d2188c899",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "emailNotificationForHighSeverityAlertsShouldBeEnabledMonitoringEffect",
@@ -7189,6 +7888,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('kubernetesClustersShouldBeAccessibleOnlyOverHTTPSExcludedNamespaces')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('kubernetesClustersShouldBeAccessibleOnlyOverHTTPSLabelSelector')]"
           }
         },
         "groupNames": [
@@ -7228,14 +7930,17 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0725b4dd-7e76-479c-a735-68e7ee23d5ca",
-        "definitionVersion": "3.*.*",
-        "policyDefinitionReferenceId": "publicNetworkAccessShouldBeDisabledForCognitiveServicesAccountsMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('publicNetworkAccessShouldBeDisabledForCognitiveServicesAccountsMonitoringEffect')]"
-          }
-        },
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1b4d1c4e-934c-4703-944c-27c82c06bebb",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "diagnosticLogsInAzureAIServicesResourcesShouldBeEnabledMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d6759c02-b87f-42b7-892e-71b3f471d782",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureAIServicesResourcesShouldUseAzurePrivateLinkMonitoring",
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_NS-2"
         ]
@@ -7286,6 +7991,86 @@
         ]
       },
       {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/afe0c3be-ba3b-4544-ba52-0c99672a8ad6",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "resourceLogsInAzureMachineLearningWorkspacesShouldBeEnabled",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/438c38d2-3772-465a-a9cc-7a6666a275ce",
+        "definitionVersion": "2.*.*",
+        "policyDefinitionReferenceId": "azureMachineLearningWorkspacesShouldDisablePublicNetworkAccess",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/7804b5c7-01dc-4723-969b-ae300cc07ff1",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureMachineLearningComputesShouldBeInAVirtualNetwork",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e96a9a5f-07ca-471b-9bc5-6a0f33cbd68f",
+        "definitionVersion": "2.*.*",
+        "policyDefinitionReferenceId": "azureMachineLearningComputesShouldHaveLocalAuthenticationMethodsDisabled",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f110a506-2dcb-422e-bcea-d533fc8c35e2",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureMachineLearningComputeInstancesshouldUseTheLatestOsImage",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/138ff14d-b687-4faa-a81c-898c91a87fa2",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "resourceLogsInAzureDatabricksWorkspacesShouldBeEnabled",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0e7849de-b939-4c50-ab48-fc6b0f5eeba2",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureDatabricksWorkspacesShouldDisablePublicNetworkAccess",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/51c1490f-3319-459c-bbbc-7f391bbed753",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureDatabricksClustersShouldDisablePublicIp",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9c25c9e4-ee12-4882-afd2-11fb9d87893f",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureDatabricksWorkspacesShouldBeInAVirtualNetwork",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/258823f2-4595-4b52-b333-cc96192710d8",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureDatabricksWorkspacesShouldUsePrivateLink",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c3d20c29-b36d-48fe-808b-99a87530ad99",
         "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "AzureDefenderForResourceManagerShouldBeEnabledMonitoringEffect",
@@ -7302,29 +8087,15 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bdc59948-5574-49b3-bb91-76b7c986428d",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "AzureDefenderForDNSShouldBeEnabledMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('AzureDefenderForDNSShouldBeEnabledMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_NS-10",
-          "Azure_Security_Benchmark_v3.0_LT-1",
-          "Azure_Security_Benchmark_v3.0_LT-2",
-          "Azure_Security_Benchmark_v3.0_IR-3",
-          "Azure_Security_Benchmark_v3.0_IR-5"
-        ]
-      },
-      {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9f061a12-e40d-4183-a00e-171812443373",
         "definitionVersion": "4.*.*",
         "policyDefinitionReferenceId": "KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect",
         "parameters": {
           "effect": {
             "value": "[parameters('KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringEffect')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('KubernetesClustersShouldNotUseTheDefaultNamespaceMonitoringLabelSelector')]"
           }
         },
         "groupNames": [
@@ -7341,6 +8112,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('KubernetesClustersShouldDisableAutomountingAPICredentialsMonitoringLabelSelector')]"
           },
           "excludedImages": {
             "value": "[parameters('excludedImagesInKubernetesCluster')]"
@@ -7360,6 +8134,9 @@
           },
           "excludedNamespaces": {
             "value": "[parameters('KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringNamespaceExclusion')]"
+          },
+          "labelSelector": {
+            "value": "[parameters('KubernetesClustersShouldNotGrantCAPSYSADMINSecurityCapabilitiesMonitoringLabelSelector')]"
           },
           "excludedImages": {
             "value": "[parameters('excludedImagesInKubernetesCluster')]"
@@ -7448,30 +8225,16 @@
         ]
       },
       {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1f7c564c-0a90-4d44-b7e1-9d456cffaee8",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "installEndpointProtection",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/13a6c84f-49a5-410a-b5df-5b880c3fe009",
+        "definitionVersion": "1.*.*-preview",
+        "policyDefinitionReferenceId": "LinuxVirtualMachineShouldUseSignedAndTrustedBootComponentEffect",
         "parameters": {
           "effect": {
-            "value": "[parameters('installEndpointProtectionMonitoringEffect')]"
+            "value": "[parameters('LinuxVirtualMachineShouldUseSignedAndTrustedBootComponentEffect')]"
           }
         },
         "groupNames": [
-          "Azure_Security_Benchmark_v3.0_ES-2"
-        ]
-      },
-      {
-        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e42c1f2-a2ab-49bc-994a-12bcd0dc4ac2",
-        "definitionVersion": "1.*.*",
-        "policyDefinitionReferenceId": "endpointProtectionHealthIssuesMonitoringEffect",
-        "parameters": {
-          "effect": {
-            "value": "[parameters('endpointProtectionHealthIssuesMonitoringEffect')]"
-          }
-        },
-        "groupNames": [
-          "Azure_Security_Benchmark_v3.0_ES-2",
-          "Azure_Security_Benchmark_v3.0_ES-3"
+          "Azure_Security_Benchmark_v3.0_PV-4"
         ]
       },
       {
@@ -7486,7 +8249,9 @@
             "value": "[parameters('diagnosticsLogsInKubernetesRetentionDays')]"
           }
         },
-        "groupNames": []
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_LT-3"
+        ]
       },
       {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a9fbe0d-c5c4-4da8-87d8-f4fd77338835",
@@ -7523,7 +8288,7 @@
       },
       {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ca88aadc-6e2b-416c-9de2-5a0f01d1693f",
-        "definitionVersion": "1.*.*-preview",
+        "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "gcLinuxDiskEncryptionMonitoring",
         "parameters": {
           "effect": {
@@ -7536,7 +8301,7 @@
       },
       {
         "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3dc5edcd-002d-444c-b216-e123bbfa37c0",
-        "definitionVersion": "1.*.*-preview",
+        "definitionVersion": "1.*.*",
         "policyDefinitionReferenceId": "gcWindowsDiskEncryptionMonitoring",
         "parameters": {
           "effect": {
@@ -7546,7 +8311,329 @@
         "groupNames": [
           "Azure_Security_Benchmark_v3.0_DP-4"
         ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/abda6d70-9778-44e7-84a8-06713e6db027",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "sqlServerADOnlyEnabledMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b3a22bc9-66de-45fb-98fa-00f5df42f41a",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "sqlServerDisableADOnlyAuthMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/146412e9-005c-472b-9e48-c87b72ac229e",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "mySqlServerADAdminisMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4dec045-250a-48c2-b5cc-e0c4eec8b5b4",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "postgreSqlServerADAdminisMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/78215662-041e-49ed-a9dd-5385911b3a1f",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "sqlManagedInstanceADOnlyEnabledMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0c28c3fb-c244-42d5-a9bf-f35f2999577b",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "sqlManagedInstanceDisablingADOnlyAuthMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/2158ddbe-fefa-408e-b43f-d4faef8ff3b8",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "synapseWorkspaceADOnlyEnabledMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6ea81a52-5ca7-4575-9669-eaa910b7edf8",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "synapseWorkspaceDisablingADOnlyAuthMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3aa03346-d8c5-4994-a5bc-7652c2a2aef1",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServiceShouldNotHaveAllApisScopedSubscriptions",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PA-7"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/92bb331d-ac71-416a-8c91-02f2cb734ce4",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServiceShouldNotBypassCertificateValidation",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ee7495e7-3ba7-40b6-bfee-c29e22cc75d4",
+        "definitionVersion": "2.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServiceShouldUseEncryptedProtocols",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f1cc7827-022c-473e-836e-5a51cae0b249",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServiceShouldUseKeyVaultForSecretNamedValues",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-8",
+          "Azure_Security_Benchmark_v3.0_DP-6"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b741306c-968e-4b67-b916-5675e5c709f4",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServiceShouldHaveDirectManagementEndpointDisabled",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/df73bd95-24da-4a4f-96b9-4e8b94b402bd",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServiceShouldDisableServiceConfigurationEndpoints",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/549814b6-3212-4203-bdc8-1548d342fb67",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServiceShouldHaveMinimumAPIVersionSet",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-8",
+          "Azure_Security_Benchmark_v3.0_PV-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c15dcc82-b93c-4dcb-9332-fbf121685b54",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServiceShouldHaveBackendCallsAuthenticated",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/40e85574-ef33-47e8-a854-7a65c7500560",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "mySqlServerADOnlyEnabledMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3ac7c827-eea2-4bde-acc7-9568cd320efa",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "serverSecretFindingsMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-5",
+          "Azure_Security_Benchmark_v3.0_IM-8"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/c8acafaf-3d23-44d1-9624-978ef0f8652c",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "unusedApisShouldbeDisabledAndRemovedFromApim",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_AM-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8ac833bd-f505-48d5-887e-c993a1d3eea0",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "apimApiEndpointsShouldbeAuthenticated",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/640d2586-54d2-465f-877f-9ffc1d2109f4",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "defenderForStorageShouldBeEnabledMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-2",
+          "Azure_Security_Benchmark_v3.0_LT-1",
+          "Azure_Security_Benchmark_v3.0_LT-2",
+          "Azure_Security_Benchmark_v3.0_IR-3",
+          "Azure_Security_Benchmark_v3.0_IR-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/71ef260a-8f18-47b7-abcb-62d0673d94dc",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "cognitiveServicesAccountsShouldHaveLocalAuthenticationMethodsDisabled",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/cddd188c-4b82-4c48-a19d-ddf74ee66a01",
+        "definitionVersion": "3.*.*",
+        "policyDefinitionReferenceId": "cognitiveServicesShouldUsePrivateLink",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fc4d8e41-e223-45ea-9bf5-eada37891d87",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "virtualMachinesAndVirtualMachineScaleSetsShouldHaveEncryptionAtHostEnabled",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/797b37f7-06b8-444c-b1ad-fc62867f335a",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureCosmosDBShouldDisablePublicNetworkAccess",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/58440f8a-10c5-4151-bdce-dfbaad4a20b7",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "cosmosDBAaccountsShouldUsePrivateLink",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/21a6bc25-125e-4d13-b82d-2e19b7208ab7",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "vPNGatewaysShouldUseOnlyAzureActiveDirectoryAzureADAuthenticationForPointtositeUsers",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/32e6bbec-16b6-44c2-be37-c5b672d103cf",
+        "definitionVersion": "2.*.*",
+        "policyDefinitionReferenceId": "azureSQLDatabaseShouldBeRunningTLSVersion12OrNewer",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-3",
+          "Azure_Security_Benchmark_v3.0_IM-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/9dfea752-dd46-4766-aed1-c355fa93fb91",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "azureSQLManagedInstancesShouldDisablePublicNetworkAccess",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_NS-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8c6a50c6-9ffd-4ae7-986f-5fa6111f9a54",
+        "definitionVersion": "2.*.*",
+        "policyDefinitionReferenceId": "storageAccountsShouldPreventSharedKeyAccess",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1dc2fc00-2245-4143-99f4-874c937f13ef",
+        "definitionVersion": "1.*.*",
+        "policyDefinitionReferenceId": "aPIManagementServicePlatformVersionShouldBeStv2",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-2",
+          "Azure_Security_Benchmark_v3.0_AM-2"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5e6bf724-0154-49bc-985f-27b2e07e636b",
+        "definitionVersion": "1.*.*-preview",
+        "policyDefinitionReferenceId": "hciSecuredCoreComplianceMonitoringAtCluster",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/dad3a6b9-4451-492f-a95c-69efc6f3fada",
+        "definitionVersion": "1.*.*-preview",
+        "policyDefinitionReferenceId": "hciWdacComplianceMonitoringAtCluster",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_PV-4"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ee8ca833-1583-4d24-837e-96c2af9488a4",
+        "definitionVersion": "1.*.*-preview",
+        "policyDefinitionReferenceId": "hciDataAtRestEncryptedComplianceMonitoringAtCluster",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-5"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/36f0d6bc-a253-4df8-b25b-c3a5023ff443",
+        "definitionVersion": "1.*.*-preview",
+        "policyDefinitionReferenceId": "hciDataInTransitComplianceMonitoringAtCluster",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_DP-3"
+        ]
+      },
+      {
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fa498b91-8a7e-4710-9578-da944c68d1fe",
+        "definitionVersion": "1.*.*-preview",
+        "policyDefinitionReferenceId": "postgreSqlFlexibleServersEnableEntraOnlyAuthenticationMonitoring",
+        "groupNames": [
+          "Azure_Security_Benchmark_v3.0_IM-1"
+        ]
       }
+    ],
+    "versions": [
+      "57.45.0",
+      "57.44.0",
+      "57.43.0",
+      "57.42.0",
+      "57.41.0",
+      "57.40.0",
+      "57.39.0",
+      "57.38.0",
+      "57.37.0",
+      "57.36.0",
+      "57.35.0",
+      "57.34.0",
+      "57.33.0",
+      "57.32.0",
+      "57.31.0",
+      "57.30.0",
+      "57.29.0",
+      "57.28.1",
+      "57.27.0",
+      "57.26.0",
+      "57.25.0",
+      "57.24.0",
+      "57.23.1"
     ]
   },
   "id": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",

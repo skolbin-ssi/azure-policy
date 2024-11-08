@@ -4,10 +4,10 @@
     "policyType": "BuiltIn",
     "description": "Monitor your Windows virtual machines and virtual machine scale sets by deploying the Azure Monitor Agent extension with user-assigned managed identity authentication and associating with specified Data Collection Rule. Azure Monitor Agent Deployment will occur on machines with supported OS images (or machines matching the provided list of images) in supported regions.",
     "metadata": {
-      "version": "2.0.0",
+      "version": "2.3.0",
       "category": "Monitoring"
     },
-    "version": "2.0.0",
+    "version": "2.3.0",
     "parameters": {
       "effect": {
         "type": "String",
@@ -20,6 +20,18 @@
           "Disabled"
         ],
         "defaultValue": "DeployIfNotExists"
+      },
+      "scopeToSupportedImages": {
+        "type": "Boolean",
+        "metadata": {
+          "displayName": "Scope Policy to Azure Monitor Agent-Supported Operating Systems",
+          "description": "If set to true, the policy will apply only to machines with supported operating systems. Otherwise, the policy will apply to all machines in the assignment scope. For supported operating systems, see https://aka.ms/AMAOverview."
+        },
+        "allowedValues": [
+          true,
+          false
+        ],
+        "defaultValue": true
       },
       "listOfWindowsImageIdToInclude": {
         "type": "Array",
@@ -63,6 +75,14 @@
           "description": "The resource group of the user-assigned managed identity which Azure Monitor Agent will use for authentication when 'Bring Your Own User-Assigned Managed Identity' is set to true."
         },
         "defaultValue": ""
+      },
+      "builtInIdentityResourceGroupLocation": {
+        "type": "String",
+        "metadata": {
+          "displayName": "Built-In-Identity-RG Location",
+          "description": "The location of the resource group 'Built-In-Identity-RG' created by the initiative. This parameter is only used when 'Bring Your Own User-Assigned Managed Identity' parameter is false."
+        },
+        "defaultValue": "eastus"
       }
     },
     "policyDefinitions": [
@@ -82,6 +102,9 @@
           },
           "identityResourceGroup": {
             "value": "[parameters('userAssignedManagedIdentityResourceGroup')]"
+          },
+          "builtInIdentityResourceGroupLocation": {
+            "value": "[parameters('builtInIdentityResourceGroupLocation')]"
           }
         }
       },
@@ -101,6 +124,9 @@
           },
           "identityResourceGroup": {
             "value": "[parameters('userAssignedManagedIdentityResourceGroup')]"
+          },
+          "builtInIdentityResourceGroupLocation": {
+            "value": "[parameters('builtInIdentityResourceGroupLocation')]"
           }
         }
       },
@@ -112,9 +138,6 @@
           "effect": {
             "value": "[parameters('effect')]"
           },
-          "listOfWindowsImageIdToInclude": {
-            "value": "[parameters('listOfWindowsImageIdToInclude')]"
-          },
           "bringYourOwnUserAssignedManagedIdentity": {
             "value": "[parameters('bringYourOwnUserAssignedManagedIdentity')]"
           },
@@ -123,6 +146,12 @@
           },
           "userAssignedManagedIdentityResourceGroup": {
             "value": "[parameters('userAssignedManagedIdentityResourceGroup')]"
+          },
+          "scopeToSupportedImages": {
+            "value": "[parameters('scopeToSupportedImages')]"
+          },
+          "listOfWindowsImageIdToInclude": {
+            "value": "[parameters('listOfWindowsImageIdToInclude')]"
           }
         }
       },
@@ -134,9 +163,6 @@
           "effect": {
             "value": "[parameters('effect')]"
           },
-          "listOfWindowsImageIdToInclude": {
-            "value": "[parameters('listOfWindowsImageIdToInclude')]"
-          },
           "bringYourOwnUserAssignedManagedIdentity": {
             "value": "[parameters('bringYourOwnUserAssignedManagedIdentity')]"
           },
@@ -145,6 +171,12 @@
           },
           "userAssignedManagedIdentityResourceGroup": {
             "value": "[parameters('userAssignedManagedIdentityResourceGroup')]"
+          },
+          "scopeToSupportedImages": {
+            "value": "[parameters('scopeToSupportedImages')]"
+          },
+          "listOfWindowsImageIdToInclude": {
+            "value": "[parameters('listOfWindowsImageIdToInclude')]"
           }
         }
       },
@@ -155,6 +187,9 @@
         "parameters": {
           "effect": {
             "value": "[parameters('effect')]"
+          },
+          "scopeToSupportedImages": {
+            "value": "[parameters('scopeToSupportedImages')]"
           },
           "listOfWindowsImageIdToInclude": {
             "value": "[parameters('listOfWindowsImageIdToInclude')]"
@@ -167,6 +202,10 @@
           }
         }
       }
+    ],
+    "versions": [
+      "2.3.0",
+      "2.2.0"
     ]
   },
   "id": "/providers/Microsoft.Authorization/policySetDefinitions/0d1b56c6-6d1f-4a5d-8695-b15efbea6b49",
